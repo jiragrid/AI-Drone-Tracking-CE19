@@ -1,7 +1,7 @@
 # AI-Drone-Tracking-CE19
 
 
-#Setup
+#Setup /Prototype AI-Image-Processing
 pip install tensorflow
 pip install opencv-python
 pip install keras
