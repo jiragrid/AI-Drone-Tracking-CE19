@@ -1,17 +1,17 @@
-#!/usr/local/bin/python3
-
 import numpy as np
-import matplotlib.pyplot as plt
 import pathlib
 import os
 import re
-from keras.preprocessing.image import load_img
-from PIL import Image
 import tkinter.filedialog
 import tkinter.messagebox
 import tkinter as tk
 
-class Gui_folder():
+from tkinter.ttk import Progressbar
+from PIL import Image
+from matplotlib import pyplot as plt
+
+
+class GuiResizeFolder():
     def __init__(self, path="/"):
         self.height = 500
         self.width = 800 
@@ -31,13 +31,13 @@ class Gui_folder():
         self.canvas.pack()
 
         self.input_frame = tk.Frame(self.root, bg='#80c1ff', bd=5)
-        self.input_frame.place(relx=0.5, rely=0, relwidth=0.75, relheight=0.1, anchor='n')
+        self.input_frame.place(relx=0.5, rely=0.3, relwidth=0.75, relheight=0.1, anchor='n')
         self.top_frame = tk.Frame(self.root, bg='#80c1ff', bd=5)
-        self.top_frame.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')
+        self.top_frame.place(relx=0.5, rely=0.4, relwidth=0.75, relheight=0.1, anchor='n')
         self.middle_frame = tk.Frame(self.root, bg='#80c1ff', bd=5)
-        self.middle_frame.place(relx=0.5, rely=0.2, relwidth=0.75, relheight=0.1, anchor='n')
+        self.middle_frame.place(relx=0.5, rely=0.5, relwidth=0.75, relheight=0.1, anchor='n')
         self.bottom_frame = tk.Frame(self.root, bd=5)
-        self.bottom_frame.place(relx=0.5, rely=0.3, relwidth=0.75, relheight=0.1, anchor='n')
+        self.bottom_frame.place(relx=0.5, rely=0.6, relwidth=1, relheight=0.2, anchor='n')
 
         self.label_width = tk.Label(self.input_frame, text="Width:")
         self.label_width.place(relx=0, relwidth=0.1, relheight=1)
@@ -51,7 +51,7 @@ class Gui_folder():
 
         self.label_source = tk.Label(self.top_frame, textvariable=self.source_path)
         self.label_source.place(relwidth=0.65, relheight=1)
-        self.button_source = tk.Button(self.top_frame, text="Browse", command=self.__browse_source, font=40)
+        self.button_source = tk.Button(self.top_frame, text="Images Folder", command=self.__browse_source, font=40)
         self.button_source.place(relx=0.7, relwidth=0.3, relheight=1)
 
         self.label_target = tk.Label(self.middle_frame, textvariable=self.target_path)
@@ -59,9 +59,12 @@ class Gui_folder():
         self.button_target = tk.Button(self.middle_frame, text="Save Folder", command=self.__browse_target, font=40)
         self.button_target.place(relx=0.7, relwidth=0.3, relheight=1)
 
-        self.button_start = tk.Button(self.bottom_frame, text="Start", command=self.__save_images, font=40, state=tk.DISABLED)
-        self.button_start.place(relx=0.4, relwidth=0.3, relheight=1)
+        self.progress_bar = Progressbar(self.bottom_frame, orient=tk.HORIZONTAL, length=100, mode="determinate")
+        self.progress_bar.place(relx=0.125, rely=0.1, relwidth=0.75, relheight=0.25)
 
+        self.button_start = tk.Button(self.bottom_frame, text="Start", command=self.__save_images, font=40, state=tk.DISABLED)
+        self.button_start.place(relx=0.4, rely=0.5, relwidth=0.2, relheight=0.5)
+        
         self.root.mainloop()
 
 
@@ -85,6 +88,8 @@ class Gui_folder():
         self.button_target.configure(state=tk.DISABLED) if self.is_saving else self.button_target.configure(state=tk.NORMAL)
         self.button_source.configure(state=tk.DISABLED) if self.is_saving else self.button_source.configure(state=tk.NORMAL)
 
+        self.root.update_idletasks()
+
     def __atoi(self, text):
         return int(text) if text.isdigit() else text
 
@@ -107,41 +112,51 @@ class Gui_folder():
         if not isYes:
             return False
 
-        try:
-            width = int(self.image_height.get())
-            height = int(self.image_height.get())
-        except ValueError:
-            tk.messagebox.showerror(title="Save Image", message="Width and Height must be integer")
-            return False
-
         self.is_saving = True
         self.__validate_inputs_state()
 
+        width = int(self.image_height.get())
+        height = int(self.image_height.get())
         images = self.__convert_dir_to_list()
+        length = len(images)
+        isSuccess = True
 
         for index, path in enumerate(images):
-            save_path = str(self.target_path.get()) + str(index + 1) + ".jpg"
-            image = load_img(path)
-            image = image.resize((width, height))
-            image_array = np.asarray(image)
+            try:
+                save_path = str(self.target_path.get()) + str(index+1) + ".jpg"
+                image = Image.open(path)
+                image = image.resize((width, height))
+                image_array = np.asarray(image)
 
-            if os.path.exists(save_path):
-                tk.messagebox.showerror(title="Save Image", message=save_path + " is exist")
-                print(save_path, "is exist")
-                self.is_saving = False
-                self.__validate_inputs_state()
+                if os.path.exists(save_path):
+                    tk.messagebox.showerror(title="Save Image", message=save_path + " is exist")
+                    print(save_path, "is exist")
 
-                return False
+                    continue
 
-            img = Image.fromarray(image_array)
-            img.save(save_path)
+                img = Image.fromarray(image_array)
+                img.save(save_path)
+
+                progress_percent = (index+1)/length * 100
+                print("progress", progress_percent, "%")
+                self.progress_bar["value"] = progress_percent
+                self.root.update_idletasks()
+            except Exception as error:
+                print("Error: ", error)
+                tk.messagebox.showerror(title="Save Image", message=error)
+                isSuccess = False
+
+                break
 
         self.is_saving = False
+        self.progress_bar["value"] = 0
         self.__validate_inputs_state()
-        print("success save image(s)")
-        tk.messagebox.showinfo(title="Save Image", message="Completed")
+
+        if isSuccess:
+            print("complete save image(s)")
+            tk.messagebox.showinfo(title="Save Image", message="Completed save image(s)")
 
 
-Gui_folder()
+GuiResizeFolder()
 
 
