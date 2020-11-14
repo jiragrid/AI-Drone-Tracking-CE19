@@ -13,7 +13,7 @@ image_height = 256
 image_width = 256
 batch_size = 32
 root_dataset_path = "./Dataset/test/"
-model_path = "./SugarcaneDisease/Model/Save"
+model_path = "./SugarcaneDisease/Model/Save/CNN"
 
 print("Load Model ...")
 model = tf.keras.models.load_model(model_path, compile=True)
@@ -45,6 +45,7 @@ for test_path in test_images_path:
     result_list.append(info)
     print(count+1, end=" ")
     count += 1
+
     # print(test_path)
     # print("Class", class_no, ":", class_labels["class_name"][class_no], "Probability:", probability)
     # print("--------------------------------------------------------------------------------------------------")

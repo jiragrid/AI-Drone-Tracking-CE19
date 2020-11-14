@@ -1,275 +1,353 @@
 ,File path,Class No,Class Name,Probability
-0,Dataset\test\1.jpg,0,white_leaf_disease,98.4136700630188
-1,Dataset\test\10.jpg,0,white_leaf_disease,99.64039325714111
-2,Dataset\test\100.jpg,0,white_leaf_disease,99.96671676635742
-3,Dataset\test\101.jpg,0,white_leaf_disease,99.95099306106567
-4,Dataset\test\102.jpg,0,white_leaf_disease,99.85353946685791
-5,Dataset\test\103.jpg,0,white_leaf_disease,99.90384578704834
-6,Dataset\test\104.jpg,0,white_leaf_disease,99.84714388847351
-7,Dataset\test\105.jpg,0,white_leaf_disease,99.81594681739807
-8,Dataset\test\106.jpg,0,white_leaf_disease,92.74911880493164
-9,Dataset\test\107.jpg,0,white_leaf_disease,99.96844530105591
-10,Dataset\test\108.jpg,0,white_leaf_disease,99.8755693435669
-11,Dataset\test\109.jpg,0,white_leaf_disease,99.96870756149292
-12,Dataset\test\11.jpg,0,white_leaf_disease,99.94394183158875
-13,Dataset\test\110.jpg,0,white_leaf_disease,99.81256127357483
-14,Dataset\test\111.jpg,0,white_leaf_disease,99.92687106132507
-15,Dataset\test\112.jpg,0,white_leaf_disease,99.8393714427948
-16,Dataset\test\113.jpg,0,white_leaf_disease,99.93756413459778
-17,Dataset\test\114.jpg,0,white_leaf_disease,99.92274045944214
-18,Dataset\test\115.jpg,0,white_leaf_disease,99.94823932647705
-19,Dataset\test\116.jpg,0,white_leaf_disease,99.93396401405334
-20,Dataset\test\117.jpg,0,white_leaf_disease,99.9441921710968
-21,Dataset\test\118.jpg,0,white_leaf_disease,99.86509680747986
-22,Dataset\test\119.jpg,0,white_leaf_disease,97.93633222579956
-23,Dataset\test\12.jpg,0,white_leaf_disease,99.96716976165771
-24,Dataset\test\120.jpg,0,white_leaf_disease,98.0964720249176
-25,Dataset\test\121.jpg,0,white_leaf_disease,99.97938275337219
-26,Dataset\test\122.jpg,0,white_leaf_disease,99.94266033172607
-27,Dataset\test\123.jpg,0,white_leaf_disease,99.94193315505981
-28,Dataset\test\124.jpg,0,white_leaf_disease,99.42354559898376
-29,Dataset\test\125.jpg,0,white_leaf_disease,99.94089603424072
-30,Dataset\test\126.jpg,0,white_leaf_disease,99.5319664478302
-31,Dataset\test\127.jpg,0,white_leaf_disease,99.95829463005066
-32,Dataset\test\128.jpg,0,white_leaf_disease,99.9224305152893
-33,Dataset\test\129.jpg,0,white_leaf_disease,99.38921928405762
-34,Dataset\test\13.jpg,0,white_leaf_disease,99.11994338035583
-35,Dataset\test\130.jpg,0,white_leaf_disease,98.74022603034973
-36,Dataset\test\131.jpg,1,narrow_brown_spot_disease,51.894450187683105
-37,Dataset\test\132.jpg,0,white_leaf_disease,98.18556904792786
-38,Dataset\test\133.jpg,0,white_leaf_disease,96.48823738098145
-39,Dataset\test\134.jpg,0,white_leaf_disease,96.05652689933777
-40,Dataset\test\135.jpg,0,white_leaf_disease,95.93797326087952
-41,Dataset\test\136.jpg,0,white_leaf_disease,99.57483410835266
-42,Dataset\test\137.jpg,0,white_leaf_disease,97.52463698387146
-43,Dataset\test\138.jpg,0,white_leaf_disease,99.38234090805054
-44,Dataset\test\139.jpg,0,white_leaf_disease,99.89796280860901
-45,Dataset\test\14.jpg,0,white_leaf_disease,90.98632335662842
-46,Dataset\test\140.jpg,1,narrow_brown_spot_disease,60.02110838890076
-47,Dataset\test\141.jpg,0,white_leaf_disease,55.251795053482056
-48,Dataset\test\142.jpg,0,white_leaf_disease,99.9582588672638
-49,Dataset\test\143.jpg,0,white_leaf_disease,99.23036098480225
-50,Dataset\test\144.jpg,0,white_leaf_disease,99.60256814956665
-51,Dataset\test\145.jpg,0,white_leaf_disease,99.87265467643738
-52,Dataset\test\146.jpg,0,white_leaf_disease,99.94447827339172
-53,Dataset\test\147.jpg,0,white_leaf_disease,99.87778067588806
-54,Dataset\test\148.jpg,0,white_leaf_disease,99.9214768409729
-55,Dataset\test\149.jpg,0,white_leaf_disease,99.83131885528564
-56,Dataset\test\15.jpg,0,white_leaf_disease,99.89319443702698
-57,Dataset\test\150.jpg,0,white_leaf_disease,96.53963446617126
-58,Dataset\test\151.jpg,0,white_leaf_disease,99.40925240516663
-59,Dataset\test\152.jpg,0,white_leaf_disease,97.99285531044006
-60,Dataset\test\153.jpg,0,white_leaf_disease,99.4607925415039
-61,Dataset\test\154.jpg,0,white_leaf_disease,99.92780089378357
-62,Dataset\test\155.jpg,0,white_leaf_disease,99.8193085193634
-63,Dataset\test\156.jpg,0,white_leaf_disease,99.9538779258728
-64,Dataset\test\157.jpg,0,white_leaf_disease,99.87900853157043
-65,Dataset\test\158.jpg,0,white_leaf_disease,99.88855719566345
-66,Dataset\test\159.jpg,0,white_leaf_disease,99.75161552429199
-67,Dataset\test\16.jpg,0,white_leaf_disease,99.91682767868042
-68,Dataset\test\160.jpg,1,narrow_brown_spot_disease,99.92934465408325
-69,Dataset\test\161.jpg,0,white_leaf_disease,99.51348900794983
-70,Dataset\test\162.jpg,1,narrow_brown_spot_disease,56.765151023864746
-71,Dataset\test\163.jpg,1,narrow_brown_spot_disease,70.24903297424316
-72,Dataset\test\164.jpg,0,white_leaf_disease,99.97937083244324
-73,Dataset\test\165.jpg,0,white_leaf_disease,99.20816421508789
-74,Dataset\test\166.jpg,0,white_leaf_disease,99.20816421508789
-75,Dataset\test\167.jpg,1,narrow_brown_spot_disease,99.99715089797974
-76,Dataset\test\168.jpg,1,narrow_brown_spot_disease,76.17061138153076
-77,Dataset\test\169.jpg,0,white_leaf_disease,98.32231402397156
-78,Dataset\test\17.jpg,1,narrow_brown_spot_disease,73.36723208427429
-79,Dataset\test\170.jpg,0,white_leaf_disease,99.75782036781311
-80,Dataset\test\171.jpg,0,white_leaf_disease,99.9339759349823
-81,Dataset\test\172.jpg,0,white_leaf_disease,98.91308546066284
-82,Dataset\test\173.jpg,0,white_leaf_disease,99.21730756759644
-83,Dataset\test\174.jpg,0,white_leaf_disease,99.95892643928528
-84,Dataset\test\175.jpg,0,white_leaf_disease,99.92948770523071
-85,Dataset\test\176.jpg,0,white_leaf_disease,98.32157492637634
-86,Dataset\test\177.jpg,0,white_leaf_disease,99.92664456367493
-87,Dataset\test\178.jpg,0,white_leaf_disease,99.78175163269043
-88,Dataset\test\179.jpg,0,white_leaf_disease,99.89798665046692
-89,Dataset\test\18.jpg,0,white_leaf_disease,99.80762004852295
-90,Dataset\test\180.jpg,0,white_leaf_disease,99.82120990753174
-91,Dataset\test\181.jpg,0,white_leaf_disease,99.82120990753174
-92,Dataset\test\182.jpg,0,white_leaf_disease,96.66241407394409
-93,Dataset\test\183.jpg,0,white_leaf_disease,96.66241407394409
-94,Dataset\test\184.jpg,0,white_leaf_disease,99.71663355827332
-95,Dataset\test\185.jpg,0,white_leaf_disease,99.71663355827332
-96,Dataset\test\186.jpg,0,white_leaf_disease,99.94994401931763
-97,Dataset\test\187.jpg,0,white_leaf_disease,99.94994401931763
-98,Dataset\test\188.jpg,0,white_leaf_disease,99.5227575302124
-99,Dataset\test\189.jpg,0,white_leaf_disease,99.5227575302124
-100,Dataset\test\19.jpg,0,white_leaf_disease,94.50181722640991
-101,Dataset\test\190.jpg,0,white_leaf_disease,98.4006941318512
-102,Dataset\test\191.jpg,0,white_leaf_disease,97.24781513214111
-103,Dataset\test\192.jpg,0,white_leaf_disease,99.3970274925232
-104,Dataset\test\193.jpg,0,white_leaf_disease,99.49758052825928
-105,Dataset\test\194.jpg,0,white_leaf_disease,99.27887320518494
-106,Dataset\test\195.jpg,0,white_leaf_disease,99.91334080696106
-107,Dataset\test\196.jpg,1,narrow_brown_spot_disease,79.59671020507812
-108,Dataset\test\197.jpg,0,white_leaf_disease,99.92290735244751
-109,Dataset\test\198.jpg,0,white_leaf_disease,99.1430938243866
-110,Dataset\test\199.jpg,0,white_leaf_disease,99.94951486587524
-111,Dataset\test\2.jpg,1,narrow_brown_spot_disease,100.0
-112,Dataset\test\20.jpg,0,white_leaf_disease,99.61904287338257
-113,Dataset\test\200.jpg,0,white_leaf_disease,93.62414479255676
-114,Dataset\test\201.jpg,0,white_leaf_disease,95.78279256820679
-115,Dataset\test\202.jpg,0,white_leaf_disease,99.92921352386475
-116,Dataset\test\203.jpg,0,white_leaf_disease,98.87489080429077
-117,Dataset\test\204.jpg,1,narrow_brown_spot_disease,99.30877089500427
-118,Dataset\test\205.jpg,1,narrow_brown_spot_disease,99.46093559265137
-119,Dataset\test\206.jpg,1,narrow_brown_spot_disease,99.98107552528381
-120,Dataset\test\207.jpg,1,narrow_brown_spot_disease,99.9666690826416
-121,Dataset\test\208.jpg,1,narrow_brown_spot_disease,99.87431168556213
-122,Dataset\test\209.jpg,0,white_leaf_disease,99.80534315109253
-123,Dataset\test\21.jpg,0,white_leaf_disease,99.79630708694458
-124,Dataset\test\210.jpg,0,white_leaf_disease,99.77401494979858
-125,Dataset\test\211.jpg,0,white_leaf_disease,75.81656575202942
-126,Dataset\test\212.jpg,1,narrow_brown_spot_disease,90.17214179039001
-127,Dataset\test\213.jpg,1,narrow_brown_spot_disease,89.46192860603333
-128,Dataset\test\214.jpg,1,narrow_brown_spot_disease,99.71422553062439
-129,Dataset\test\215.jpg,0,white_leaf_disease,99.89067316055298
-130,Dataset\test\216.jpg,0,white_leaf_disease,91.86277389526367
-131,Dataset\test\217.jpg,1,narrow_brown_spot_disease,91.76688194274902
-132,Dataset\test\218.jpg,0,white_leaf_disease,53.2759964466095
-133,Dataset\test\219.jpg,0,white_leaf_disease,99.19859170913696
-134,Dataset\test\22.jpg,0,white_leaf_disease,99.86911416053772
-135,Dataset\test\220.jpg,1,narrow_brown_spot_disease,99.99839067459106
-136,Dataset\test\221.jpg,1,narrow_brown_spot_disease,99.97684359550476
-137,Dataset\test\222.jpg,0,white_leaf_disease,98.86981844902039
-138,Dataset\test\223.jpg,1,narrow_brown_spot_disease,62.363117933273315
-139,Dataset\test\224.jpg,0,white_leaf_disease,99.32882189750671
-140,Dataset\test\225.jpg,0,white_leaf_disease,99.56778883934021
-141,Dataset\test\226.jpg,0,white_leaf_disease,76.4823317527771
-142,Dataset\test\227.jpg,1,narrow_brown_spot_disease,99.31948184967041
-143,Dataset\test\228.jpg,0,white_leaf_disease,94.9368417263031
-144,Dataset\test\229.jpg,0,white_leaf_disease,87.9426896572113
-145,Dataset\test\23.jpg,0,white_leaf_disease,98.74058365821838
-146,Dataset\test\230.jpg,0,white_leaf_disease,95.36995887756348
-147,Dataset\test\231.jpg,0,white_leaf_disease,96.29429578781128
-148,Dataset\test\232.jpg,0,white_leaf_disease,91.70454144477844
-149,Dataset\test\233.jpg,0,white_leaf_disease,85.12821793556213
-150,Dataset\test\234.jpg,1,narrow_brown_spot_disease,96.82059288024902
-151,Dataset\test\235.jpg,1,narrow_brown_spot_disease,57.38340616226196
-152,Dataset\test\236.jpg,1,narrow_brown_spot_disease,69.55212354660034
-153,Dataset\test\237.jpg,1,narrow_brown_spot_disease,99.09890294075012
-154,Dataset\test\238.jpg,1,narrow_brown_spot_disease,82.13503360748291
-155,Dataset\test\239.jpg,1,narrow_brown_spot_disease,76.56313180923462
-156,Dataset\test\24.jpg,0,white_leaf_disease,99.3962824344635
-157,Dataset\test\240.jpg,1,narrow_brown_spot_disease,57.81751275062561
-158,Dataset\test\241.jpg,1,narrow_brown_spot_disease,79.15782332420349
-159,Dataset\test\242.jpg,1,narrow_brown_spot_disease,77.18708515167236
-160,Dataset\test\243.jpg,1,narrow_brown_spot_disease,97.99129962921143
-161,Dataset\test\244.jpg,1,narrow_brown_spot_disease,99.73697662353516
-162,Dataset\test\245.jpg,0,white_leaf_disease,74.55046772956848
-163,Dataset\test\246.jpg,1,narrow_brown_spot_disease,71.06005549430847
-164,Dataset\test\247.jpg,1,narrow_brown_spot_disease,96.38873934745789
-165,Dataset\test\248.jpg,1,narrow_brown_spot_disease,99.99068975448608
-166,Dataset\test\249.jpg,1,narrow_brown_spot_disease,99.9065101146698
-167,Dataset\test\25.jpg,0,white_leaf_disease,99.64385032653809
-168,Dataset\test\250.jpg,1,narrow_brown_spot_disease,99.9990701675415
-169,Dataset\test\251.jpg,1,narrow_brown_spot_disease,96.36281728744507
-170,Dataset\test\252.jpg,1,narrow_brown_spot_disease,91.27912521362305
-171,Dataset\test\253.jpg,1,narrow_brown_spot_disease,99.84970092773438
-172,Dataset\test\254.jpg,1,narrow_brown_spot_disease,99.39911961555481
-173,Dataset\test\255.jpg,1,narrow_brown_spot_disease,99.56647753715515
-174,Dataset\test\256.jpg,1,narrow_brown_spot_disease,99.48411583900452
-175,Dataset\test\257.jpg,1,narrow_brown_spot_disease,86.960768699646
-176,Dataset\test\258.jpg,1,narrow_brown_spot_disease,96.86662554740906
-177,Dataset\test\259.jpg,1,narrow_brown_spot_disease,98.77326488494873
-178,Dataset\test\26.jpg,0,white_leaf_disease,99.90764856338501
-179,Dataset\test\260.jpg,1,narrow_brown_spot_disease,96.84129357337952
-180,Dataset\test\261.jpg,1,narrow_brown_spot_disease,98.77326488494873
-181,Dataset\test\262.jpg,1,narrow_brown_spot_disease,99.99997615814209
-182,Dataset\test\263.jpg,1,narrow_brown_spot_disease,86.960768699646
-183,Dataset\test\264.jpg,1,narrow_brown_spot_disease,96.84129357337952
-184,Dataset\test\265.jpg,1,narrow_brown_spot_disease,96.86662554740906
-185,Dataset\test\266.jpg,1,narrow_brown_spot_disease,99.99980926513672
-186,Dataset\test\267.jpg,1,narrow_brown_spot_disease,99.99995231628418
-187,Dataset\test\268.jpg,1,narrow_brown_spot_disease,99.98736381530762
-188,Dataset\test\269.jpg,1,narrow_brown_spot_disease,99.99936819076538
-189,Dataset\test\27.jpg,0,white_leaf_disease,98.96284341812134
-190,Dataset\test\270.jpg,1,narrow_brown_spot_disease,99.99997615814209
-191,Dataset\test\271.jpg,1,narrow_brown_spot_disease,99.99982118606567
-192,Dataset\test\272.jpg,1,narrow_brown_spot_disease,99.99985694885254
-193,Dataset\test\273.jpg,1,narrow_brown_spot_disease,98.84635806083679
-194,Dataset\test\274.jpg,0,white_leaf_disease,97.3388671875
-195,Dataset\test\28.jpg,0,white_leaf_disease,99.69474673271179
-196,Dataset\test\29.jpg,0,white_leaf_disease,99.95410442352295
-197,Dataset\test\3.jpg,1,narrow_brown_spot_disease,99.99998807907104
-198,Dataset\test\30.jpg,0,white_leaf_disease,99.9679684638977
-199,Dataset\test\31.jpg,0,white_leaf_disease,99.96127486228943
-200,Dataset\test\32.jpg,0,white_leaf_disease,99.38653111457825
-201,Dataset\test\33.jpg,0,white_leaf_disease,99.99635219573975
-202,Dataset\test\34.jpg,0,white_leaf_disease,99.68228340148926
-203,Dataset\test\35.jpg,0,white_leaf_disease,99.85470175743103
-204,Dataset\test\36.jpg,0,white_leaf_disease,97.95101284980774
-205,Dataset\test\37.jpg,0,white_leaf_disease,99.49650168418884
-206,Dataset\test\38.jpg,0,white_leaf_disease,99.41108822822571
-207,Dataset\test\39.jpg,0,white_leaf_disease,99.85974431037903
-208,Dataset\test\4.jpg,0,white_leaf_disease,99.9168872833252
-209,Dataset\test\40.jpg,0,white_leaf_disease,99.85828399658203
-210,Dataset\test\41.jpg,0,white_leaf_disease,99.70635771751404
-211,Dataset\test\42.jpg,0,white_leaf_disease,94.56537365913391
-212,Dataset\test\43.jpg,0,white_leaf_disease,99.55339431762695
-213,Dataset\test\44.jpg,0,white_leaf_disease,99.8416543006897
-214,Dataset\test\45.jpg,0,white_leaf_disease,96.6708242893219
-215,Dataset\test\46.jpg,0,white_leaf_disease,99.97074007987976
-216,Dataset\test\47.jpg,0,white_leaf_disease,99.99184608459473
-217,Dataset\test\48.jpg,0,white_leaf_disease,99.96521472930908
-218,Dataset\test\49.jpg,0,white_leaf_disease,99.18370842933655
-219,Dataset\test\5.jpg,0,white_leaf_disease,99.47658777236938
-220,Dataset\test\50.jpg,0,white_leaf_disease,99.86972212791443
-221,Dataset\test\51.jpg,0,white_leaf_disease,99.5944082736969
-222,Dataset\test\52.jpg,0,white_leaf_disease,99.45407509803772
-223,Dataset\test\53.jpg,0,white_leaf_disease,99.94914531707764
-224,Dataset\test\54.jpg,0,white_leaf_disease,99.9136745929718
-225,Dataset\test\55.jpg,0,white_leaf_disease,99.58484172821045
-226,Dataset\test\56.jpg,0,white_leaf_disease,99.69985485076904
-227,Dataset\test\57.jpg,0,white_leaf_disease,99.65468049049377
-228,Dataset\test\58.jpg,0,white_leaf_disease,86.70350909233093
-229,Dataset\test\59.jpg,0,white_leaf_disease,92.44643449783325
-230,Dataset\test\6.jpg,0,white_leaf_disease,99.89063739776611
-231,Dataset\test\60.jpg,0,white_leaf_disease,99.708491563797
-232,Dataset\test\61.jpg,0,white_leaf_disease,93.0275559425354
-233,Dataset\test\62.jpg,0,white_leaf_disease,94.82712149620056
-234,Dataset\test\63.jpg,0,white_leaf_disease,99.63029623031616
-235,Dataset\test\64.jpg,0,white_leaf_disease,99.34958219528198
-236,Dataset\test\65.jpg,0,white_leaf_disease,99.96577501296997
-237,Dataset\test\66.jpg,0,white_leaf_disease,99.19226169586182
-238,Dataset\test\67.jpg,0,white_leaf_disease,99.96252059936523
-239,Dataset\test\68.jpg,0,white_leaf_disease,99.8991072177887
-240,Dataset\test\69.jpg,0,white_leaf_disease,99.95296001434326
-241,Dataset\test\7.jpg,0,white_leaf_disease,91.22036099433899
-242,Dataset\test\70.jpg,0,white_leaf_disease,99.26580786705017
-243,Dataset\test\71.jpg,0,white_leaf_disease,99.9058187007904
-244,Dataset\test\72.jpg,0,white_leaf_disease,99.31979179382324
-245,Dataset\test\73.jpg,0,white_leaf_disease,98.87462258338928
-246,Dataset\test\74.jpg,0,white_leaf_disease,99.29280877113342
-247,Dataset\test\75.jpg,0,white_leaf_disease,99.93327260017395
-248,Dataset\test\76.jpg,0,white_leaf_disease,99.91052746772766
-249,Dataset\test\77.jpg,0,white_leaf_disease,99.51671361923218
-250,Dataset\test\78.jpg,0,white_leaf_disease,99.99303817749023
-251,Dataset\test\79.jpg,0,white_leaf_disease,73.61118197441101
-252,Dataset\test\8.jpg,0,white_leaf_disease,99.91371035575867
-253,Dataset\test\80.jpg,0,white_leaf_disease,99.73340034484863
-254,Dataset\test\81.jpg,1,narrow_brown_spot_disease,79.79909777641296
-255,Dataset\test\82.jpg,0,white_leaf_disease,99.66375827789307
-256,Dataset\test\83.jpg,0,white_leaf_disease,99.82276558876038
-257,Dataset\test\84.jpg,0,white_leaf_disease,96.91845178604126
-258,Dataset\test\85.jpg,0,white_leaf_disease,98.87405037879944
-259,Dataset\test\86.jpg,0,white_leaf_disease,99.17052984237671
-260,Dataset\test\87.jpg,0,white_leaf_disease,98.94191026687622
-261,Dataset\test\88.jpg,0,white_leaf_disease,98.72108697891235
-262,Dataset\test\89.jpg,0,white_leaf_disease,93.53514909744263
-263,Dataset\test\9.jpg,0,white_leaf_disease,99.76995587348938
-264,Dataset\test\90.jpg,0,white_leaf_disease,99.33162331581116
-265,Dataset\test\91.jpg,0,white_leaf_disease,99.65607523918152
-266,Dataset\test\92.jpg,0,white_leaf_disease,99.5854914188385
-267,Dataset\test\93.jpg,0,white_leaf_disease,99.9548614025116
-268,Dataset\test\94.jpg,0,white_leaf_disease,99.69375133514404
-269,Dataset\test\95.jpg,0,white_leaf_disease,97.73640632629395
-270,Dataset\test\96.jpg,0,white_leaf_disease,99.90660548210144
-271,Dataset\test\97.jpg,0,white_leaf_disease,99.75656270980835
-272,Dataset\test\98.jpg,0,white_leaf_disease,99.95444416999817
-273,Dataset\test\99.jpg,0,white_leaf_disease,99.84997510910034
+0,Dataset\test\1.jpg,0,white_leaf_disease,99.98372793
+1,Dataset\test\10.jpg,0,white_leaf_disease,99.64678288
+2,Dataset\test\100.jpg,0,white_leaf_disease,87.22506166
+3,Dataset\test\101.jpg,0,white_leaf_disease,99.37858582
+4,Dataset\test\102.jpg,0,white_leaf_disease,94.55922842
+5,Dataset\test\103.jpg,0,white_leaf_disease,99.50752854
+6,Dataset\test\104.jpg,0,white_leaf_disease,99.27869439
+7,Dataset\test\105.jpg,0,white_leaf_disease,94.83218789
+8,Dataset\test\106.jpg,0,white_leaf_disease,97.61883616
+9,Dataset\test\107.jpg,0,white_leaf_disease,99.59751964
+10,Dataset\test\108.jpg,0,white_leaf_disease,95.22710443
+11,Dataset\test\109.jpg,0,white_leaf_disease,91.55191183
+12,Dataset\test\11.jpg,0,white_leaf_disease,97.8920877
+13,Dataset\test\110.jpg,0,white_leaf_disease,87.01717257
+14,Dataset\test\111.jpg,0,white_leaf_disease,91.66122675
+15,Dataset\test\112.jpg,0,white_leaf_disease,86.88373566
+16,Dataset\test\113.jpg,0,white_leaf_disease,97.16956615
+17,Dataset\test\114.jpg,0,white_leaf_disease,98.61990213
+18,Dataset\test\115.jpg,0,white_leaf_disease,98.17998409
+19,Dataset\test\116.jpg,0,white_leaf_disease,96.74009085
+20,Dataset\test\117.jpg,0,white_leaf_disease,90.96111655
+21,Dataset\test\118.jpg,0,white_leaf_disease,97.97226787
+22,Dataset\test\119.jpg,0,white_leaf_disease,91.24032259
+23,Dataset\test\12.jpg,0,white_leaf_disease,98.39106798
+24,Dataset\test\120.jpg,0,white_leaf_disease,99.80735779
+25,Dataset\test\121.jpg,0,white_leaf_disease,94.79869008
+26,Dataset\test\122.jpg,0,white_leaf_disease,95.02190351
+27,Dataset\test\123.jpg,0,white_leaf_disease,96.45120502
+28,Dataset\test\124.jpg,0,white_leaf_disease,78.05078626
+29,Dataset\test\125.jpg,0,white_leaf_disease,97.61882424
+30,Dataset\test\126.jpg,0,white_leaf_disease,75.15600324
+31,Dataset\test\127.jpg,0,white_leaf_disease,99.73062277
+32,Dataset\test\128.jpg,0,white_leaf_disease,98.22262526
+33,Dataset\test\129.jpg,0,white_leaf_disease,99.49005246
+34,Dataset\test\13.jpg,0,white_leaf_disease,99.87222552
+35,Dataset\test\130.jpg,0,white_leaf_disease,93.88723969
+36,Dataset\test\131.jpg,0,white_leaf_disease,96.71699405
+37,Dataset\test\132.jpg,1,narrow_brown_spot_disease,48.12842906
+38,Dataset\test\133.jpg,0,white_leaf_disease,70.68971992
+39,Dataset\test\134.jpg,0,white_leaf_disease,64.04020786
+40,Dataset\test\135.jpg,0,white_leaf_disease,73.50739837
+41,Dataset\test\136.jpg,0,white_leaf_disease,95.66165805
+42,Dataset\test\137.jpg,0,white_leaf_disease,84.74226594
+43,Dataset\test\138.jpg,1,narrow_brown_spot_disease,50.0043273
+44,Dataset\test\139.jpg,0,white_leaf_disease,89.48580623
+45,Dataset\test\14.jpg,0,white_leaf_disease,100
+46,Dataset\test\140.jpg,0,white_leaf_disease,95.97939849
+47,Dataset\test\141.jpg,0,white_leaf_disease,99.63145852
+48,Dataset\test\142.jpg,0,white_leaf_disease,99.63614345
+49,Dataset\test\143.jpg,0,white_leaf_disease,90.40007591
+50,Dataset\test\144.jpg,0,white_leaf_disease,99.98722076
+51,Dataset\test\145.jpg,0,white_leaf_disease,99.67430234
+52,Dataset\test\146.jpg,0,white_leaf_disease,96.41252756
+53,Dataset\test\147.jpg,0,white_leaf_disease,99.97070432
+54,Dataset\test\148.jpg,0,white_leaf_disease,76.6803503
+55,Dataset\test\149.jpg,0,white_leaf_disease,99.9391675
+56,Dataset\test\15.jpg,0,white_leaf_disease,99.99206066
+57,Dataset\test\150.jpg,0,white_leaf_disease,98.94451499
+58,Dataset\test\151.jpg,0,white_leaf_disease,52.63592005
+59,Dataset\test\152.jpg,0,white_leaf_disease,93.40991378
+60,Dataset\test\153.jpg,0,white_leaf_disease,99.99765158
+61,Dataset\test\154.jpg,0,white_leaf_disease,99.99694824
+62,Dataset\test\155.jpg,0,white_leaf_disease,99.71006513
+63,Dataset\test\156.jpg,0,white_leaf_disease,99.94466901
+64,Dataset\test\157.jpg,0,white_leaf_disease,99.96865988
+65,Dataset\test\158.jpg,0,white_leaf_disease,99.25336838
+66,Dataset\test\159.jpg,0,white_leaf_disease,99.93157387
+67,Dataset\test\16.jpg,0,white_leaf_disease,99.96842146
+68,Dataset\test\160.jpg,0,white_leaf_disease,98.84545803
+69,Dataset\test\161.jpg,0,white_leaf_disease,99.99895096
+70,Dataset\test\162.jpg,0,white_leaf_disease,99.36297536
+71,Dataset\test\163.jpg,0,white_leaf_disease,99.85004663
+72,Dataset\test\164.jpg,0,white_leaf_disease,99.99915361
+73,Dataset\test\165.jpg,0,white_leaf_disease,97.99258113
+74,Dataset\test\166.jpg,0,white_leaf_disease,97.99258113
+75,Dataset\test\167.jpg,0,white_leaf_disease,99.98150468
+76,Dataset\test\168.jpg,0,white_leaf_disease,99.42221045
+77,Dataset\test\169.jpg,0,white_leaf_disease,99.47028756
+78,Dataset\test\17.jpg,0,white_leaf_disease,99.94932413
+79,Dataset\test\170.jpg,0,white_leaf_disease,99.12700653
+80,Dataset\test\171.jpg,0,white_leaf_disease,97.6569593
+81,Dataset\test\172.jpg,0,white_leaf_disease,95.03461719
+82,Dataset\test\173.jpg,0,white_leaf_disease,99.59518909
+83,Dataset\test\174.jpg,0,white_leaf_disease,97.20617533
+84,Dataset\test\175.jpg,0,white_leaf_disease,99.99425411
+85,Dataset\test\176.jpg,0,white_leaf_disease,99.78201389
+86,Dataset\test\177.jpg,0,white_leaf_disease,99.85969663
+87,Dataset\test\178.jpg,0,white_leaf_disease,99.93187189
+88,Dataset\test\179.jpg,0,white_leaf_disease,99.92188215
+89,Dataset\test\18.jpg,0,white_leaf_disease,99.99991655
+90,Dataset\test\180.jpg,0,white_leaf_disease,99.94243383
+91,Dataset\test\181.jpg,0,white_leaf_disease,99.94243383
+92,Dataset\test\182.jpg,0,white_leaf_disease,99.9874115
+93,Dataset\test\183.jpg,0,white_leaf_disease,99.9874115
+94,Dataset\test\184.jpg,0,white_leaf_disease,99.57941771
+95,Dataset\test\185.jpg,0,white_leaf_disease,99.57941771
+96,Dataset\test\186.jpg,0,white_leaf_disease,99.86516833
+97,Dataset\test\187.jpg,0,white_leaf_disease,99.86516833
+98,Dataset\test\188.jpg,0,white_leaf_disease,95.88105679
+99,Dataset\test\189.jpg,0,white_leaf_disease,95.88105679
+100,Dataset\test\19.jpg,0,white_leaf_disease,99.99557734
+101,Dataset\test\190.jpg,0,white_leaf_disease,99.5426476
+102,Dataset\test\191.jpg,0,white_leaf_disease,78.53714824
+103,Dataset\test\192.jpg,0,white_leaf_disease,99.07158613
+104,Dataset\test\193.jpg,0,white_leaf_disease,99.70362186
+105,Dataset\test\194.jpg,0,white_leaf_disease,99.99899864
+106,Dataset\test\195.jpg,0,white_leaf_disease,99.96221066
+107,Dataset\test\196.jpg,0,white_leaf_disease,99.98960495
+108,Dataset\test\197.jpg,0,white_leaf_disease,99.91970658
+109,Dataset\test\198.jpg,0,white_leaf_disease,99.94612336
+110,Dataset\test\199.jpg,0,white_leaf_disease,99.87946749
+111,Dataset\test\2.jpg,0,white_leaf_disease,99.9986887
+112,Dataset\test\20.jpg,0,white_leaf_disease,99.99933243
+113,Dataset\test\200.jpg,0,white_leaf_disease,99.61938858
+114,Dataset\test\201.jpg,0,white_leaf_disease,98.81993532
+115,Dataset\test\202.jpg,0,white_leaf_disease,99.6384263
+116,Dataset\test\203.jpg,0,white_leaf_disease,99.50464964
+117,Dataset\test\204.jpg,1,narrow_brown_spot_disease,69.47468519
+118,Dataset\test\205.jpg,1,narrow_brown_spot_disease,68.99558306
+119,Dataset\test\206.jpg,1,narrow_brown_spot_disease,87.19457388
+120,Dataset\test\207.jpg,1,narrow_brown_spot_disease,61.53795123
+121,Dataset\test\208.jpg,1,narrow_brown_spot_disease,74.46040511
+122,Dataset\test\209.jpg,0,white_leaf_disease,97.74822593
+123,Dataset\test\21.jpg,0,white_leaf_disease,99.42717552
+124,Dataset\test\210.jpg,0,white_leaf_disease,98.55538011
+125,Dataset\test\211.jpg,1,narrow_brown_spot_disease,84.13831592
+126,Dataset\test\212.jpg,1,narrow_brown_spot_disease,92.13205576
+127,Dataset\test\213.jpg,1,narrow_brown_spot_disease,63.20156455
+128,Dataset\test\214.jpg,1,narrow_brown_spot_disease,88.38515878
+129,Dataset\test\215.jpg,0,white_leaf_disease,99.9997139
+130,Dataset\test\216.jpg,0,white_leaf_disease,99.99465942
+131,Dataset\test\217.jpg,0,white_leaf_disease,99.95767474
+132,Dataset\test\218.jpg,0,white_leaf_disease,99.97753501
+133,Dataset\test\219.jpg,0,white_leaf_disease,99.99830723
+134,Dataset\test\22.jpg,0,white_leaf_disease,99.92606044
+135,Dataset\test\220.jpg,1,narrow_brown_spot_disease,99.92777705
+136,Dataset\test\221.jpg,0,white_leaf_disease,99.99997616
+137,Dataset\test\222.jpg,0,white_leaf_disease,98.64915013
+138,Dataset\test\223.jpg,0,white_leaf_disease,99.86367822
+139,Dataset\test\224.jpg,0,white_leaf_disease,99.92831349
+140,Dataset\test\225.jpg,0,white_leaf_disease,95.82569599
+141,Dataset\test\226.jpg,0,white_leaf_disease,99.20036197
+142,Dataset\test\227.jpg,0,white_leaf_disease,91.05734825
+143,Dataset\test\228.jpg,0,white_leaf_disease,98.18583727
+144,Dataset\test\229.jpg,0,white_leaf_disease,83.53757858
+145,Dataset\test\23.jpg,0,white_leaf_disease,55.01175523
+146,Dataset\test\230.jpg,0,white_leaf_disease,98.83352518
+147,Dataset\test\231.jpg,0,white_leaf_disease,82.2168529
+148,Dataset\test\232.jpg,0,white_leaf_disease,99.49051142
+149,Dataset\test\233.jpg,0,white_leaf_disease,92.30130315
+150,Dataset\test\234.jpg,0,white_leaf_disease,99.62853193
+151,Dataset\test\235.jpg,0,white_leaf_disease,99.59276319
+152,Dataset\test\236.jpg,0,white_leaf_disease,94.77870464
+153,Dataset\test\237.jpg,1,narrow_brown_spot_disease,72.0115006
+154,Dataset\test\238.jpg,1,narrow_brown_spot_disease,55.53733706
+155,Dataset\test\239.jpg,0,white_leaf_disease,67.58395433
+156,Dataset\test\24.jpg,0,white_leaf_disease,99.8634398
+157,Dataset\test\240.jpg,0,white_leaf_disease,88.09793591
+158,Dataset\test\241.jpg,0,white_leaf_disease,70.17902136
+159,Dataset\test\242.jpg,0,white_leaf_disease,48.08861613
+160,Dataset\test\243.jpg,0,white_leaf_disease,84.71701741
+161,Dataset\test\244.jpg,0,white_leaf_disease,62.96926737
+162,Dataset\test\245.jpg,0,white_leaf_disease,58.14698339
+163,Dataset\test\246.jpg,0,white_leaf_disease,91.27209187
+164,Dataset\test\247.jpg,0,white_leaf_disease,61.41534448
+165,Dataset\test\248.jpg,1,narrow_brown_spot_disease,87.39619851
+166,Dataset\test\249.jpg,1,narrow_brown_spot_disease,84.46566463
+167,Dataset\test\25.jpg,0,white_leaf_disease,99.67523813
+168,Dataset\test\250.jpg,1,narrow_brown_spot_disease,55.19742966
+169,Dataset\test\251.jpg,1,narrow_brown_spot_disease,71.45127654
+170,Dataset\test\252.jpg,1,narrow_brown_spot_disease,65.18136859
+171,Dataset\test\253.jpg,1,narrow_brown_spot_disease,81.22505546
+172,Dataset\test\254.jpg,1,narrow_brown_spot_disease,73.4234333
+173,Dataset\test\255.jpg,1,narrow_brown_spot_disease,82.70061016
+174,Dataset\test\256.jpg,1,narrow_brown_spot_disease,82.27881193
+175,Dataset\test\257.jpg,1,narrow_brown_spot_disease,45.02972066
+176,Dataset\test\258.jpg,1,narrow_brown_spot_disease,59.29644108
+177,Dataset\test\259.jpg,0,white_leaf_disease,52.48074532
+178,Dataset\test\26.jpg,0,white_leaf_disease,99.99859333
+179,Dataset\test\260.jpg,1,narrow_brown_spot_disease,46.05852067
+180,Dataset\test\261.jpg,0,white_leaf_disease,52.48074532
+181,Dataset\test\262.jpg,1,narrow_brown_spot_disease,83.6045146
+182,Dataset\test\263.jpg,1,narrow_brown_spot_disease,45.02972066
+183,Dataset\test\264.jpg,1,narrow_brown_spot_disease,46.05852067
+184,Dataset\test\265.jpg,1,narrow_brown_spot_disease,59.29644108
+185,Dataset\test\266.jpg,1,narrow_brown_spot_disease,68.53538752
+186,Dataset\test\267.jpg,1,narrow_brown_spot_disease,76.47906542
+187,Dataset\test\268.jpg,1,narrow_brown_spot_disease,74.22327995
+188,Dataset\test\269.jpg,1,narrow_brown_spot_disease,66.7036593
+189,Dataset\test\27.jpg,0,white_leaf_disease,99.98880625
+190,Dataset\test\270.jpg,1,narrow_brown_spot_disease,71.39813304
+191,Dataset\test\271.jpg,1,narrow_brown_spot_disease,72.39964008
+192,Dataset\test\272.jpg,1,narrow_brown_spot_disease,68.42187643
+193,Dataset\test\273.jpg,1,narrow_brown_spot_disease,77.87845135
+194,Dataset\test\274.jpg,0,white_leaf_disease,97.96981812
+195,Dataset\test\275.jpg,0,white_leaf_disease,65.91632962
+196,Dataset\test\276.jpg,1,narrow_brown_spot_disease,62.59097457
+197,Dataset\test\277.jpg,0,white_leaf_disease,98.18846583
+198,Dataset\test\278.jpg,0,white_leaf_disease,99.99895096
+199,Dataset\test\279.jpg,0,white_leaf_disease,99.77376461
+200,Dataset\test\28.jpg,0,white_leaf_disease,99.9943614
+201,Dataset\test\280.jpg,0,white_leaf_disease,99.996984
+202,Dataset\test\281.jpg,0,white_leaf_disease,92.95227528
+203,Dataset\test\282.jpg,0,white_leaf_disease,100
+204,Dataset\test\283.jpg,0,white_leaf_disease,99.99943972
+205,Dataset\test\284.jpg,0,white_leaf_disease,97.61158824
+206,Dataset\test\29.jpg,0,white_leaf_disease,99.99991655
+207,Dataset\test\3.jpg,0,white_leaf_disease,67.15014577
+208,Dataset\test\30.jpg,0,white_leaf_disease,99.99985695
+209,Dataset\test\31.jpg,0,white_leaf_disease,99.67531562
+210,Dataset\test\32.jpg,0,white_leaf_disease,99.54589605
+211,Dataset\test\33.jpg,0,white_leaf_disease,99.91961122
+212,Dataset\test\34.jpg,0,white_leaf_disease,99.98772144
+213,Dataset\test\35.jpg,0,white_leaf_disease,99.99982119
+214,Dataset\test\36.jpg,0,white_leaf_disease,99.9999404
+215,Dataset\test\37.jpg,0,white_leaf_disease,100
+216,Dataset\test\38.jpg,0,white_leaf_disease,99.99893904
+217,Dataset\test\39.jpg,0,white_leaf_disease,99.87512827
+218,Dataset\test\4.jpg,0,white_leaf_disease,97.79829979
+219,Dataset\test\40.jpg,0,white_leaf_disease,99.67439175
+220,Dataset\test\41.jpg,0,white_leaf_disease,99.78615642
+221,Dataset\test\42.jpg,0,white_leaf_disease,99.61198568
+222,Dataset\test\43.jpg,0,white_leaf_disease,99.99974966
+223,Dataset\test\44.jpg,0,white_leaf_disease,99.9997139
+224,Dataset\test\45.jpg,0,white_leaf_disease,99.99344349
+225,Dataset\test\46.jpg,0,white_leaf_disease,99.99992847
+226,Dataset\test\47.jpg,0,white_leaf_disease,99.91068244
+227,Dataset\test\48.jpg,0,white_leaf_disease,99.99932051
+228,Dataset\test\49.jpg,0,white_leaf_disease,99.99707937
+229,Dataset\test\5.jpg,0,white_leaf_disease,99.9258697
+230,Dataset\test\50.jpg,0,white_leaf_disease,99.6160388
+231,Dataset\test\51.jpg,0,white_leaf_disease,99.98132586
+232,Dataset\test\52.jpg,0,white_leaf_disease,99.49040413
+233,Dataset\test\53.jpg,0,white_leaf_disease,92.25828648
+234,Dataset\test\54.jpg,0,white_leaf_disease,99.6556282
+235,Dataset\test\55.jpg,0,white_leaf_disease,99.99871254
+236,Dataset\test\56.jpg,0,white_leaf_disease,99.92313385
+237,Dataset\test\57.jpg,0,white_leaf_disease,98.81721139
+238,Dataset\test\58.jpg,0,white_leaf_disease,99.5868206
+239,Dataset\test\59.jpg,0,white_leaf_disease,99.90203381
+240,Dataset\test\6.jpg,0,white_leaf_disease,99.99155998
+241,Dataset\test\60.jpg,0,white_leaf_disease,99.23650026
+242,Dataset\test\61.jpg,0,white_leaf_disease,99.78177547
+243,Dataset\test\62.jpg,0,white_leaf_disease,96.88493609
+244,Dataset\test\63.jpg,0,white_leaf_disease,94.96259093
+245,Dataset\test\64.jpg,0,white_leaf_disease,99.91664886
+246,Dataset\test\65.jpg,0,white_leaf_disease,90.60937762
+247,Dataset\test\66.jpg,0,white_leaf_disease,90.13125896
+248,Dataset\test\67.jpg,0,white_leaf_disease,99.74351525
+249,Dataset\test\68.jpg,0,white_leaf_disease,97.76576757
+250,Dataset\test\69.jpg,0,white_leaf_disease,98.80359769
+251,Dataset\test\7.jpg,0,white_leaf_disease,99.3961513
+252,Dataset\test\70.jpg,0,white_leaf_disease,99.89290833
+253,Dataset\test\71.jpg,0,white_leaf_disease,99.26356673
+254,Dataset\test\72.jpg,0,white_leaf_disease,99.27762747
+255,Dataset\test\73.jpg,0,white_leaf_disease,99.96355772
+256,Dataset\test\74.jpg,0,white_leaf_disease,97.48845696
+257,Dataset\test\75.jpg,0,white_leaf_disease,84.02514458
+258,Dataset\test\76.jpg,0,white_leaf_disease,95.83812952
+259,Dataset\test\77.jpg,0,white_leaf_disease,91.14814401
+260,Dataset\test\78.jpg,0,white_leaf_disease,98.46396446
+261,Dataset\test\79.jpg,0,white_leaf_disease,99.72653389
+262,Dataset\test\8.jpg,0,white_leaf_disease,73.72839451
+263,Dataset\test\80.jpg,0,white_leaf_disease,99.51920509
+264,Dataset\test\81.jpg,0,white_leaf_disease,99.54414368
+265,Dataset\test\82.jpg,0,white_leaf_disease,99.0629375
+266,Dataset\test\83.jpg,0,white_leaf_disease,89.25191164
+267,Dataset\test\84.jpg,0,white_leaf_disease,98.50763679
+268,Dataset\test\85.jpg,0,white_leaf_disease,99.27282333
+269,Dataset\test\86.jpg,0,white_leaf_disease,87.30195165
+270,Dataset\test\87.jpg,0,white_leaf_disease,98.90912175
+271,Dataset\test\88.jpg,0,white_leaf_disease,98.45585227
+272,Dataset\test\89.jpg,0,white_leaf_disease,83.2080245
+273,Dataset\test\9.jpg,0,white_leaf_disease,99.40151572
+274,Dataset\test\90.jpg,0,white_leaf_disease,86.88078523
+275,Dataset\test\91.jpg,0,white_leaf_disease,98.87858629
+276,Dataset\test\92.jpg,0,white_leaf_disease,99.96187687
+277,Dataset\test\93.jpg,0,white_leaf_disease,99.97920394
+278,Dataset\test\94.jpg,0,white_leaf_disease,85.26408672
+279,Dataset\test\95.jpg,0,white_leaf_disease,99.84931946
+280,Dataset\test\96.jpg,0,white_leaf_disease,99.98237491
+281,Dataset\test\97.jpg,0,white_leaf_disease,99.47512746
+282,Dataset\test\98.jpg,0,white_leaf_disease,97.28603363
+283,Dataset\test\99.jpg,0,white_leaf_disease,98.31804633
+284,Dataset\test\abc (1).jpg,1,narrow_brown_spot_disease,51.73960924
+285,Dataset\test\abc (10).jpg,0,white_leaf_disease,99.04500842
+286,Dataset\test\abc (11).jpg,0,white_leaf_disease,79.22921777
+287,Dataset\test\abc (12).jpg,0,white_leaf_disease,96.94181681
+288,Dataset\test\abc (13).jpg,0,white_leaf_disease,90.30159116
+289,Dataset\test\abc (14).jpg,0,white_leaf_disease,46.47532403
+290,Dataset\test\abc (15).jpg,0,white_leaf_disease,92.78722405
+291,Dataset\test\abc (16).jpg,0,white_leaf_disease,95.10558248
+292,Dataset\test\abc (17).jpg,0,white_leaf_disease,95.01114488
+293,Dataset\test\abc (18).jpg,0,white_leaf_disease,88.77708316
+294,Dataset\test\abc (19).jpg,0,white_leaf_disease,98.6361146
+295,Dataset\test\abc (2).jpg,1,narrow_brown_spot_disease,52.86635756
+296,Dataset\test\abc (20).jpg,0,white_leaf_disease,93.92088056
+297,Dataset\test\abc (21).jpg,0,white_leaf_disease,96.94618583
+298,Dataset\test\abc (22).jpg,0,white_leaf_disease,99.43948984
+299,Dataset\test\abc (23).jpg,0,white_leaf_disease,99.04100895
+300,Dataset\test\abc (24).jpg,0,white_leaf_disease,99.01893735
+301,Dataset\test\abc (25).jpg,0,white_leaf_disease,97.27430344
+302,Dataset\test\abc (26).jpg,0,white_leaf_disease,97.63192534
+303,Dataset\test\abc (27).jpg,0,white_leaf_disease,93.67821813
+304,Dataset\test\abc (28).jpg,0,white_leaf_disease,99.78501797
+305,Dataset\test\abc (29).jpg,0,white_leaf_disease,91.5025413
+306,Dataset\test\abc (3).jpg,0,white_leaf_disease,98.50506783
+307,Dataset\test\abc (30).jpg,0,white_leaf_disease,98.33865762
+308,Dataset\test\abc (31).jpg,0,white_leaf_disease,95.08743882
+309,Dataset\test\abc (32).jpg,0,white_leaf_disease,98.30533862
+310,Dataset\test\abc (33).jpg,0,white_leaf_disease,94.35645938
+311,Dataset\test\abc (34).jpg,0,white_leaf_disease,96.57752514
+312,Dataset\test\abc (35).jpg,0,white_leaf_disease,73.82183671
+313,Dataset\test\abc (36).jpg,0,white_leaf_disease,96.90682888
+314,Dataset\test\abc (37).jpg,0,white_leaf_disease,81.10938668
+315,Dataset\test\abc (38).jpg,0,white_leaf_disease,95.03900409
+316,Dataset\test\abc (39).jpg,0,white_leaf_disease,94.28930283
+317,Dataset\test\abc (4).jpg,0,white_leaf_disease,99.64649677
+318,Dataset\test\abc (40).jpg,0,white_leaf_disease,97.58412838
+319,Dataset\test\abc (41).jpg,0,white_leaf_disease,98.48052859
+320,Dataset\test\abc (42).jpg,0,white_leaf_disease,96.69294357
+321,Dataset\test\abc (43).jpg,0,white_leaf_disease,84.21756625
+322,Dataset\test\abc (44).jpg,0,white_leaf_disease,47.46806622
+323,Dataset\test\abc (45).jpg,0,white_leaf_disease,93.99449229
+324,Dataset\test\abc (46).jpg,0,white_leaf_disease,99.90133047
+325,Dataset\test\abc (47).jpg,0,white_leaf_disease,95.32548189
+326,Dataset\test\abc (48).jpg,0,white_leaf_disease,99.44144487
+327,Dataset\test\abc (49).jpg,0,white_leaf_disease,94.25035715
+328,Dataset\test\abc (5).jpg,0,white_leaf_disease,78.06229591
+329,Dataset\test\abc (50).jpg,0,white_leaf_disease,91.1074698
+330,Dataset\test\abc (51).jpg,0,white_leaf_disease,99.96440411
+331,Dataset\test\abc (52).jpg,0,white_leaf_disease,99.7386992
+332,Dataset\test\abc (53).jpg,0,white_leaf_disease,98.81617427
+333,Dataset\test\abc (54).jpg,0,white_leaf_disease,99.96292591
+334,Dataset\test\abc (55).jpg,0,white_leaf_disease,99.86633062
+335,Dataset\test\abc (56).jpg,0,white_leaf_disease,91.4300561
+336,Dataset\test\abc (57).jpg,0,white_leaf_disease,97.78200984
+337,Dataset\test\abc (58).jpg,2,ring_spot_disease,91.86030626
+338,Dataset\test\abc (59).jpg,2,ring_spot_disease,41.28972888
+339,Dataset\test\abc (6).jpg,0,white_leaf_disease,76.29131079
+340,Dataset\test\abc (60).jpg,0,white_leaf_disease,40.59115648
+341,Dataset\test\abc (61).jpg,1,narrow_brown_spot_disease,59.62453485
+342,Dataset\test\abc (7).jpg,0,white_leaf_disease,88.29392195
+343,Dataset\test\abc (8).jpg,0,white_leaf_disease,97.45883942
+344,Dataset\test\abc (9).jpg,0,white_leaf_disease,79.74998951
+,,,,
+max_acc,,,,100
+min_acc,,,,40.59115648
+avg_acc,,,,91.09877977
+class 0,,,,301
+class 1,,,,42
+class 2,,,,2

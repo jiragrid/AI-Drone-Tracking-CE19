@@ -49,13 +49,13 @@ print("initialize ...")
 print("set config ...")
 dataset_path = "./Dataset/train/"
 model_path = "./SugarcaneDisease/Class/"
-save_path = './SugarcaneDisease/Model/Save'
+save_path = './SugarcaneDisease/Model/Save/CNN'
 label_files = "labels.csv"
 image_height = 256
 image_width = 256
 batch_size = 8
 total_epochs = 20
-image_shape = [image_width, image_height, 3]
+image_shape = (image_width, image_height, 3)
 test_ratio = 0.2
 validation_ratio = 0.2
 seed = 1919
@@ -102,7 +102,7 @@ first_image = image_batch[0]
 print(np.min(first_image), np.max(first_image)) 
 
 print("Create Model ...")
-num_classes = 2
+num_classes = 3
 data_augmentation = keras.Sequential(
   [
     layers.experimental.preprocessing.RandomFlip("horizontal", input_shape=image_shape),
@@ -113,11 +113,11 @@ data_augmentation = keras.Sequential(
 model = Sequential([
     data_augmentation,
     layers.Conv2D(64, 3, padding='same', activation='relu'),
-    layers.MaxPooling2D(2, 2),
+    layers.MaxPooling2D(),
     layers.Conv2D(32, 3, padding='same', activation='relu'),
-    layers.MaxPooling2D(2, 2),
-    layers.Conv2D(32, 3, padding='same', activation='relu'),
-    layers.MaxPooling2D(2, 2),
+    layers.MaxPooling2D(),
+    layers.Conv2D(16, 3, padding='same', activation='relu'),
+    layers.MaxPooling2D(),
     layers.Flatten(),
     layers.Dense(128, activation='relu'),
     layers.Dense(num_classes)
