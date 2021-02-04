@@ -1,0 +1,346 @@
+,file_path,class_no,class_name,accuracy
+0,Dataset\test\1.jpg,1,narrow_brown_spot_disease,61.99193000793457
+1,Dataset\test\10.jpg,0,white_leaf_disease,54.92691397666931
+2,Dataset\test\100.jpg,2,ring_spot_disease,76.76807045936584
+3,Dataset\test\101.jpg,1,narrow_brown_spot_disease,45.72654664516449
+4,Dataset\test\102.jpg,2,ring_spot_disease,76.76807045936584
+5,Dataset\test\103.jpg,2,ring_spot_disease,37.05816864967346
+6,Dataset\test\104.jpg,2,ring_spot_disease,56.50610327720642
+7,Dataset\test\105.jpg,0,white_leaf_disease,46.498581767082214
+8,Dataset\test\106.jpg,2,ring_spot_disease,48.906612396240234
+9,Dataset\test\107.jpg,2,ring_spot_disease,47.360461950302124
+10,Dataset\test\108.jpg,2,ring_spot_disease,76.76807045936584
+11,Dataset\test\109.jpg,2,ring_spot_disease,76.76807045936584
+12,Dataset\test\11.jpg,2,ring_spot_disease,76.76807045936584
+13,Dataset\test\110.jpg,2,ring_spot_disease,76.76807045936584
+14,Dataset\test\111.jpg,2,ring_spot_disease,76.76807045936584
+15,Dataset\test\112.jpg,2,ring_spot_disease,76.76807045936584
+16,Dataset\test\113.jpg,2,ring_spot_disease,76.76807045936584
+17,Dataset\test\114.jpg,2,ring_spot_disease,76.76807045936584
+18,Dataset\test\115.jpg,2,ring_spot_disease,76.76807045936584
+19,Dataset\test\116.jpg,2,ring_spot_disease,76.76807045936584
+20,Dataset\test\117.jpg,2,ring_spot_disease,76.76807045936584
+21,Dataset\test\118.jpg,2,ring_spot_disease,76.76807045936584
+22,Dataset\test\119.jpg,2,ring_spot_disease,76.76807045936584
+23,Dataset\test\12.jpg,0,white_leaf_disease,47.22157120704651
+24,Dataset\test\120.jpg,2,ring_spot_disease,43.246787786483765
+25,Dataset\test\121.jpg,2,ring_spot_disease,76.76807045936584
+26,Dataset\test\122.jpg,2,ring_spot_disease,76.76807045936584
+27,Dataset\test\123.jpg,2,ring_spot_disease,76.76807045936584
+28,Dataset\test\124.jpg,2,ring_spot_disease,64.55458998680115
+29,Dataset\test\125.jpg,2,ring_spot_disease,76.76807045936584
+30,Dataset\test\126.jpg,2,ring_spot_disease,76.76807045936584
+31,Dataset\test\127.jpg,2,ring_spot_disease,76.76807045936584
+32,Dataset\test\128.jpg,2,ring_spot_disease,54.39217686653137
+33,Dataset\test\129.jpg,2,ring_spot_disease,76.76807045936584
+34,Dataset\test\13.jpg,0,white_leaf_disease,37.722644209861755
+35,Dataset\test\130.jpg,2,ring_spot_disease,76.76807045936584
+36,Dataset\test\131.jpg,2,ring_spot_disease,76.76807045936584
+37,Dataset\test\132.jpg,2,ring_spot_disease,76.76807045936584
+38,Dataset\test\133.jpg,2,ring_spot_disease,76.76807045936584
+39,Dataset\test\134.jpg,2,ring_spot_disease,76.76807045936584
+40,Dataset\test\135.jpg,2,ring_spot_disease,76.76807045936584
+41,Dataset\test\136.jpg,2,ring_spot_disease,76.76807045936584
+42,Dataset\test\137.jpg,2,ring_spot_disease,76.76807045936584
+43,Dataset\test\138.jpg,2,ring_spot_disease,76.76807045936584
+44,Dataset\test\139.jpg,2,ring_spot_disease,76.76807045936584
+45,Dataset\test\14.jpg,2,ring_spot_disease,59.2753529548645
+46,Dataset\test\140.jpg,2,ring_spot_disease,76.76807045936584
+47,Dataset\test\141.jpg,2,ring_spot_disease,76.76807045936584
+48,Dataset\test\142.jpg,0,white_leaf_disease,56.28836750984192
+49,Dataset\test\143.jpg,2,ring_spot_disease,74.46533441543579
+50,Dataset\test\144.jpg,0,white_leaf_disease,47.08334505558014
+51,Dataset\test\145.jpg,0,white_leaf_disease,44.30028796195984
+52,Dataset\test\146.jpg,2,ring_spot_disease,73.1293261051178
+53,Dataset\test\147.jpg,2,ring_spot_disease,76.76807045936584
+54,Dataset\test\148.jpg,2,ring_spot_disease,76.76807045936584
+55,Dataset\test\149.jpg,2,ring_spot_disease,76.76807045936584
+56,Dataset\test\15.jpg,2,ring_spot_disease,83.24880003929138
+57,Dataset\test\150.jpg,0,white_leaf_disease,62.069594860076904
+58,Dataset\test\151.jpg,2,ring_spot_disease,76.76807045936584
+59,Dataset\test\152.jpg,2,ring_spot_disease,76.76807045936584
+60,Dataset\test\153.jpg,0,white_leaf_disease,46.08004093170166
+61,Dataset\test\154.jpg,0,white_leaf_disease,63.10543417930603
+62,Dataset\test\155.jpg,2,ring_spot_disease,76.76807045936584
+63,Dataset\test\156.jpg,2,ring_spot_disease,53.30306887626648
+64,Dataset\test\157.jpg,2,ring_spot_disease,52.56539583206177
+65,Dataset\test\158.jpg,2,ring_spot_disease,76.95577144622803
+66,Dataset\test\159.jpg,2,ring_spot_disease,68.72202754020691
+67,Dataset\test\16.jpg,0,white_leaf_disease,93.9050018787384
+68,Dataset\test\160.jpg,0,white_leaf_disease,39.45982754230499
+69,Dataset\test\161.jpg,2,ring_spot_disease,76.95189118385315
+70,Dataset\test\162.jpg,1,narrow_brown_spot_disease,83.77909660339355
+71,Dataset\test\163.jpg,2,ring_spot_disease,70.83253264427185
+72,Dataset\test\164.jpg,2,ring_spot_disease,51.10480785369873
+73,Dataset\test\165.jpg,2,ring_spot_disease,76.76807045936584
+74,Dataset\test\166.jpg,2,ring_spot_disease,76.76807045936584
+75,Dataset\test\167.jpg,1,narrow_brown_spot_disease,89.79445695877075
+76,Dataset\test\168.jpg,0,white_leaf_disease,71.07418775558472
+77,Dataset\test\169.jpg,2,ring_spot_disease,76.76807045936584
+78,Dataset\test\17.jpg,1,narrow_brown_spot_disease,55.62359690666199
+79,Dataset\test\170.jpg,2,ring_spot_disease,76.76807045936584
+80,Dataset\test\171.jpg,2,ring_spot_disease,76.30087733268738
+81,Dataset\test\172.jpg,2,ring_spot_disease,72.64360189437866
+82,Dataset\test\173.jpg,2,ring_spot_disease,76.76807045936584
+83,Dataset\test\174.jpg,2,ring_spot_disease,76.76807045936584
+84,Dataset\test\175.jpg,2,ring_spot_disease,76.76807045936584
+85,Dataset\test\176.jpg,0,white_leaf_disease,52.38558053970337
+86,Dataset\test\177.jpg,2,ring_spot_disease,73.22584390640259
+87,Dataset\test\178.jpg,2,ring_spot_disease,76.76807045936584
+88,Dataset\test\179.jpg,2,ring_spot_disease,76.76807045936584
+89,Dataset\test\18.jpg,0,white_leaf_disease,99.55143332481384
+90,Dataset\test\180.jpg,2,ring_spot_disease,74.1685152053833
+91,Dataset\test\181.jpg,2,ring_spot_disease,74.1685152053833
+92,Dataset\test\182.jpg,2,ring_spot_disease,75.30556917190552
+93,Dataset\test\183.jpg,2,ring_spot_disease,75.30556917190552
+94,Dataset\test\184.jpg,1,narrow_brown_spot_disease,43.06196570396423
+95,Dataset\test\185.jpg,1,narrow_brown_spot_disease,43.06196570396423
+96,Dataset\test\186.jpg,0,white_leaf_disease,87.14075088500977
+97,Dataset\test\187.jpg,0,white_leaf_disease,87.14075088500977
+98,Dataset\test\188.jpg,2,ring_spot_disease,51.395606994628906
+99,Dataset\test\189.jpg,2,ring_spot_disease,51.395606994628906
+100,Dataset\test\19.jpg,2,ring_spot_disease,77.20139622688293
+101,Dataset\test\190.jpg,2,ring_spot_disease,59.29139256477356
+102,Dataset\test\191.jpg,0,white_leaf_disease,80.68731427192688
+103,Dataset\test\192.jpg,2,ring_spot_disease,64.02096152305603
+104,Dataset\test\193.jpg,1,narrow_brown_spot_disease,60.88775992393494
+105,Dataset\test\194.jpg,2,ring_spot_disease,45.68428099155426
+106,Dataset\test\195.jpg,0,white_leaf_disease,39.776524901390076
+107,Dataset\test\196.jpg,2,ring_spot_disease,76.76807045936584
+108,Dataset\test\197.jpg,2,ring_spot_disease,76.76807045936584
+109,Dataset\test\198.jpg,2,ring_spot_disease,45.38147747516632
+110,Dataset\test\199.jpg,2,ring_spot_disease,56.34816884994507
+111,Dataset\test\2.jpg,1,narrow_brown_spot_disease,94.01406645774841
+112,Dataset\test\20.jpg,2,ring_spot_disease,66.89278483390808
+113,Dataset\test\200.jpg,2,ring_spot_disease,45.65848112106323
+114,Dataset\test\201.jpg,0,white_leaf_disease,57.614171504974365
+115,Dataset\test\202.jpg,2,ring_spot_disease,50.46498775482178
+116,Dataset\test\203.jpg,0,white_leaf_disease,73.72569441795349
+117,Dataset\test\204.jpg,2,ring_spot_disease,76.76807045936584
+118,Dataset\test\205.jpg,2,ring_spot_disease,76.76807045936584
+119,Dataset\test\206.jpg,2,ring_spot_disease,76.76807045936584
+120,Dataset\test\207.jpg,2,ring_spot_disease,76.76807045936584
+121,Dataset\test\208.jpg,2,ring_spot_disease,76.76807045936584
+122,Dataset\test\209.jpg,0,white_leaf_disease,40.030455589294434
+123,Dataset\test\21.jpg,2,ring_spot_disease,71.10970616340637
+124,Dataset\test\210.jpg,2,ring_spot_disease,45.18324434757233
+125,Dataset\test\211.jpg,2,ring_spot_disease,53.3391535282135
+126,Dataset\test\212.jpg,2,ring_spot_disease,66.07351899147034
+127,Dataset\test\213.jpg,2,ring_spot_disease,62.2386634349823
+128,Dataset\test\214.jpg,2,ring_spot_disease,42.820972204208374
+129,Dataset\test\215.jpg,2,ring_spot_disease,53.72328162193298
+130,Dataset\test\216.jpg,0,white_leaf_disease,67.08778142929077
+131,Dataset\test\217.jpg,0,white_leaf_disease,54.811131954193115
+132,Dataset\test\218.jpg,0,white_leaf_disease,49.76257085800171
+133,Dataset\test\219.jpg,2,ring_spot_disease,48.14397394657135
+134,Dataset\test\22.jpg,2,ring_spot_disease,45.85700035095215
+135,Dataset\test\220.jpg,1,narrow_brown_spot_disease,99.99991655349731
+136,Dataset\test\221.jpg,1,narrow_brown_spot_disease,43.10440123081207
+137,Dataset\test\222.jpg,2,ring_spot_disease,77.53653526306152
+138,Dataset\test\223.jpg,1,narrow_brown_spot_disease,81.60846829414368
+139,Dataset\test\224.jpg,2,ring_spot_disease,47.12511599063873
+140,Dataset\test\225.jpg,2,ring_spot_disease,61.96078658103943
+141,Dataset\test\226.jpg,0,white_leaf_disease,35.027968883514404
+142,Dataset\test\227.jpg,1,narrow_brown_spot_disease,79.24748063087463
+143,Dataset\test\228.jpg,2,ring_spot_disease,43.1958794593811
+144,Dataset\test\229.jpg,2,ring_spot_disease,45.65994143486023
+145,Dataset\test\23.jpg,2,ring_spot_disease,76.2191653251648
+146,Dataset\test\230.jpg,0,white_leaf_disease,59.13722515106201
+147,Dataset\test\231.jpg,0,white_leaf_disease,72.32683300971985
+148,Dataset\test\232.jpg,0,white_leaf_disease,60.761892795562744
+149,Dataset\test\233.jpg,0,white_leaf_disease,52.304184436798096
+150,Dataset\test\234.jpg,1,narrow_brown_spot_disease,41.73301160335541
+151,Dataset\test\235.jpg,2,ring_spot_disease,54.021668434143066
+152,Dataset\test\236.jpg,2,ring_spot_disease,76.76807045936584
+153,Dataset\test\237.jpg,2,ring_spot_disease,64.61099982261658
+154,Dataset\test\238.jpg,2,ring_spot_disease,76.76807045936584
+155,Dataset\test\239.jpg,2,ring_spot_disease,76.76807045936584
+156,Dataset\test\24.jpg,1,narrow_brown_spot_disease,88.20390701293945
+157,Dataset\test\240.jpg,2,ring_spot_disease,46.87269330024719
+158,Dataset\test\241.jpg,2,ring_spot_disease,76.76807045936584
+159,Dataset\test\242.jpg,2,ring_spot_disease,72.7892279624939
+160,Dataset\test\243.jpg,2,ring_spot_disease,76.95614695549011
+161,Dataset\test\244.jpg,2,ring_spot_disease,76.21680498123169
+162,Dataset\test\245.jpg,0,white_leaf_disease,89.78033661842346
+163,Dataset\test\246.jpg,2,ring_spot_disease,76.76807045936584
+164,Dataset\test\247.jpg,2,ring_spot_disease,76.76807045936584
+165,Dataset\test\248.jpg,2,ring_spot_disease,76.76807045936584
+166,Dataset\test\249.jpg,2,ring_spot_disease,76.76807045936584
+167,Dataset\test\25.jpg,2,ring_spot_disease,76.76807045936584
+168,Dataset\test\250.jpg,2,ring_spot_disease,76.76807045936584
+169,Dataset\test\251.jpg,2,ring_spot_disease,76.76807045936584
+170,Dataset\test\252.jpg,2,ring_spot_disease,76.76807045936584
+171,Dataset\test\253.jpg,2,ring_spot_disease,76.76807045936584
+172,Dataset\test\254.jpg,2,ring_spot_disease,76.76807045936584
+173,Dataset\test\255.jpg,2,ring_spot_disease,76.76807045936584
+174,Dataset\test\256.jpg,2,ring_spot_disease,76.76807045936584
+175,Dataset\test\257.jpg,2,ring_spot_disease,70.81884145736694
+176,Dataset\test\258.jpg,2,ring_spot_disease,76.76807045936584
+177,Dataset\test\259.jpg,2,ring_spot_disease,75.37970542907715
+178,Dataset\test\26.jpg,2,ring_spot_disease,76.81587338447571
+179,Dataset\test\260.jpg,2,ring_spot_disease,79.27717566490173
+180,Dataset\test\261.jpg,2,ring_spot_disease,75.37970542907715
+181,Dataset\test\262.jpg,2,ring_spot_disease,76.76807045936584
+182,Dataset\test\263.jpg,2,ring_spot_disease,70.81884145736694
+183,Dataset\test\264.jpg,2,ring_spot_disease,79.27717566490173
+184,Dataset\test\265.jpg,2,ring_spot_disease,76.76807045936584
+185,Dataset\test\266.jpg,2,ring_spot_disease,76.76807045936584
+186,Dataset\test\267.jpg,2,ring_spot_disease,76.76807045936584
+187,Dataset\test\268.jpg,2,ring_spot_disease,76.76807045936584
+188,Dataset\test\269.jpg,2,ring_spot_disease,76.76807045936584
+189,Dataset\test\27.jpg,0,white_leaf_disease,75.05684494972229
+190,Dataset\test\270.jpg,2,ring_spot_disease,76.76807045936584
+191,Dataset\test\271.jpg,2,ring_spot_disease,76.76807045936584
+192,Dataset\test\272.jpg,2,ring_spot_disease,76.76807045936584
+193,Dataset\test\273.jpg,2,ring_spot_disease,44.86634135246277
+194,Dataset\test\274.jpg,2,ring_spot_disease,48.68399202823639
+195,Dataset\test\275.jpg,0,white_leaf_disease,35.826969146728516
+196,Dataset\test\276.jpg,0,white_leaf_disease,55.48803210258484
+197,Dataset\test\277.jpg,2,ring_spot_disease,72.99326658248901
+198,Dataset\test\278.jpg,2,ring_spot_disease,77.03329920768738
+199,Dataset\test\279.jpg,2,ring_spot_disease,74.57411885261536
+200,Dataset\test\28.jpg,2,ring_spot_disease,64.40274119377136
+201,Dataset\test\280.jpg,2,ring_spot_disease,62.179726362228394
+202,Dataset\test\281.jpg,2,ring_spot_disease,76.76807045936584
+203,Dataset\test\282.jpg,2,ring_spot_disease,77.18116641044617
+204,Dataset\test\283.jpg,2,ring_spot_disease,55.09691834449768
+205,Dataset\test\284.jpg,2,ring_spot_disease,76.76807045936584
+206,Dataset\test\29.jpg,0,white_leaf_disease,38.74022364616394
+207,Dataset\test\3.jpg,1,narrow_brown_spot_disease,61.22967600822449
+208,Dataset\test\30.jpg,0,white_leaf_disease,86.74051761627197
+209,Dataset\test\31.jpg,2,ring_spot_disease,76.76807045936584
+210,Dataset\test\32.jpg,2,ring_spot_disease,76.76807045936584
+211,Dataset\test\33.jpg,2,ring_spot_disease,76.15994215011597
+212,Dataset\test\34.jpg,2,ring_spot_disease,62.73183822631836
+213,Dataset\test\35.jpg,2,ring_spot_disease,57.11004137992859
+214,Dataset\test\36.jpg,1,narrow_brown_spot_disease,75.45990347862244
+215,Dataset\test\37.jpg,0,white_leaf_disease,50.91586709022522
+216,Dataset\test\38.jpg,0,white_leaf_disease,77.6895523071289
+217,Dataset\test\39.jpg,2,ring_spot_disease,78.69223356246948
+218,Dataset\test\4.jpg,2,ring_spot_disease,76.76807045936584
+219,Dataset\test\40.jpg,2,ring_spot_disease,82.87217020988464
+220,Dataset\test\41.jpg,2,ring_spot_disease,73.73006343841553
+221,Dataset\test\42.jpg,2,ring_spot_disease,56.63902759552002
+222,Dataset\test\43.jpg,2,ring_spot_disease,43.03591251373291
+223,Dataset\test\44.jpg,2,ring_spot_disease,76.39572620391846
+224,Dataset\test\45.jpg,2,ring_spot_disease,70.17542123794556
+225,Dataset\test\46.jpg,1,narrow_brown_spot_disease,59.65591073036194
+226,Dataset\test\47.jpg,2,ring_spot_disease,76.76807045936584
+227,Dataset\test\48.jpg,2,ring_spot_disease,54.1063129901886
+228,Dataset\test\49.jpg,2,ring_spot_disease,58.9793860912323
+229,Dataset\test\5.jpg,0,white_leaf_disease,45.96128463745117
+230,Dataset\test\50.jpg,2,ring_spot_disease,76.78757309913635
+231,Dataset\test\51.jpg,0,white_leaf_disease,97.47166037559509
+232,Dataset\test\52.jpg,2,ring_spot_disease,76.76807045936584
+233,Dataset\test\53.jpg,2,ring_spot_disease,76.76807045936584
+234,Dataset\test\54.jpg,2,ring_spot_disease,76.76807045936584
+235,Dataset\test\55.jpg,0,white_leaf_disease,57.011592388153076
+236,Dataset\test\56.jpg,0,white_leaf_disease,78.30005288124084
+237,Dataset\test\57.jpg,2,ring_spot_disease,47.253844141960144
+238,Dataset\test\58.jpg,0,white_leaf_disease,39.580926299095154
+239,Dataset\test\59.jpg,2,ring_spot_disease,74.87136125564575
+240,Dataset\test\6.jpg,2,ring_spot_disease,65.69642424583435
+241,Dataset\test\60.jpg,2,ring_spot_disease,55.32959699630737
+242,Dataset\test\61.jpg,2,ring_spot_disease,52.69961357116699
+243,Dataset\test\62.jpg,2,ring_spot_disease,43.146273493766785
+244,Dataset\test\63.jpg,2,ring_spot_disease,74.72085952758789
+245,Dataset\test\64.jpg,2,ring_spot_disease,75.73249340057373
+246,Dataset\test\65.jpg,2,ring_spot_disease,76.76807045936584
+247,Dataset\test\66.jpg,2,ring_spot_disease,73.33852648735046
+248,Dataset\test\67.jpg,0,white_leaf_disease,61.58154010772705
+249,Dataset\test\68.jpg,2,ring_spot_disease,76.76807045936584
+250,Dataset\test\69.jpg,2,ring_spot_disease,75.6899356842041
+251,Dataset\test\7.jpg,1,narrow_brown_spot_disease,80.39447069168091
+252,Dataset\test\70.jpg,2,ring_spot_disease,40.954285860061646
+253,Dataset\test\71.jpg,2,ring_spot_disease,59.406089782714844
+254,Dataset\test\72.jpg,2,ring_spot_disease,76.76807045936584
+255,Dataset\test\73.jpg,2,ring_spot_disease,76.70421600341797
+256,Dataset\test\74.jpg,0,white_leaf_disease,79.87616658210754
+257,Dataset\test\75.jpg,2,ring_spot_disease,76.76807045936584
+258,Dataset\test\76.jpg,2,ring_spot_disease,76.76807045936584
+259,Dataset\test\77.jpg,2,ring_spot_disease,61.420273780822754
+260,Dataset\test\78.jpg,2,ring_spot_disease,57.198333740234375
+261,Dataset\test\79.jpg,2,ring_spot_disease,59.51172709465027
+262,Dataset\test\8.jpg,2,ring_spot_disease,80.9191644191742
+263,Dataset\test\80.jpg,2,ring_spot_disease,62.149226665496826
+264,Dataset\test\81.jpg,0,white_leaf_disease,46.49616181850433
+265,Dataset\test\82.jpg,0,white_leaf_disease,45.96250653266907
+266,Dataset\test\83.jpg,2,ring_spot_disease,84.27788019180298
+267,Dataset\test\84.jpg,2,ring_spot_disease,70.5981969833374
+268,Dataset\test\85.jpg,2,ring_spot_disease,48.21119010448456
+269,Dataset\test\86.jpg,2,ring_spot_disease,45.428770780563354
+270,Dataset\test\87.jpg,2,ring_spot_disease,51.819658279418945
+271,Dataset\test\88.jpg,2,ring_spot_disease,95.82501649856567
+272,Dataset\test\89.jpg,2,ring_spot_disease,76.76807045936584
+273,Dataset\test\9.jpg,2,ring_spot_disease,56.64721727371216
+274,Dataset\test\90.jpg,2,ring_spot_disease,73.31182956695557
+275,Dataset\test\91.jpg,2,ring_spot_disease,76.76807045936584
+276,Dataset\test\92.jpg,1,narrow_brown_spot_disease,40.916597843170166
+277,Dataset\test\93.jpg,2,ring_spot_disease,42.15245842933655
+278,Dataset\test\94.jpg,2,ring_spot_disease,63.65710496902466
+279,Dataset\test\95.jpg,2,ring_spot_disease,71.7211663722992
+280,Dataset\test\96.jpg,2,ring_spot_disease,73.89512658119202
+281,Dataset\test\97.jpg,2,ring_spot_disease,72.29114174842834
+282,Dataset\test\98.jpg,2,ring_spot_disease,57.16697573661804
+283,Dataset\test\99.jpg,2,ring_spot_disease,76.76807045936584
+284,Dataset\test\abc (1).jpg,2,ring_spot_disease,67.52737164497375
+285,Dataset\test\abc (10).jpg,2,ring_spot_disease,76.76807045936584
+286,Dataset\test\abc (11).jpg,2,ring_spot_disease,76.76807045936584
+287,Dataset\test\abc (12).jpg,2,ring_spot_disease,76.76807045936584
+288,Dataset\test\abc (13).jpg,2,ring_spot_disease,76.76807045936584
+289,Dataset\test\abc (14).jpg,2,ring_spot_disease,76.76807045936584
+290,Dataset\test\abc (15).jpg,2,ring_spot_disease,76.76807045936584
+291,Dataset\test\abc (16).jpg,2,ring_spot_disease,65.45360684394836
+292,Dataset\test\abc (17).jpg,2,ring_spot_disease,76.76807045936584
+293,Dataset\test\abc (18).jpg,2,ring_spot_disease,76.76807045936584
+294,Dataset\test\abc (19).jpg,2,ring_spot_disease,76.76807045936584
+295,Dataset\test\abc (2).jpg,2,ring_spot_disease,70.98614573478699
+296,Dataset\test\abc (20).jpg,2,ring_spot_disease,76.76807045936584
+297,Dataset\test\abc (21).jpg,2,ring_spot_disease,66.93701148033142
+298,Dataset\test\abc (22).jpg,2,ring_spot_disease,76.76807045936584
+299,Dataset\test\abc (23).jpg,2,ring_spot_disease,76.45252346992493
+300,Dataset\test\abc (24).jpg,2,ring_spot_disease,76.76807045936584
+301,Dataset\test\abc (25).jpg,2,ring_spot_disease,76.76807045936584
+302,Dataset\test\abc (26).jpg,2,ring_spot_disease,76.76807045936584
+303,Dataset\test\abc (27).jpg,2,ring_spot_disease,76.76807045936584
+304,Dataset\test\abc (28).jpg,2,ring_spot_disease,76.76807045936584
+305,Dataset\test\abc (29).jpg,2,ring_spot_disease,77.13835835456848
+306,Dataset\test\abc (3).jpg,2,ring_spot_disease,76.76807045936584
+307,Dataset\test\abc (30).jpg,2,ring_spot_disease,76.76807045936584
+308,Dataset\test\abc (31).jpg,2,ring_spot_disease,76.76807045936584
+309,Dataset\test\abc (32).jpg,2,ring_spot_disease,76.76807045936584
+310,Dataset\test\abc (33).jpg,2,ring_spot_disease,76.76807045936584
+311,Dataset\test\abc (34).jpg,2,ring_spot_disease,76.76807045936584
+312,Dataset\test\abc (35).jpg,2,ring_spot_disease,76.76807045936584
+313,Dataset\test\abc (36).jpg,2,ring_spot_disease,76.76807045936584
+314,Dataset\test\abc (37).jpg,2,ring_spot_disease,76.76807045936584
+315,Dataset\test\abc (38).jpg,2,ring_spot_disease,76.76807045936584
+316,Dataset\test\abc (39).jpg,2,ring_spot_disease,76.76807045936584
+317,Dataset\test\abc (4).jpg,2,ring_spot_disease,76.76807045936584
+318,Dataset\test\abc (40).jpg,2,ring_spot_disease,76.76807045936584
+319,Dataset\test\abc (41).jpg,2,ring_spot_disease,75.23629665374756
+320,Dataset\test\abc (42).jpg,2,ring_spot_disease,76.76807045936584
+321,Dataset\test\abc (43).jpg,2,ring_spot_disease,76.76807045936584
+322,Dataset\test\abc (44).jpg,2,ring_spot_disease,76.76807045936584
+323,Dataset\test\abc (45).jpg,2,ring_spot_disease,76.76807045936584
+324,Dataset\test\abc (46).jpg,2,ring_spot_disease,76.15460157394409
+325,Dataset\test\abc (47).jpg,2,ring_spot_disease,76.76807045936584
+326,Dataset\test\abc (48).jpg,2,ring_spot_disease,73.84954690933228
+327,Dataset\test\abc (49).jpg,2,ring_spot_disease,76.76807045936584
+328,Dataset\test\abc (5).jpg,2,ring_spot_disease,71.75591588020325
+329,Dataset\test\abc (50).jpg,2,ring_spot_disease,76.76807045936584
+330,Dataset\test\abc (51).jpg,2,ring_spot_disease,76.76807045936584
+331,Dataset\test\abc (52).jpg,2,ring_spot_disease,76.76807045936584
+332,Dataset\test\abc (53).jpg,2,ring_spot_disease,76.76807045936584
+333,Dataset\test\abc (54).jpg,2,ring_spot_disease,76.76807045936584
+334,Dataset\test\abc (55).jpg,2,ring_spot_disease,78.12318205833435
+335,Dataset\test\abc (56).jpg,2,ring_spot_disease,70.59327960014343
+336,Dataset\test\abc (57).jpg,2,ring_spot_disease,76.76807045936584
+337,Dataset\test\abc (58).jpg,2,ring_spot_disease,76.76807045936584
+338,Dataset\test\abc (59).jpg,2,ring_spot_disease,76.76807045936584
+339,Dataset\test\abc (6).jpg,2,ring_spot_disease,76.76807045936584
+340,Dataset\test\abc (60).jpg,2,ring_spot_disease,76.76807045936584
+341,Dataset\test\abc (61).jpg,2,ring_spot_disease,76.76807045936584
+342,Dataset\test\abc (7).jpg,2,ring_spot_disease,78.03865075111389
+343,Dataset\test\abc (8).jpg,2,ring_spot_disease,76.76807045936584
+344,Dataset\test\abc (9).jpg,2,ring_spot_disease,76.76807045936584
