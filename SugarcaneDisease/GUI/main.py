@@ -18,7 +18,7 @@ class Main(tk.Frame):
     container = tk.Frame(self)
     container.pack(side=tk.TOP, fill=tk.BOTH, expand=True, pady=20)
 
-    self.__btn_next = tk.Button(self, text="next", bg=colors.BLUE, fg=colors.WHITE, command=self.__next_page)
+    self.__btn_next = tk.Button(self, text="Next", font=40, bg=colors.BLUE, fg=colors.WHITE, command=self.__next_page)
     self.__btn_next.pack(side=tk.BOTTOM, pady=10)
 
     self.__P1.place(in_=container, x=0, y=0, relwidth=1, relheight=1)
