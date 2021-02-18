@@ -54,12 +54,12 @@ label_files = "labels.csv"
 image_height = 256
 image_width = 256
 batch_size = 8
-total_epochs = 20
+total_epochs = 50
 image_shape = (image_width, image_height, 3)
 test_ratio = 0.2
 validation_ratio = 0.2
-seed = 1919
-verbose = 2
+seed = 6985
+verbose = 1
 
 print("Load Class labels ...")
 class_labels = pd.read_csv(model_path + label_files)
@@ -106,20 +106,20 @@ num_classes = 3
 data_augmentation = keras.Sequential(
   [
     layers.experimental.preprocessing.RandomFlip("horizontal", input_shape=image_shape),
-    layers.experimental.preprocessing.RandomRotation(0.1),
-    layers.experimental.preprocessing.RandomZoom(0.1),
+    layers.experimental.preprocessing.RandomRotation(0.2),
+    layers.experimental.preprocessing.RandomZoom(0.2),
   ]
 )
 model = Sequential([
     data_augmentation,
-    layers.Conv2D(128, 3, padding='same', activation='relu'),
-    layers.MaxPooling2D(),
     layers.Conv2D(64, 3, padding='same', activation='relu'),
     layers.MaxPooling2D(),
     layers.Conv2D(32, 3, padding='same', activation='relu'),
     layers.MaxPooling2D(),
+    layers.Conv2D(32, 3, padding='same', activation='relu'),
+    layers.MaxPooling2D(),
     layers.Flatten(),
-    layers.Dense(128, activation='relu'),
+    layers.Dense(32, activation='relu'),
     layers.Dense(num_classes)
 ])
 model.compile(optimizer='adam',
