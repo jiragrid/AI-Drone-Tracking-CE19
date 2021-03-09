@@ -4,7 +4,7 @@ import Axios from 'axios'
 export default function Page() {
   const fetchData = async () => {
     try {
-      const { data } = await Axios.get('http://0.0.0.0:5000/test')
+      const { data } = await Axios.get('http://localhost:5000/test')
       console.log('fetch', data)
     }
     catch(error) {
