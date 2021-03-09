@@ -111,3 +111,8 @@ dist
 #Dataset
 Dataset
 dataset
+
+#Website
+Web/.node_modules
+Web/dist
+Web/.next
