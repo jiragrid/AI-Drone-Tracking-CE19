@@ -116,3 +116,6 @@ dataset
 mobile-app/.node_modules
 mobile-app/dist
 mobile-app/.next
+
+#API
+restful-api/database/images
