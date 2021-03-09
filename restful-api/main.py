@@ -6,7 +6,6 @@ from api import TestApi
 app = Flask(__name__)
 CORS(app)
 api = Api(app)
-
 api.add_resource(TestApi, '/test')
 
 if __name__ == '__main__':
