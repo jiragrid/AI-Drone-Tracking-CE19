@@ -113,6 +113,6 @@ Dataset
 dataset
 
 #Website
-Web/.node_modules
-Web/dist
-Web/.next
+mobile-app/.node_modules
+mobile-app/dist
+mobile-app/.next
