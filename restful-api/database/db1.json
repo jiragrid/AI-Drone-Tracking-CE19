@@ -1,0 +1,34 @@
+{
+    "result": [
+        {
+            "file_name": "test",
+            "file_type": "png",
+            "predict": 98,
+            "class_name": "white_leaf",
+            "predictions": {
+                "white_leaf": 98,
+                "brow_spot": 92
+            }
+        },
+        {
+            "file_name": "hello world !",
+            "file_type": "jpg",
+            "predict": 94,
+            "class_name": "white_leaf",
+            "predictions": {
+                "white_leaf": 94,
+                "brow_spot": 79
+            }
+        },
+        {
+            "file_name": "hello world !",
+            "file_type": "jpg",
+            "predict": 94,
+            "class_name": "white_leaf",
+            "predictions": {
+                "white_leaf": 94,
+                "brown_spot": 86
+            }
+        }
+    ]
+}
