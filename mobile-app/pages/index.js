@@ -87,8 +87,8 @@ export default function Page() {
           <CardInfo
             title="Ring Spot Leaf Disease"
             total={ringSpots.length}
-            percentUp={5}//{calculatePercentage(ringSpots)}
-            percentDown={9}//{getLastAccuracy(ringSpots)}
+            percentUp={calculatePercentage(ringSpots)}
+            percentDown={getLastAccuracy(ringSpots)}
             icon={<CircleIcon />}
           />
         </div>
