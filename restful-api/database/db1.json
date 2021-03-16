@@ -7,6 +7,14 @@
             "url": "restful-api/database/images/save/1615916383.png",
             "class_no": "3",
             "class_name": "None of All"
+        },
+        {
+            "file_name": "slip1.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 53.99096608161926,
+            "url": "restful-api/database/images/save/1615917302.png",
+            "class_no": "3",
+            "class_name": "None of All"
         }
     ]
 }

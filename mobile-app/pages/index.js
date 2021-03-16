@@ -20,21 +20,24 @@ export default function Page() {
   const [whiteLeafs, setWhiteLeafs] = useState([]);
   const [ringSpots, setRingSpots] = useState([]);
   const [brownSpots, setBrownSpots] = useState([]);
+  const [noneOfAll, setNoneOfAll] = useState([]);
 
   const fetchPrediction = async () => {
     try {
       setIsLoading(true);
       const { data } = await Axios.get(URL);
 
-      setPredictionInfo(data?.data?.map((item, index) => ({ 
-        no: index,
-        white_leaf_disease: item.class_name === 'white_leaf_disease' ? item.accuracy : 0,
-        brown_spot_disease: item.class_name === 'brown_spot_disease' ? item.accuracy : 0,
-        ring_spot_disease: item.class_name === 'ring_spot_disease' ? item.accuracy : 0,
+      setPredictionInfo(data?.data?.splice(-10).map((item, index) => ({ 
+        no: index + 1,
+        white_leaf_disease: item.class_no === '0' ? item.accuracy : 0,
+        brown_spot_disease: item.class_no === '1' ? item.accuracy : 0,
+        ring_spot_disease: item.class_no === '2' ? item.accuracy : 0,
+        none_of_all: item.class_no === '3' ? item.accuracy : 0,
       })));
-      setWhiteLeafs(data?.data?.filter((item) => item.class_name === 'white_leaf_disease'));
-      setBrownSpots(data?.data?.filter((item) => item.class_name === 'brown_spot_disease'));
-      setRingSpots(data?.data?.filter((item) => item.class_name === 'ring_spot_disease'));
+      setWhiteLeafs(data?.data?.filter((item) => item.class_no === '0'));
+      setBrownSpots(data?.data?.filter((item) => item.class_no === '1'));
+      setRingSpots(data?.data?.filter((item) => item.class_no === '2'));
+      setNoneOfAll(data?.data?.filter((item) => item.class_no === '3'));
       setIsLoading(false);
     }
     catch(error) {
@@ -83,17 +86,17 @@ export default function Page() {
           <CardInfo
             title="Ring Spot Leaf Disease"
             total={ringSpots.length}
-            percentUp={calculatePercentage(ringSpots)}
-            percentDown={getLastAccuracy(ringSpots)}
+            percentUp={5}//{calculatePercentage(ringSpots)}
+            percentDown={9}//{getLastAccuracy(ringSpots)}
             icon={<CircleIcon />}
           />
         </div>
         <div className="col-md-3">
           <CardInfo
             title="None of All"
-            total={ringSpots.length}
-            percentUp={calculatePercentage(ringSpots)}
-            percentDown={getLastAccuracy(ringSpots)}
+            total={noneOfAll.length}
+            percentUp={calculatePercentage(noneOfAll)}
+            percentDown={getLastAccuracy(noneOfAll)}
             icon={<NoneIcon />}
           />
         </div>

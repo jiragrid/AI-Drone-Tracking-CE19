@@ -32,9 +32,10 @@ function RenderLineChart({
         <Area type="monotone" dataKey="white_leaf_disease" stroke="#8884d8" fillOpacity={0.25} fill="#8884d8" />
         <Area type="monotone" dataKey="brown_spot_disease" stroke="#82ca9d" fillOpacity={0.25} fill="#82ca9d" />
         <Area type="monotone" dataKey="ring_spot_disease" stroke="#0184d8" fillOpacity={0.25} fill="#0184d8" />
+        <Area type="monotone" dataKey="none_of_all" stroke="#B184d8" fillOpacity={0.25} fill="#B184d8" />
         <CartesianGrid stroke="#ddd" strokeDasharray="5 5" />
         <XAxis dataKey="no">
-          <Label value="No. of Test" offset={0} position="insideBottom" />
+          <Label value="No. Recently Test" offset={0} position="insideBottom" />
         </XAxis>
         <YAxis label={{ value: 'Accuracy (%)', angle: -90, position: 'insideLeft', }} />
         <Legend />

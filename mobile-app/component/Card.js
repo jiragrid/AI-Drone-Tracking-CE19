@@ -29,15 +29,19 @@ function CardInfo({
           <span>{icon}</span>
         </Typography>
         <Typography className="mt-3 text-right" variant="h4">{total.toString()}</Typography>
-        <div className="d-flex justify-content-between">
-          <Typography className="mt-3" color={comparePercent(percentUp, percentDown).color}>
-            Average: {percentUp}%
+        <div className="row">
+          <div className="col-md-6">
+            <Typography className="mt-3" color={comparePercent(percentUp, percentDown).color}>
+              Average : {percentUp}%
             {comparePercent(percentUp, percentDown).icon}
-          </Typography>
-          <Typography className="mt-3" color={comparePercent(percentDown, percentUp).color}>
-            Last: {percentDown}%
+            </Typography>
+          </div>
+          <div className="col-md-6 text-right">
+            <Typography className="mt-3" color={comparePercent(percentDown, percentUp).color}>
+              Last: {percentDown}%
             {comparePercent(percentDown, percentUp).icon}
-          </Typography>
+            </Typography>
+          </div>
         </div>
       </CardContent>
     </Card>
