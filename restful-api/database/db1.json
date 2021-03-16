@@ -1,18 +1,18 @@
 {
     "result": [
         {
-            "file_name": "01.png",
-            "file_type": "image/png",
+            "file_name": "EA22B179-13FB-48A9-905F-493286F2958D.jpeg",
+            "file_type": "image/jpeg",
             "accuracy": 53.99096608161926,
-            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615912665.png",
+            "url": "restful-api/database/images/save/1615914260.png",
             "class_no": "2",
             "class_name": "ring_spot_disease"
         },
         {
-            "file_name": "logo.png",
-            "file_type": "image/png",
+            "file_name": "C1EE3616-06F7-4357-BFF3-A6880E8328D3.jpeg",
+            "file_type": "image/jpeg",
             "accuracy": 53.99096608161926,
-            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615912679.png",
+            "url": "restful-api/database/images/save/1615914364.png",
             "class_no": "2",
             "class_name": "ring_spot_disease"
         },
@@ -20,7 +20,23 @@
             "file_name": "01.png",
             "file_type": "image/png",
             "accuracy": 53.99096608161926,
-            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615912781.png",
+            "url": "restful-api/database/images/save/1615914409.png",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
+        },
+        {
+            "file_name": "5408E9CE-8355-4116-87A5-8B8D4803CC55.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 53.99096608161926,
+            "url": "restful-api/database/images/save/1615914457.png",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
+        },
+        {
+            "file_name": "images.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 53.99096608161926,
+            "url": "restful-api/database/images/save/1615914516.png",
             "class_no": "2",
             "class_name": "ring_spot_disease"
         }

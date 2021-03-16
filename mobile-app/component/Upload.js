@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@material-ui/core';
 import Axios from 'axios';
-import { URL } from '../constants/url';
+import { URL, URL_FILE } from '../constants/url';
 
 function Upload({
   images = [],
@@ -61,12 +61,12 @@ function Upload({
 
       return (
         <div className="row">
-          <img className="col-md-6" src={current?.url} />
-          <div className="col-md-6 border rounded">
+          <img className="col-md-6 mt-3" src={`${URL_FILE}/${current?.url || ''}`} />
+          <div className="col-md-6 mb-3 mt-3">
             <Typography variant="h6">Class Name:</Typography>
             <Typography>{current?.class_name}</Typography>
             <Typography className="mt-2" variant="h6">Accuracy:</Typography>
-            <Typography>{current?.accuracy}</Typography>
+            <Typography>{current?.accuracy?.toFixed(2)}%</Typography>
           </div>
         </div>
       )

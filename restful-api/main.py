@@ -10,4 +10,4 @@ api.add_resource(TestApi, '/test')
 api.add_resource(GetFile, '/get-file/<path:path>')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)

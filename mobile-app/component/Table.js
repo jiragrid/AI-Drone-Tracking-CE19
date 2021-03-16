@@ -8,9 +8,10 @@ import {
   CircularProgress,
   Dialog,
   DialogContent,
+  Typography,
 } from '@material-ui/core';
 import Axios from 'axios';
-import { URL } from '../constants/url';
+import { URL, URL_FILE } from '../constants/url';
 
 function CustomTable({
 
@@ -51,9 +52,10 @@ function CustomTable({
   }, [])
 
   const RenderDialog = () => (
-    <Dialog open={isOpenDialog} onClose={handleCloseDialog}>
+    <Dialog open={isOpenDialog} onClose={handleCloseDialog} fullWidth>
       <DialogContent>
-        <img className="w-100" src={dialogInfo?.url} />
+        <img className="w-100" src={`${URL_FILE}/${dialogInfo?.url || ''}`} />
+        <Typography className="mt-3 mb-3 text-center" variant="subtitle2">Class Name: {dialogInfo?.class_name || ''}</Typography>
       </DialogContent>
     </Dialog>
   )
