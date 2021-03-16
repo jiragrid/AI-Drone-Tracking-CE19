@@ -6,6 +6,7 @@ import {
   DialogActions,
   Button,
   CircularProgress,
+  Typography,
 } from '@material-ui/core';
 import Axios from 'axios';
 import { URL } from '../constants/url';
@@ -17,6 +18,15 @@ function Upload({
 }) {
   const IMG_LENGTH = images.length || 0;
   const [progress, setProgress] = useState(0);
+  const [prediction, setPrediction] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleCloseModal = () => {
+    setProgress(0);
+    setPrediction([]);
+    setCurrentIndex(0);
+    onClose();
+  };
 
   const uploadApi = async (image = {}, index = 0) => {
     try {
@@ -24,11 +34,13 @@ function Upload({
         file_name: image.name,
         file_type: image.type,
         src: image.src
-      })
+      });
+
+      console.log('success upload', data);
+      prediction.push(data.data[0]);
 
       setProgress((index + 1) / IMG_LENGTH * 100);
-      console.log(IMG_LENGTH);
-      console.log('success upload', data);
+      setPrediction([...prediction]);
     }
     catch (error) {
       console.log('error upload', error);
@@ -40,14 +52,22 @@ function Upload({
   };
 
   useEffect(() => {
-    if (images.length > 0) handleUploadImages();
-  }, [images]);
+    if (images.length > 0 && isOpen) handleUploadImages();
+  }, [isOpen]);
 
   const RenderBody = () => {
     if (progress === 100) {
+      const current = prediction[currentIndex];
+
       return (
-        <div className="m-2">
-          <img className="w-100" src={images[0]} />
+        <div className="row">
+          <img className="col-md-6 mb-2" src={current?.url} />
+          <div className="col-md-6">
+            <Typography variant="h6">Class Name:</Typography>
+            <Typography>{current?.class_name}</Typography>
+            <Typography className="mt-2" variant="h6">Accuracy:</Typography>
+            <Typography>{current?.accuracy}</Typography>
+          </div>
         </div>
       )
     }
@@ -64,15 +84,27 @@ function Upload({
   return (
     <Dialog
       open={isOpen}
-      onClose={onClose}
-      maxWidth="md"
+      onClose={handleCloseModal}
+      maxWidth="sm"
       fullWidth
     >
-      <DialogContent className="text-center">
+      <DialogContent>
         {RenderBody()}
       </DialogContent>
       <DialogActions>
-        <Button onClick={onClose}>Close</Button>
+        <Button 
+          onClick={() => setCurrentIndex(currentIndex - 1)} 
+          disabled={currentIndex === 0}
+        >
+          Back
+        </Button>
+        <Button 
+          color="primary"
+          onClick={() => setCurrentIndex(currentIndex + 1)}
+          disabled={currentIndex >= IMG_LENGTH - 1}
+        >
+          Next
+        </Button>
       </DialogActions>
     </Dialog>
   );

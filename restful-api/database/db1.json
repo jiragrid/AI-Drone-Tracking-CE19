@@ -1,10 +1,66 @@
 {
     "result": [
         {
+            "file_name": "images.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 53.99096608161926,
+            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615908502.png",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
+        },
+        {
+            "file_name": "images.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 53.99096608161926,
+            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615908649.png",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
+        },
+        {
             "file_name": "01.png",
             "file_type": "image/png",
             "accuracy": 53.99096608161926,
-            "url": "localhost:5000/get-file/./restful-api/database/images/save/1615906841.jpeg",
+            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615908649.png",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
+        },
+        {
+            "file_name": "01.png",
+            "file_type": "image/png",
+            "accuracy": 53.99096608161926,
+            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615908726.png",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
+        },
+        {
+            "file_name": "01.png",
+            "file_type": "image/png",
+            "accuracy": 53.99096608161926,
+            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615908739.png",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
+        },
+        {
+            "file_name": "images.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 53.99096608161926,
+            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615908785.png",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
+        },
+        {
+            "file_name": "01.png",
+            "file_type": "image/png",
+            "accuracy": 53.99096608161926,
+            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615908785.png",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
+        },
+        {
+            "file_name": "01.png",
+            "file_type": "image/png",
+            "accuracy": 53.99096608161926,
+            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615909445.png",
             "class_no": "2",
             "class_name": "ring_spot_disease"
         }

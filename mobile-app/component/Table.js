@@ -1,37 +1,72 @@
-import React from 'react';
-import { 
+import React, { useEffect, useState } from 'react';
+import {
   Table,
   TableHead,
-  TableRow, 
+  TableRow,
   TableCell,
   TableBody,
+  CircularProgress,
 } from '@material-ui/core';
+import Axios from 'axios';
+import { URL } from '../constants/url';
 
 function CustomTable({
 
 }) {
+  const [predictionInfo, setPredictionInfo] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const fetchPrediction = async () => {
+    try {
+      setIsLoading(true);
+      const { data } = await Axios.get(URL);
+
+      console.log(data);
+      setPredictionInfo(data.data.map((item) => item))
+      setIsLoading(false);
+    }
+    catch (error) {
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    fetchPrediction();
+  }, [])
+
   return (
     <div className="w-100">
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>ID</TableCell>
+            <TableCell>No</TableCell>
             <TableCell>Image Name</TableCell>
             <TableCell className="text-center">Image Type</TableCell>
-            <TableCell className="text-center">Prediction</TableCell>
+            <TableCell className="text-center">Accuracy</TableCell>
             <TableCell className="text-center">Class Name</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
-          <TableRow>
-            <TableCell>1</TableCell>
-            <TableCell>test</TableCell>
-            <TableCell className="text-center">image/png</TableCell>
-            <TableCell className="text-center">95%</TableCell>
-            <TableCell className="text-center">White Leaf Disease</TableCell>
-          </TableRow>
+        <TableBody className={isLoading ? 'd-none' : ''}>
+        {
+          predictionInfo.map((predict, index) => (
+            <TableRow key={`prediction-table-${index}`}>
+              <TableCell>{index + 1}</TableCell>
+              <TableCell>{predict.file_name}</TableCell>
+              <TableCell className="text-center">{predict.file_type}</TableCell>
+              <TableCell className="text-center">{predict.accuracy.toFixed(2)}%</TableCell>
+              <TableCell className="text-center">{predict.class_name}</TableCell>
+            </TableRow>
+          ))
+        }
         </TableBody>
       </Table>
+      <div className={!isLoading && predictionInfo.length === 0 ? 'mt-3 text-center' : 'd-none'}>
+        <small>Data is coming soon ...</small>
+      </div>
+      <div className={isLoading ? 'text-center mt-3' : 'd-none'}>
+        <CircularProgress />
+        <div>loading ...</div>
+      </div>
     </div>
   );
 };

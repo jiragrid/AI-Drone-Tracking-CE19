@@ -65,3 +65,7 @@ tr {
     max-width: 100% !important;
     overflow-x: auto !important;
 }
+
+img {
+    object-fit: contain;
+}
