@@ -1,4 +1,4 @@
-export const IP = '192.168.0.105';
+export const IP = 'localhost';
 export const HOST = `http://${IP}:5000`;
 export const URL = `${HOST}/test`;
 export const URL_FILE = `${HOST}/get-file`

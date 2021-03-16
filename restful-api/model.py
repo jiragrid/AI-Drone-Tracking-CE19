@@ -10,9 +10,10 @@ import pandas as pd
 import os
 from shutil import copyfile
 
+
 image_height = 256
 image_width = 256
-
+threshold = 80
 
 def save_image(src, path):
     file_name = str(int(time.time())) + '.png'
@@ -50,9 +51,13 @@ def prediction(path):
         file_name = str(int(time.time())) + '.png'
         info = dict()
         info['accuracy'] = accuracy
-        info['class_no'] = str(class_no)
         info['url'] = dir_name + str(file_name)
-        info['class_name'] = str(class_labels['class_name'][class_no])
+        info['class_no'] = '3'
+        info['class_name'] =  str(class_labels['class_name'][3])
+        
+        if accuracy >= threshold:
+            info['class_no'] = str(class_no)
+            info['class_name'] = str(class_labels['class_name'][class_no])
 
         result.append(info)
 

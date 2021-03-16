@@ -1,4 +1,5 @@
 class_id,class_name
-0,white_leaf_disease
-1,narrow_brown_spot_disease
-2,ring_spot_disease
+0,White Leaf Disease
+1,Narrow Brown Spot Disease
+2,Ring Spot Disease
+3,None of All

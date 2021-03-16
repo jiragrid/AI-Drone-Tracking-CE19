@@ -8,6 +8,7 @@ import AppContainer from '../containers/AppContainer';
 import EcoIcon from '@material-ui/icons/Eco';
 import DotIcon from '@material-ui/icons/FiberManualRecord';
 import CircleIcon from '@material-ui/icons/RadioButtonUnchecked';
+import NoneIcon from '@material-ui/icons/NotInterested';
 import CardInfo from '../component/Card';
 import OverallChart from '../component/OverallChart';
 import Axios from 'axios';
@@ -60,7 +61,7 @@ export default function Page() {
   return (
     <AppContainer>
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-3">
           <CardInfo
             title="White Leaf Disease"
             total={whiteLeafs.length}
@@ -69,7 +70,7 @@ export default function Page() {
             icon={<EcoIcon />}
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-3">
           <CardInfo
             title="Brown Spot Leaf Disease"
             total={brownSpots.length}
@@ -78,13 +79,22 @@ export default function Page() {
             icon={<DotIcon />}
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-3">
           <CardInfo
             title="Ring Spot Leaf Disease"
             total={ringSpots.length}
             percentUp={calculatePercentage(ringSpots)}
             percentDown={getLastAccuracy(ringSpots)}
             icon={<CircleIcon />}
+          />
+        </div>
+        <div className="col-md-3">
+          <CardInfo
+            title="None of All"
+            total={ringSpots.length}
+            percentUp={calculatePercentage(ringSpots)}
+            percentDown={getLastAccuracy(ringSpots)}
+            icon={<NoneIcon />}
           />
         </div>
       </div>

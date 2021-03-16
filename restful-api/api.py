@@ -31,10 +31,9 @@ class TestApi(Resource):
         args = parser.parse_args()
 
         try:
-            file_name = save_image(args['src'], self.image_path + '/temp')
+            save_image(args['src'], self.image_path + '/temp')
             result = prediction(self.image_path + '/temp')
 
-            print(result)
             data = json.loads(self.open_json_file())
             data = data['result']
 
@@ -52,6 +51,7 @@ class TestApi(Resource):
             return {'data': result, 'status_code': 200}
 
         except Exception as e:
+            print('error', e)
             return {'data': str(e), 'status_code': 500}
 
 class GetFile(Resource):
