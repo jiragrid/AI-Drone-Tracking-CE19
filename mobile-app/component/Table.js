@@ -6,6 +6,8 @@ import {
   TableCell,
   TableBody,
   CircularProgress,
+  Dialog,
+  DialogContent,
 } from '@material-ui/core';
 import Axios from 'axios';
 import { URL } from '../constants/url';
@@ -15,6 +17,10 @@ function CustomTable({
 }) {
   const [predictionInfo, setPredictionInfo] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isOpenDialog, setIsOpenDialog] = useState(false);
+  const [dialogInfo, setDialogInfo] = useState({});
+
+  const toggleDialog = () => setIsOpenDialog(!isOpenDialog);
 
   const fetchPrediction = async () => {
     try {
@@ -30,12 +36,31 @@ function CustomTable({
     }
   }
 
+  const handleCloseDialog = () => {
+    setDialogInfo(false);
+    toggleDialog();
+  }
+
+  const handleClickRow = (index = 0) => {
+    toggleDialog();
+    setDialogInfo(predictionInfo[index]);
+  }
+
   useEffect(() => {
     fetchPrediction();
   }, [])
 
+  const RenderDialog = () => (
+    <Dialog open={isOpenDialog} onClose={handleCloseDialog}>
+      <DialogContent>
+        <img className="w-100" src={dialogInfo?.url} />
+      </DialogContent>
+    </Dialog>
+  )
+
   return (
     <div className="w-100">
+      {RenderDialog()}
       <Table>
         <TableHead>
           <TableRow>
@@ -49,9 +74,9 @@ function CustomTable({
         <TableBody className={isLoading ? 'd-none' : ''}>
         {
           predictionInfo.map((predict, index) => (
-            <TableRow key={`prediction-table-${index}`}>
+            <TableRow className="row-data" key={`prediction-table-${index}`} onClick={() => handleClickRow(index)}>
               <TableCell>{index + 1}</TableCell>
-              <TableCell>{predict.file_name}</TableCell>
+              <TableCell>{predict.file_name.split('.')[0]}</TableCell>
               <TableCell className="text-center">{predict.file_type}</TableCell>
               <TableCell className="text-center">{predict.accuracy.toFixed(2)}%</TableCell>
               <TableCell className="text-center">{predict.class_name}</TableCell>

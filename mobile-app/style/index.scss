@@ -69,3 +69,13 @@ tr {
 img {
     object-fit: contain;
 }
+
+.row-data {
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: whitesmoke;
+        opacity: 0.5;
+    }
+}
