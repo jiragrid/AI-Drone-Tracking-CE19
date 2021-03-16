@@ -61,7 +61,7 @@ function Upload({
 
       return (
         <div className="row">
-          <img className="col-md-6 mb-2" src={current?.url} />
+          <img className="col-md-6" src={current?.url} />
           <div className="col-md-6 border rounded">
             <Typography variant="h6">Class Name:</Typography>
             <Typography>{current?.class_name}</Typography>

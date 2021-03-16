@@ -91,7 +91,7 @@ export default function Page() {
       <div className="mt-3">
         <Card>
           <CardContent>
-            <Typography className="mb-3" variant="subtitle1" color="textSecondary">Overall</Typography>
+            <Typography className="mb-3" variant="subtitle1" color="textSecondary">Overall Accuracy</Typography>
             <OverallChart data={predictionInfo} />
           </CardContent>
         </Card>

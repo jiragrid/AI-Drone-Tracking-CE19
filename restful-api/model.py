@@ -51,8 +51,7 @@ def prediction(path):
         info = dict()
         info['accuracy'] = accuracy
         info['class_no'] = str(class_no)
-        info['url'] = 'http://localhost:5000/get-file/' + \
-            dir_name + str(file_name)
+        info['url'] = 'http://localhost:5000/get-file/' + dir_name + str(file_name)
         info['class_name'] = str(class_labels['class_name'][class_no])
 
         result.append(info)

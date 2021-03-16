@@ -15,6 +15,14 @@
             "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615912679.png",
             "class_no": "2",
             "class_name": "ring_spot_disease"
+        },
+        {
+            "file_name": "01.png",
+            "file_type": "image/png",
+            "accuracy": 53.99096608161926,
+            "url": "http://localhost:5000/get-file/restful-api/database/images/save/1615912781.png",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
         }
     ]
 }
