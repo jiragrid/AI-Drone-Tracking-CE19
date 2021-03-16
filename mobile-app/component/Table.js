@@ -22,7 +22,7 @@ function CustomTable({
       const { data } = await Axios.get(URL);
 
       console.log(data);
-      setPredictionInfo(data.data.map((item) => item))
+      setPredictionInfo(data?.data?.map((item) => item))
       setIsLoading(false);
     }
     catch (error) {

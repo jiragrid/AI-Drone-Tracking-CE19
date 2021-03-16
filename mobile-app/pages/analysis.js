@@ -57,7 +57,7 @@ function Analysis() {
         accept="image/*"
         onChange={handleChangeFile}
         ref={uploadRef}
-        multiple
+        // multiple
       />
       <UploadCard
         images={images}
@@ -66,7 +66,7 @@ function Analysis() {
       />
       <Card>
         <CardContent>
-          <Typography className="mb-3" variant="h5">Analysis</Typography>
+          <Typography className="mb-3" variant="h5">Analysis Logs</Typography>
           <Table />
         </CardContent>
       </Card>

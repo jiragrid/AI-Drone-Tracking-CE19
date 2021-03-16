@@ -37,7 +37,7 @@ function Upload({
       });
 
       console.log('success upload', data);
-      prediction.push(data.data[0]);
+      prediction.push(data?.data[0]);
 
       setProgress((index + 1) / IMG_LENGTH * 100);
       setPrediction([...prediction]);
@@ -52,8 +52,8 @@ function Upload({
   };
 
   useEffect(() => {
-    if (images.length > 0 && isOpen) handleUploadImages();
-  }, [isOpen]);
+    if (images.length > 0 && isOpen && prediction.length === 0) handleUploadImages();
+  });
 
   const RenderBody = () => {
     if (progress === 100) {
@@ -62,7 +62,7 @@ function Upload({
       return (
         <div className="row">
           <img className="col-md-6 mb-2" src={current?.url} />
-          <div className="col-md-6">
+          <div className="col-md-6 border rounded">
             <Typography variant="h6">Class Name:</Typography>
             <Typography>{current?.class_name}</Typography>
             <Typography className="mt-2" variant="h6">Accuracy:</Typography>
@@ -73,10 +73,15 @@ function Upload({
     }
     else {
       return (
-        <span>
-          <CircularProgress variant="determinate" value={progress} />
-          <div>in progress ...</div>
-        </span>
+        <div className="text-center">
+          <div>
+            <CircularProgress variant="indeterminate" />
+          </div>
+          {/* <CircularProgress variant="determinate" value={progress} /> */}
+          <div>
+            <small>in progress ...</small>
+          </div>
+        </div>
       )
     }
   }
@@ -92,13 +97,13 @@ function Upload({
         {RenderBody()}
       </DialogContent>
       <DialogActions>
-        <Button 
-          onClick={() => setCurrentIndex(currentIndex - 1)} 
+        <Button
+          onClick={() => setCurrentIndex(currentIndex - 1)}
           disabled={currentIndex === 0}
         >
           Back
         </Button>
-        <Button 
+        <Button
           color="primary"
           onClick={() => setCurrentIndex(currentIndex + 1)}
           disabled={currentIndex >= IMG_LENGTH - 1}
