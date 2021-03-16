@@ -1,34 +1,12 @@
 {
     "result": [
         {
-            "file_name": "test",
-            "file_type": "png",
-            "predict": 98,
-            "class_name": "white_leaf",
-            "predictions": {
-                "white_leaf": 98,
-                "brow_spot": 92
-            }
-        },
-        {
-            "file_name": "hello world !",
-            "file_type": "jpg",
-            "predict": 94,
-            "class_name": "white_leaf",
-            "predictions": {
-                "white_leaf": 94,
-                "brow_spot": 79
-            }
-        },
-        {
-            "file_name": "hello world !",
-            "file_type": "jpg",
-            "predict": 94,
-            "class_name": "white_leaf",
-            "predictions": {
-                "white_leaf": 94,
-                "brown_spot": 86
-            }
+            "file_name": "01.png",
+            "file_type": "image/png",
+            "accuracy": 53.99096608161926,
+            "url": "localhost:5000/get-file/./restful-api/database/images/save/1615906841.jpeg",
+            "class_no": "2",
+            "class_name": "ring_spot_disease"
         }
     ]
 }
