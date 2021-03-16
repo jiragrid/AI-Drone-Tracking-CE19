@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Card,
   CardContent,
@@ -8,50 +8,105 @@ import AppContainer from '../containers/AppContainer';
 import EcoIcon from '@material-ui/icons/Eco';
 import DotIcon from '@material-ui/icons/FiberManualRecord';
 import CircleIcon from '@material-ui/icons/RadioButtonUnchecked';
+import NoneIcon from '@material-ui/icons/NotInterested';
 import CardInfo from '../component/Card';
 import OverallChart from '../component/OverallChart';
+import Axios from 'axios';
+import { URL } from '../constants/url';
 
 export default function Page() {
-  const random = (max = 0, min = 0) => {
-    return Math.floor(Math.random() * Math.floor(max) + min);
-  };
+  const [isLoading, setIsLoading] = useState(false);
+  const [predictionInfo, setPredictionInfo] = useState([]);
+  const [whiteLeafs, setWhiteLeafs] = useState([]);
+  const [ringSpots, setRingSpots] = useState([]);
+  const [brownSpots, setBrownSpots] = useState([]);
+  const [noneOfAll, setNoneOfAll] = useState([]);
+
+  const fetchPrediction = async () => {
+    try {
+      setIsLoading(true);
+      const { data } = await Axios.get(URL);
+      const arr = data?.data?.map((item) => item).splice(-10);
+
+      setPredictionInfo(arr.map((item, index) => ({ 
+        no: index + 1,
+        white_leaf_disease: item.class_no === '0' ? item.accuracy : 0,
+        brown_spot_disease: item.class_no === '1' ? item.accuracy : 0,
+        ring_spot_disease: item.class_no === '2' ? item.accuracy : 0,
+        none_of_all: item.class_no === '3' ? item.accuracy : 0,
+      })));
+      setWhiteLeafs(data?.data?.filter((item) => item.class_no === '0'));
+      setBrownSpots(data?.data?.filter((item) => item.class_no === '1'));
+      setRingSpots(data?.data?.filter((item) => item.class_no === '2'));
+      setNoneOfAll(data?.data?.filter((item) => item.class_no === '3'));
+      setIsLoading(false);
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
+
+  const calculatePercentage = (arr = []) => {
+    const length = arr.length;
+
+    if (length === 0) return 0;
+
+    const sum = arr.reduce((prev, curr) => (prev + curr?.accuracy) , 0);
+
+    return parseFloat((sum/length).toFixed(2));
+  }
+
+  const getLastAccuracy = (arr = []) => parseFloat(arr[arr.length - 1]?.accuracy?.toFixed(2)) || 0
+
+  useEffect(() => {
+    fetchPrediction();
+  }, []);
 
   return (
     <AppContainer>
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-3">
           <CardInfo
             title="White Leaf Disease"
-            total={random(999)}
-            percentUp={random(50)}
-            percentDown={random(50)}
+            total={whiteLeafs.length}
+            percentUp={calculatePercentage(whiteLeafs)}
+            percentDown={getLastAccuracy(whiteLeafs)}
             icon={<EcoIcon />}
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-3">
           <CardInfo
             title="Brown Spot Leaf Disease"
-            total={random(999)}
-            percentUp={random(50)}
-            percentDown={random(50)}
+            total={brownSpots.length}
+            percentUp={calculatePercentage(brownSpots)}
+            percentDown={getLastAccuracy(brownSpots)}
             icon={<DotIcon />}
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-3">
           <CardInfo
             title="Ring Spot Leaf Disease"
-            total={random(999)}
-            percentUp={random(50)}
-            percentDown={random(50)}
+            total={ringSpots.length}
+            percentUp={calculatePercentage(ringSpots)}
+            percentDown={getLastAccuracy(ringSpots)}
             icon={<CircleIcon />}
+          />
+        </div>
+        <div className="col-md-3">
+          <CardInfo
+            title="None of All"
+            total={noneOfAll.length}
+            percentUp={calculatePercentage(noneOfAll)}
+            percentDown={getLastAccuracy(noneOfAll)}
+            icon={<NoneIcon />}
           />
         </div>
       </div>
       <div className="mt-3">
         <Card>
           <CardContent>
-            <Typography className="mb-3" variant="subtitle1" color="textSecondary">Overall</Typography>
-            <OverallChart />
+            <Typography className="mb-3" variant="subtitle1" color="textSecondary">Overall Accuracy</Typography>
+            <OverallChart data={predictionInfo} />
           </CardContent>
         </Card>
       </div>
