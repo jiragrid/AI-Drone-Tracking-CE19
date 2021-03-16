@@ -26,8 +26,9 @@ export default function Page() {
     try {
       setIsLoading(true);
       const { data } = await Axios.get(URL);
+      const arr = data?.data?.map((item) => item).splice(-10);
 
-      setPredictionInfo(data?.data?.splice(-10).map((item, index) => ({ 
+      setPredictionInfo(arr.map((item, index) => ({ 
         no: index + 1,
         white_leaf_disease: item.class_no === '0' ? item.accuracy : 0,
         brown_spot_disease: item.class_no === '1' ? item.accuracy : 0,
