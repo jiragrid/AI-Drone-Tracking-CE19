@@ -51,6 +51,8 @@ function CustomTable({
     fetchPrediction();
   }, [])
 
+  console.log(predictionInfo)
+
   const RenderDialog = () => (
     <Dialog open={isOpenDialog} onClose={handleCloseDialog} fullWidth>
       <DialogContent>
@@ -63,6 +65,15 @@ function CustomTable({
             <Typography>{dialogInfo?.class_name}</Typography>
             <Typography className="mt-2" variant="h6">Accuracy:</Typography>
             <Typography>{dialogInfo?.accuracy?.toFixed(2)}%</Typography>
+            <Typography className="mt-2" variant="h6">Created At:</Typography>
+            <Typography>
+              {
+                dialogInfo?.timestamp ?
+                  new Date(dialogInfo?.timestamp * 1000).toLocaleString()
+                  :
+                  '-'
+              }
+            </Typography>
           </div>
         </div>
       </DialogContent>
@@ -80,6 +91,7 @@ function CustomTable({
             <TableCell className="text-center">Image Type</TableCell>
             <TableCell className="text-center">Accuracy</TableCell>
             <TableCell className="text-center">Class Name</TableCell>
+            <TableCell className="text-center">Created At</TableCell>
           </TableRow>
         </TableHead>
         <TableBody className={isLoading ? 'd-none' : ''}>
@@ -91,6 +103,14 @@ function CustomTable({
                 <TableCell className="text-center">{predict.file_type}</TableCell>
                 <TableCell className="text-center">{predict.accuracy.toFixed(2)}%</TableCell>
                 <TableCell className="text-center">{predict.class_name}</TableCell>
+                <TableCell className="text-center">
+                  {
+                    predict.timestamp ?
+                      new Date(predict.timestamp * 1000).toLocaleString()
+                      :
+                      '-'
+                  }
+                </TableCell>
               </TableRow>
             ))
           }

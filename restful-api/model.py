@@ -48,12 +48,14 @@ def prediction(path):
         class_no = np.argmax(predictions[0])
         accuracy = 100 * np.max(score)
 
-        file_name = str(int(time.time())) + '.png'
+        get_time = int(time.time())
+        file_name = str(get_time) + '.png'
         info = dict()
         info['accuracy'] = accuracy
         info['url'] = dir_name + str(file_name)
         info['class_no'] = '3'
         info['class_name'] =  str(class_labels['class_name'][3])
+        info['timestamp'] = int(get_time)
         
         if accuracy >= threshold:
             info['class_no'] = str(class_no)

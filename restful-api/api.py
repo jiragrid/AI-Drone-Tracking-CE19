@@ -43,7 +43,8 @@ class Predition(Resource):
                 'accuracy': result[0]['accuracy'],
                 'url': result[0]['url'],
                 'class_no': result[0]['class_no'],
-                'class_name': result[0]['class_name']
+                'class_name': result[0]['class_name'],
+                'timestamp': result[0]['timestamp']
             })
 
             self.write_json_file(data)
