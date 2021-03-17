@@ -28,7 +28,7 @@ def save_image(src, path):
 
 
 def prediction(path):
-    model_path = './SugarcaneDisease/Model/Save/CNN'
+    model_path = './SugarcaneDisease/Model/Save/CNN-V1'
     class_labels = pd.read_csv("./SugarcaneDisease/Class/labels.csv")
     result = []
 

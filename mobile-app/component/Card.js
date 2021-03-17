@@ -32,7 +32,7 @@ function CardInfo({
         <div className="row">
           <div className="col-md-6">
             <Typography className="mt-3" color={comparePercent(percentUp, percentDown).color}>
-              Average : {percentUp}%
+              Avg : {percentUp}%
             {comparePercent(percentUp, percentDown).icon}
             </Typography>
           </div>
