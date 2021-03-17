@@ -11,11 +11,18 @@
     "batch_size": 8,
     "dimensions": 3
   },
+  "hidden_layers": [
+    128,
+    64,
+    64,
+    32
+  ],
+  "max_pooling": 3,
   "optimizer": "adam",
   "test_ratio": 0.2,
   "validation_ratio": 0.2,
   "verbose": 1,
-  "seed": 1234,
+  "seed": 6985,
   "epochs": 50,
   "total_class": 3,
   "data_augment": {
