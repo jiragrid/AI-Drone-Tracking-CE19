@@ -35,7 +35,7 @@ function RenderLineChart({
         <Area type="monotone" dataKey="none_of_all" stroke="#6F6F6F" fillOpacity={0.25} fill="#6F6F6F" />
         <CartesianGrid stroke="#ddd" strokeDasharray="5 5" />
         <XAxis dataKey="no">
-          <Label value="No. Recently Test" offset={0} position="insideBottom" />
+          <Label value="No. Recently Test" offset={0} position="bottom" />
         </XAxis>
         <YAxis label={{ value: 'Accuracy (%)', angle: -90, position: 'insideLeft', }} />
         <Legend />

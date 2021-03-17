@@ -63,6 +63,14 @@
             "url": "restful-api/database/images/save/1615970103.png",
             "class_no": "1",
             "class_name": "Narrow Brown Spot Disease"
+        },
+        {
+            "file_name": "262.jpg",
+            "file_type": "image/jpeg",
+            "accuracy": 98.66905212402344,
+            "url": "restful-api/database/images/save/1615974010.png",
+            "class_no": "1",
+            "class_name": "Narrow Brown Spot Disease"
         }
     ]
 }
