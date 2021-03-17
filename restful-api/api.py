@@ -5,7 +5,7 @@ from model import save_image, prediction
 from flask import send_from_directory
 
 
-class TestApi(Resource):
+class Predition(Resource):
     def __init__(self):
         self.path_db = './restful-api/database/db1.json'
         self.image_path = './restful-api/database/images'
