@@ -58,7 +58,7 @@ function CustomTable({
           <img className="col-md-6 w-100 mb-3" src={`${URL_FILE}/${dialogInfo?.url || ''}`} />
           <div className="col-md-6 mb-3">
             <Typography variant="h6">Image Name:</Typography>
-            <Typography>{dialogInfo?.file_name}</Typography>
+            <Typography>{dialogInfo?.file_name?.split('.')[0]}</Typography>
             <Typography className="mt-2" variant="h6">Class Name:</Typography>
             <Typography>{dialogInfo?.class_name}</Typography>
             <Typography className="mt-2" variant="h6">Accuracy:</Typography>
@@ -70,7 +70,7 @@ function CustomTable({
   )
 
   return (
-    <div className="w-100">
+    <div className="overflow-100">
       {RenderDialog()}
       <Table>
         <TableHead>

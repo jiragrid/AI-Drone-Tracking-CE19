@@ -83,3 +83,9 @@ img {
 .recharts-default-legend {
     margin-top: 1em !important;
 }
+
+.overflow-100 {
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
