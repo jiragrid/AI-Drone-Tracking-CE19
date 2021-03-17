@@ -1,130 +1,207 @@
+import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import pathlib
-import os
-import re
 import cv2
-import xml.etree.ElementTree as et
-import csv
-import pandas as pd 
+import os
+import pathlib
+import re
+import tensorflow as tf
+from PIL import Image as img
+from matplotlib import pyplot as plt
+from sklearn.model_selection import train_test_split
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras.models import Sequential
+from sklearn.metrics import classification_report
+import json
 
-from keras.preprocessing.image import load_img
 
-
-class SugarcaneDataset():
+class SugarcaneDisease:
     def __init__(self):
-        self.images_list = []
-        self.annots_list = []
-        self.images_np = []
-        self.annots_np = []
+        json_dir = './SugarcaneDisease/Class/config.json'
+        self.config = json.loads(self.open_json_file(json_dir))
+    
+    def open_json_file(self, path):
+        with open(path, 'r') as f:
+            return f.read()
 
-    def __atoi(self, text):
-        return int(text) if text.isdigit() else text
+    def train(self):
+        print("Set config ...")
+        image_config = self.config['image_config']
 
-    def __natural_keys(self, text):
-        return [self.__atoi(c) for c in re.split(r'(\d+)', str(text))]
+        image_height = image_config['height']
+        image_width = image_config['width']
+        dimension = image_config['dimensions']
+        batch_size = image_config['batch_size']
 
-    def __convert_dir_to_list(self, base_path, class_path, files_path="images/*"):
-        data_dir = pathlib.Path(base_path)
-        sample_list = list(data_dir.glob(class_path + files_path))
-        sample_list = sorted(sample_list, key=self.__natural_keys)
+        test_ratio = image_config['test_ratio']
+        validation_ratio = image_config['validation_ratio']
+        verbose = image_config['verbose']
+        seed = self.config['seed']
+        total_epochs = self.config['epochs']
 
-        return sample_list
+        image_shape = (image_width, image_height, dimension)
+        
+        print("Load Class labels ...")
+        print(self.config['labels_dir'])
 
-    def load_dataset(self, base_path, class_path):
-        self.images_list = self.__convert_dir_to_list(
-            base_path, class_path, files_path="images/*")
-        self.annots_list = self.__convert_dir_to_list(
-            base_path, class_path, files_path="annotations/*")
+        print("Load Dataset directory ...")
+        dataset_dir = pathlib.Path(self.config['dataset_dir'])
 
-    def walk_in_path(self, _path):
-        if not os.path.exists(_path):
-            return False
+        print("Split train Dataset ...")
+        train_dataset = tf.keras.preprocessing.image_dataset_from_directory(
+            dataset_dir,
+            validation_split=validation_ratio,
+            subset="training",
+            seed=seed,
+            image_size=(image_width, image_height),
+            batch_size=batch_size
+        )
 
-        for root, dirs, files in os.walk(_path, topdown=False):
-            # for name in files:
-            # print(os.path.join("file name:", root, name))
-            for name in dirs:
-                print(os.path.join("dir name:", root, name))
+        print("Split validation Dataset ...")
+        validattion_dataset = tf.keras.preprocessing.image_dataset_from_directory(
+            dataset_dir,
+            validation_split=validation_ratio,
+            subset="validation",
+            seed=seed,
+            image_size=(image_width, image_height),
+            batch_size=batch_size
+        )
 
-    def extract_boxes(self, filename):
-        tree = et.parse(filename)
-        root = tree.getroot()
-        boxes = list()
+        print("Autotune train and validation Dataset ...")
+        AUTOTUNE = tf.data.experimental.AUTOTUNE
+        data_augment = self.config['data_augment']
 
-        for box in root.findall('.//bndbox'):
-            xmin = int(box.find('xmin').text)
-            ymin = int(box.find('ymin').text)
-            xmax = int(box.find('xmax').text)
-            ymax = int(box.find('ymax').text)
-            coors = [xmin, ymin, xmax, ymax]
-            boxes.append(coors)
+        train_dataset = train_dataset.cache().shuffle(data_augment['shuffle']).prefetch(buffer_size=AUTOTUNE)
+        validattion_dataset = validattion_dataset.cache().prefetch(buffer_size=AUTOTUNE)
 
-        width = int(root.find('.//size/width').text)
-        height = int(root.find('.//size/height').text)
+        print("Normalization train and validation Dataset ...")
+        normalization_layer = layers.experimental.preprocessing.Rescaling(1/255)
+        normalized_dataset = train_dataset.map(lambda x, y: (normalization_layer(x), y))
+        image_batch, labels_batch = next(iter(normalized_dataset))
+        first_image = image_batch[0]
+        print(np.min(first_image), np.max(first_image)) 
 
-        return boxes, width, height
+        print("Create Model ...")
+        num_classes = self.config['total_class']
+        data_augmentation = keras.Sequential(
+            [
+                layers.experimental.preprocessing.RandomFlip(data_augment['flip'], input_shape=image_shape),
+                layers.experimental.preprocessing.RandomRotation(data_augment['rotation']),
+                layers.experimental.preprocessing.RandomZoom(data_augment['zoom']),
+            ]
+        )
+        model = Sequential([
+            data_augmentation,
+            layers.Conv2D(128, 3, padding='same', activation='relu'),
+            layers.MaxPooling2D(),
+            layers.Conv2D(64, 3, padding='same', activation='relu'),
+            layers.MaxPooling2D(),
+            layers.Conv2D(64, 3, padding='same', activation='relu'),
+            layers.MaxPooling2D(),
+            layers.Flatten(),
+            layers.Dense(32, activation='relu'),
+            layers.Dense(num_classes)
+        ])
+        model.compile(optimizer=self.config['optimizer'],
+            loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+            metrics=['accuracy']
+        )
+        model.summary()
 
-    def load_image(self, index, width=256, height=256, isPlot=False):
-        image = load_img(self.images_list[index])
-        image = image.resize((width, height))
-        image_array = np.asarray(image)
+        print("Evaluate Model ...")
+        history = model.fit(
+        train_dataset,
+        validation_data=validattion_dataset,
+        epochs=total_epochs,
+        verbose=verbose
+        )
 
-        if isPlot:
-            plt.figure(figsize=(10, 10))
-            plt.imshow(image_array)
-            plt.show()
+        print("Visualization ...")
+        acc = history.history['accuracy']
+        val_acc = history.history['val_accuracy']
 
-        return image_array
+        loss = history.history['loss']
+        val_loss = history.history['val_loss']
 
-    def load_mask(self, index):
-        path = self.annots_list[index]
-        boxes, w, h = self.extract_boxes(path)
-        masks = np.zeros([h, w, len(boxes)], dtype='uint8')
+        epochs_range = range(total_epochs)
 
-        for i in range(len(boxes)):
-            box = boxes[i]
-            row_s, row_e = box[1], box[3]
-            col_s, col_e = box[0], box[2]
-            masks[row_s:row_e, col_s:col_e, i] = 1
+        plt.figure(figsize=(8, 8))
+        plt.subplot(1, 2, 1)
+        plt.plot(epochs_range, acc, label='Training Accuracy')
+        plt.plot(epochs_range, val_acc, label='Validation Accuracy')
+        plt.legend(loc='lower right')
+        plt.title('Training and Validation Accuracy')
 
-            return masks, boxes
+        plt.subplot(1, 2, 2)
+        plt.plot(epochs_range, loss, label='Training Loss')
+        plt.plot(epochs_range, val_loss, label='Validation Loss')
+        plt.legend(loc='upper right')
+        plt.title('Training and Validation Loss')
+        plt.show()
 
+        print("Save Model ...")
+        keras.models.save_model(model, self.config['save_model_dir'])
+    
+    def test(self, y_true):
+        print("Set config ...")
+        image_config = self.config['image_config']
 
-dataset_path = "/Users/earthzaa/Downloads/Dataset/"
-class_path = "white-leaf-disease/"
+        image_height = image_config['image_height']
+        image_width = image_config['image_width']
+        dimensions = image_config['dimensions']
+        batch_size = 32
+        model_dir = self.config['save_model_dir']
+        class_labels = self.config['labels_dir']
+        test_images_path = list(pathlib.Path(model_dir).glob("**/*"))
+        result_list = []
+        images_list = []
+        y_predict = []
+        count = 0
 
-print("create class")
-white_leaf = SugarcaneDataset()
-white_leaf.load_dataset(base_path=dataset_path, class_path=class_path)
-print("success load dataset")
+        print("Load Model ...")
+        model = tf.keras.models.load_model(model_dir, compile=True)
 
-images_list = white_leaf.images_list[:5]
-meta_list = ["id", "file_name", "x_init", "y_init", "x_end", "y_end", "white-leaf-disease", "ring-spot-disease", "narrow-bronw-spot-disease"]
-new_list = []
+        print("Load test Dataset ...")
+        csv_labels = ["file_path", "class_no", "class_name", "accuracy"]
 
-print("create dataframe")
-for index, image_id in enumerate(images_list):
-    mask, mask_array = white_leaf.load_mask(index)
+        print("Load image ...")
 
-    info = [
-        str(image_id.stem),
-        str(image_id.name),
-        mask_array[0][0],
-        mask_array[0][1],
-        mask_array[0][2],
-        mask_array[0][3],
-        1,
-        0,
-        0
-    ]
+        for test_path in test_images_path:
+            print("Convert image to array ...")
+            print(test_path)
+            img = keras.preprocessing.image.load_img(test_path, target_size=(image_height, image_width))
+            img_array = keras.preprocessing.image.img_to_array(img)
 
-    new_list.append(info)
-    print("create dataframe index:", str(index), "success")
+            print("Reshape image ...")
+            # img_array /= 255
+            img_array = img_array.reshape(1, image_width, image_height, dimensions)
+            
+            print("Predict image ...")
+            predictions = model.predict(img_array)
+            score = tf.nn.softmax(predictions[0])
+            class_no = np.argmax(predictions[0])
+            accuracy = 100 * np.max(score)
 
-df = pd.DataFrame(new_list, columns=meta_list) 
-print(df)
-df.to_csv(dataset_path + class_path + "white-leaf.csv", index=False, header=True)
+            y_predict.append(class_no)
 
+            print("Write Prediction image ...")
+            info = [
+                test_path,
+                class_no,
+                class_labels["class_name"][class_no],
+                accuracy
+            ]
+            result_list.append(info)
+            count += 1
+            print("Success", count, "...")
 
+            # print(test_path)
+            # print("Class", class_no, ":", class_labels["class_name"][class_no], "Probability:", probability)
+            # print("--------------------------------------------------------------------------------------------------")
 
+        print("Result ...")
+        print(classification_report(y_true, y_predict))
+        print(tf.math.confusion_matrix(y_true, y_predict))
+
+        # df = pd.DataFrame(result_list, columns=csv_labels) 
+        # df.to_csv("./SugarcaneDisease/Result/" + "result.csv", index=True, header=True)
