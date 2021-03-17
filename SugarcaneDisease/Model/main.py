@@ -7,6 +7,8 @@ from SugarcraneClass import SugarcaneDisease
 # "epochs": 50
 
 config_dir = './SugarcaneDisease/Model/config.json'
+logs_dir = './SugarcaneDisease/Model/logs.json'
 run = SugarcaneDisease(config_dir)
 run.train()
+run.save_log(logs_dir)
 

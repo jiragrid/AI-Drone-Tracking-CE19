@@ -13,6 +13,8 @@ from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 from sklearn.metrics import classification_report
 import json
+import time
+import datetime
 
 
 class SugarcaneDisease:
@@ -22,6 +24,23 @@ class SugarcaneDisease:
     def open_json_file(self, path):
         with open(path, 'r') as f:
             return f.read()
+
+    def write_json_file(self, path, data):
+        with open(path, 'w') as f:
+            json.dump({'logs': data}, f, indent=4)
+
+    def save_log(self, logs_dir):
+        logs = json.loads(self.open_json_file(logs_dir))
+        logs = logs['logs']
+
+        info = dict()
+        info['log_name'] = 'CNN'
+        info['date'] = str(datetime.datetime.now())
+        info['timestamp'] = int(time.time())
+        info['config'] = self.config
+        logs.append(info)
+
+        self.write_json_file(logs_dir, logs)
 
     def train(self):
         print("Set config ...")
@@ -206,3 +225,4 @@ class SugarcaneDisease:
 
         # df = pd.DataFrame(result_list, columns=csv_labels) 
         # df.to_csv("./SugarcaneDisease/Result/" + "result.csv", index=True, header=True)
+        
