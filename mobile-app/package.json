@@ -1,5 +1,5 @@
 {
-  "name": "AI Sugarcane Disease Analysis",
+  "name": "AI-Sugarcane-Disease-Analysis",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start"
   },
-  "keywords": ["react", "machine learning", "images classification", "kmitl", "computer engineering"],
+  "keywords": ["react", "nextjs", "machine learning", "images classification", "kmitl", "computer engineering", "project", "thai"],
   "author": "KMITL CE56-19",
   "license": "ISC",
   "dependencies": {
