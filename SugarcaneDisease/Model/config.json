@@ -1,0 +1,27 @@
+{
+  "root_dir": "./SugarcaneDisease/Class",
+  "save_model_dir": "./SugarcaneDisease/Model/Save/CNN",
+  "save_predict_dir": "./SugarcaneDisease/Result",
+  "predict_file_name": "CNN",
+  "labels_dir": "./SugarcaneDisease/Class/labels.csv",
+  "dataset_dir": "./Dataset/train",
+  "image_config": {
+    "width": 256,
+    "height": 256,
+    "batch_size": 8,
+    "dimensions": 3
+  },
+  "optimizer": "adam",
+  "test_ratio": 0.2,
+  "validation_ratio": 0.2,
+  "verbose": 1,
+  "seed": 1234,
+  "epochs": 50,
+  "total_class": 3,
+  "data_augment": {
+    "shuffle": 1000,
+    "flip": "horizontal",
+    "rotation": 0.2,
+    "zoom": 0.2
+  }
+}
