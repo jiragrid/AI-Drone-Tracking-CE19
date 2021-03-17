@@ -30,10 +30,10 @@ export default function Page() {
 
       setPredictionInfo(arr.map((item, index) => ({ 
         no: index + 1,
-        white_leaf_disease: item.class_no === '0' ? item.accuracy : 0,
-        brown_spot_disease: item.class_no === '1' ? item.accuracy : 0,
-        ring_spot_disease: item.class_no === '2' ? item.accuracy : 0,
-        none_of_all: item.class_no === '3' ? item.accuracy : 0,
+        white_leaf_disease: item.class_no === '0' ? item.accuracy.toFixed(2) : 0,
+        brown_spot_disease: item.class_no === '1' ? item.accuracy.toFixed(2) : 0,
+        ring_spot_disease: item.class_no === '2' ? item.accuracy.toFixed(2) : 0,
+        none_of_all: item.class_no === '3' ? item.accuracy.toFixed(2) : 0,
       })));
       setWhiteLeafs(data?.data?.filter((item) => item.class_no === '0'));
       setBrownSpots(data?.data?.filter((item) => item.class_no === '1'));
