@@ -1,6 +1,6 @@
 {
-  "name": "create-next-app-cli",
-  "version": "0.1.0",
+  "name": "AI Sugarcane Disease Analysis",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["react", "machine learning", "images classification", "kmitl", "computer engineering"],
+  "author": "KMITL CE56-19",
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
