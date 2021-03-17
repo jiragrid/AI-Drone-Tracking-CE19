@@ -71,7 +71,7 @@ function Upload({
             <Typography>
               {
                 current?.timestamp ?
-                  new Date(current?.timestamp).toLocaleString()
+                  new Date(current?.timestamp * 1000).toLocaleString()
                   :
                   '-'
               }

@@ -80,6 +80,105 @@
             "class_no": "0",
             "class_name": "White Leaf Disease",
             "timestamp": 1615975410
+        },
+        {
+            "file_name": "C962E6E7-26AA-46ED-94B5-6040AD5C7506.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 78.10404300689697,
+            "url": "restful-api/database/images/save/1615981183.png",
+            "class_no": "3",
+            "class_name": "None of All",
+            "timestamp": 1615981183
+        },
+        {
+            "file_name": "IMG_0481.JPG",
+            "file_type": "image/jpeg",
+            "accuracy": 90.07307291030884,
+            "url": "restful-api/database/images/save/1615981189.png",
+            "class_no": "0",
+            "class_name": "White Leaf Disease",
+            "timestamp": 1615981189
+        },
+        {
+            "file_name": "IMG_0459.JPG",
+            "file_type": "image/jpeg",
+            "accuracy": 99.99997615814209,
+            "url": "restful-api/database/images/save/1615981203.png",
+            "class_no": "0",
+            "class_name": "White Leaf Disease",
+            "timestamp": 1615981203
+        },
+        {
+            "file_name": "161445576_741683586712730_3569267800720572324_n.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 99.9961256980896,
+            "url": "restful-api/database/images/save/1615981403.png",
+            "class_no": "0",
+            "class_name": "White Leaf Disease",
+            "timestamp": 1615981403
+        },
+        {
+            "file_name": "161274395_261553008874220_4880707338645420044_n.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 97.38043546676636,
+            "url": "restful-api/database/images/save/1615981436.png",
+            "class_no": "0",
+            "class_name": "White Leaf Disease",
+            "timestamp": 1615981436
+        },
+        {
+            "file_name": "161835990_448779819572345_6447500966647733094_n.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 74.21908378601074,
+            "url": "restful-api/database/images/save/1615981462.png",
+            "class_no": "3",
+            "class_name": "None of All",
+            "timestamp": 1615981462
+        },
+        {
+            "file_name": "162126395_1178594962574483_1155540461881442497_n.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 76.36025547981262,
+            "url": "restful-api/database/images/save/1615981489.png",
+            "class_no": "3",
+            "class_name": "None of All",
+            "timestamp": 1615981489
+        },
+        {
+            "file_name": "162072536_290002079381721_7491027618722341746_n.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 99.93853569030762,
+            "url": "restful-api/database/images/save/1615981516.png",
+            "class_no": "0",
+            "class_name": "White Leaf Disease",
+            "timestamp": 1615981516
+        },
+        {
+            "file_name": "162108254_436918577416735_5927679607221181108_n.jpeg",
+            "file_type": "image/jpeg",
+            "accuracy": 89.9817407131195,
+            "url": "restful-api/database/images/save/1615981544.png",
+            "class_no": "1",
+            "class_name": "Narrow Brown Spot Disease",
+            "timestamp": 1615981544
+        },
+        {
+            "file_name": "262.jpg",
+            "file_type": "image/jpeg",
+            "accuracy": 98.66905212402344,
+            "url": "restful-api/database/images/save/1615982502.png",
+            "class_no": "1",
+            "class_name": "Narrow Brown Spot Disease",
+            "timestamp": 1615982502
+        },
+        {
+            "file_name": "236.jpg",
+            "file_type": "image/jpeg",
+            "accuracy": 80.88270425796509,
+            "url": "restful-api/database/images/save/1615982515.png",
+            "class_no": "1",
+            "class_name": "Narrow Brown Spot Disease",
+            "timestamp": 1615982515
         }
     ]
 }
