@@ -16,9 +16,8 @@ import json
 
 
 class SugarcaneDisease:
-    def __init__(self):
-        json_dir = './SugarcaneDisease/Class/config.json'
-        self.config = json.loads(self.open_json_file(json_dir))
+    def __init__(self, config_dir):
+        self.config = json.loads(self.open_json_file(config_dir))
     
     def open_json_file(self, path):
         with open(path, 'r') as f:
@@ -33,11 +32,13 @@ class SugarcaneDisease:
         dimension = image_config['dimensions']
         batch_size = image_config['batch_size']
 
-        test_ratio = image_config['test_ratio']
-        validation_ratio = image_config['validation_ratio']
-        verbose = image_config['verbose']
+        test_ratio = self.config['test_ratio']
+        validation_ratio = self.config['validation_ratio']
+        verbose = self.config['verbose']
         seed = self.config['seed']
         total_epochs = self.config['epochs']
+        hidden_layers = self.config['hidden_layers']
+        max_pooling = self.config['max_pooling']
 
         image_shape = (image_width, image_height, dimension)
         
@@ -92,14 +93,14 @@ class SugarcaneDisease:
         )
         model = Sequential([
             data_augmentation,
-            layers.Conv2D(128, 3, padding='same', activation='relu'),
+            layers.Conv2D(hidden_layers[0], max_pooling, padding='same', activation='relu'),
             layers.MaxPooling2D(),
-            layers.Conv2D(64, 3, padding='same', activation='relu'),
+            layers.Conv2D(hidden_layers[1], max_pooling, padding='same', activation='relu'),
             layers.MaxPooling2D(),
-            layers.Conv2D(64, 3, padding='same', activation='relu'),
+            layers.Conv2D(hidden_layers[2], max_pooling, padding='same', activation='relu'),
             layers.MaxPooling2D(),
             layers.Flatten(),
-            layers.Dense(32, activation='relu'),
+            layers.Dense(hidden_layers[3], activation='relu'),
             layers.Dense(num_classes)
         ])
         model.compile(optimizer=self.config['optimizer'],
