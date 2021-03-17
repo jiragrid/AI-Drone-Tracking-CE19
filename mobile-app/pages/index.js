@@ -76,7 +76,7 @@ export default function Page() {
         </div>
         <div className="col-md-3">
           <CardInfo
-            title="Brown Spot Leaf Disease"
+            title="Narrow Brown Spot Leaf Disease"
             total={brownSpots.length}
             percentUp={calculatePercentage(brownSpots)}
             percentDown={getLastAccuracy(brownSpots)}

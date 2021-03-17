@@ -63,6 +63,23 @@
             "url": "restful-api/database/images/save/1615970103.png",
             "class_no": "1",
             "class_name": "Narrow Brown Spot Disease"
+        },
+        {
+            "file_name": "262.jpg",
+            "file_type": "image/jpeg",
+            "accuracy": 98.66905212402344,
+            "url": "restful-api/database/images/save/1615974010.png",
+            "class_no": "1",
+            "class_name": "Narrow Brown Spot Disease"
+        },
+        {
+            "file_name": "1.jpg",
+            "file_type": "image/jpeg",
+            "accuracy": 99.98509883880615,
+            "url": "restful-api/database/images/save/1615975410.png",
+            "class_no": "0",
+            "class_name": "White Leaf Disease",
+            "timestamp": 1615975410
         }
     ]
 }

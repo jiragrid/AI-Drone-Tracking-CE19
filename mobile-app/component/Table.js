@@ -51,17 +51,37 @@ function CustomTable({
     fetchPrediction();
   }, [])
 
+  console.log(predictionInfo)
+
   const RenderDialog = () => (
     <Dialog open={isOpenDialog} onClose={handleCloseDialog} fullWidth>
       <DialogContent>
-        <img className="w-100" src={`${URL_FILE}/${dialogInfo?.url || ''}`} />
-        <Typography className="mt-3 mb-3 text-center" variant="subtitle2">Class Name: {dialogInfo?.class_name || ''}</Typography>
+        <div className="row">
+          <img className="col-md-6 w-100 mb-3" src={`${URL_FILE}/${dialogInfo?.url || ''}`} />
+          <div className="col-md-6 mb-3">
+            <Typography variant="h6">Image Name:</Typography>
+            <Typography>{dialogInfo?.file_name?.split('.')[0]}</Typography>
+            <Typography className="mt-2" variant="h6">Class Name:</Typography>
+            <Typography>{dialogInfo?.class_name}</Typography>
+            <Typography className="mt-2" variant="h6">Accuracy:</Typography>
+            <Typography>{dialogInfo?.accuracy?.toFixed(2)}%</Typography>
+            <Typography className="mt-2" variant="h6">Created At:</Typography>
+            <Typography>
+              {
+                dialogInfo?.timestamp ?
+                  new Date(dialogInfo?.timestamp * 1000).toLocaleString()
+                  :
+                  '-'
+              }
+            </Typography>
+          </div>
+        </div>
       </DialogContent>
     </Dialog>
   )
 
   return (
-    <div className="w-100">
+    <div className="overflow-100">
       {RenderDialog()}
       <Table>
         <TableHead>
@@ -71,20 +91,29 @@ function CustomTable({
             <TableCell className="text-center">Image Type</TableCell>
             <TableCell className="text-center">Accuracy</TableCell>
             <TableCell className="text-center">Class Name</TableCell>
+            <TableCell className="text-center">Created At</TableCell>
           </TableRow>
         </TableHead>
         <TableBody className={isLoading ? 'd-none' : ''}>
-        {
-          predictionInfo.map((predict, index) => (
-            <TableRow className="row-data" key={`prediction-table-${index}`} onClick={() => handleClickRow(index)}>
-              <TableCell>{index + 1}</TableCell>
-              <TableCell>{predict.file_name.split('.')[0]}</TableCell>
-              <TableCell className="text-center">{predict.file_type}</TableCell>
-              <TableCell className="text-center">{predict.accuracy.toFixed(2)}%</TableCell>
-              <TableCell className="text-center">{predict.class_name}</TableCell>
-            </TableRow>
-          ))
-        }
+          {
+            predictionInfo.map((predict, index) => (
+              <TableRow className="row-data" key={`prediction-table-${index}`} onClick={() => handleClickRow(index)}>
+                <TableCell>{index + 1}</TableCell>
+                <TableCell>{predict.file_name.split('.')[0]}</TableCell>
+                <TableCell className="text-center">{predict.file_type}</TableCell>
+                <TableCell className="text-center">{predict.accuracy.toFixed(2)}%</TableCell>
+                <TableCell className="text-center">{predict.class_name}</TableCell>
+                <TableCell className="text-center">
+                  {
+                    predict.timestamp ?
+                      new Date(predict.timestamp * 1000).toLocaleString()
+                      :
+                      '-'
+                  }
+                </TableCell>
+              </TableRow>
+            ))
+          }
         </TableBody>
       </Table>
       <div className={!isLoading && predictionInfo.length === 0 ? 'mt-3 text-center' : 'd-none'}>

@@ -29,14 +29,14 @@ function CardInfo({
           <span>{icon}</span>
         </Typography>
         <Typography className="mt-3 text-right" variant="h4">{total.toString()}</Typography>
-        <div className="row">
-          <div className="col-md-6">
+        <div className="d-flex justify-content-between flex-grow-1 flex-wrap">
+          <div>
             <Typography className="mt-3" color={comparePercent(percentUp, percentDown).color}>
               Avg : {percentUp}%
             {comparePercent(percentUp, percentDown).icon}
             </Typography>
           </div>
-          <div className="col-md-6 text-right">
+          <div>
             <Typography className="mt-3" color={comparePercent(percentDown, percentUp).color}>
               Last: {percentDown}%
             {comparePercent(percentDown, percentUp).icon}

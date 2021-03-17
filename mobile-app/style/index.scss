@@ -79,3 +79,13 @@ img {
         opacity: 0.5;
     }
 }
+
+.recharts-default-legend {
+    margin-top: 1em !important;
+}
+
+.overflow-100 {
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+}
