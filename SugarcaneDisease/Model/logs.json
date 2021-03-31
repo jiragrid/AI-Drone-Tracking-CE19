@@ -38,6 +38,46 @@
                     "zoom": 0.2
                 }
             }
+        },
+        {
+            "log_name": "CNN",
+            "date": "2021-03-31 23:29:30.346152",
+            "timestamp": 1617208170,
+            "config": {
+                "root_dir": "./SugarcaneDisease/Class",
+                "save_model_dir": "./SugarcaneDisease/Model/Save/CNN-V1",
+                "save_predict_dir": "./SugarcaneDisease/Result",
+                "predict_file_name": "CNN",
+                "labels_dir": "./SugarcaneDisease/Class/labels.csv",
+                "dataset_dir": "./Dataset/train",
+                "testset_dir": "./Dataset/Test",
+                "image_config": {
+                    "width": 256,
+                    "height": 256,
+                    "batch_size": 8,
+                    "dimensions": 3
+                },
+                "hidden_layers": [
+                    3,
+                    3,
+                    16,
+                    256
+                ],
+                "max_pooling": 3,
+                "optimizer": "adam",
+                "test_ratio": 0.2,
+                "validation_ratio": 0.2,
+                "verbose": 1,
+                "seed": 6985,
+                "epochs": 100,
+                "total_class": 3,
+                "data_augment": {
+                    "shuffle": 1000,
+                    "flip": "horizontal",
+                    "rotation": 0.2,
+                    "zoom": 0.2
+                }
+            }
         }
     ]
 }
