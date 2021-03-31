@@ -14,7 +14,7 @@ image_height = 256
 image_width = 256
 batch_size = 32
 root_dataset_path = "./Dataset/test/"
-model_path = "./SugarcaneDisease/Model/Save/CNN"
+model_path = "./SugarcaneDisease/Model/Save/CNN-V1"
 
 print("Load Model ...")
 model = tf.keras.models.load_model(model_path, compile=True)

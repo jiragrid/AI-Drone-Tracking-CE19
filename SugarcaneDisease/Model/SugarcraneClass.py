@@ -166,13 +166,14 @@ class SugarcaneDisease:
         print("Set config ...")
         image_config = self.config['image_config']
 
-        image_height = image_config['image_height']
-        image_width = image_config['image_width']
+        image_height = image_config['height']
+        image_width = image_config['width']
         dimensions = image_config['dimensions']
         batch_size = 32
-        model_dir = self.config['save_model_dir']
-        class_labels = self.config['labels_dir']
-        test_images_path = list(pathlib.Path(model_dir).glob("**/*"))
+        model_dir = self.config['test_model_dir']
+        class_labels = pd.read_csv(self.config['labels_dir'])
+        test_path = self.config['testset_dir']
+        test_images_path = list(pathlib.Path(test_path).glob("**/*"))
         result_list = []
         images_list = []
         y_predict = []
@@ -183,6 +184,7 @@ class SugarcaneDisease:
 
         print("Load test Dataset ...")
         csv_labels = ["file_path", "class_no", "class_name", "accuracy"]
+        print(class_labels)
 
         print("Load image ...")
 
