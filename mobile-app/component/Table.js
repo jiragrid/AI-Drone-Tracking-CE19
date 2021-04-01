@@ -51,7 +51,7 @@ function CustomTable({
     fetchPrediction();
   }, [])
 
-  console.log(predictionInfo)
+  // console.log(predictionInfo)
 
   const RenderDialog = () => (
     <Dialog open={isOpenDialog} onClose={handleCloseDialog} fullWidth>

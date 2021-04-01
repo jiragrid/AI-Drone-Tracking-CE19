@@ -37,7 +37,8 @@ function Upload({
       });
 
       console.log('success upload', data);
-      prediction.push(data?.data[0]);
+
+      if (Array.isArray(data?.data)) data?.data?.map((item) => prediction.push(item))
 
       setProgress((index + 1) / IMG_LENGTH * 100);
       setPrediction([...prediction]);
@@ -56,7 +57,7 @@ function Upload({
   });
 
   const RenderBody = () => {
-    if (progress === 100) {
+    if (progress >= 100) {
       const current = prediction[currentIndex];
 
       return (
@@ -84,11 +85,10 @@ function Upload({
       return (
         <div className="text-center">
           <div>
-            <CircularProgress variant="indeterminate" />
+            <CircularProgress variant="indeterminate" value={progress} />
           </div>
-          {/* <CircularProgress variant="determinate" value={progress} /> */}
           <div>
-            <small>in progress ...</small>
+            <small>please wait ...</small>
           </div>
         </div>
       )

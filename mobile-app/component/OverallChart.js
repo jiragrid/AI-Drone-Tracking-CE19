@@ -29,10 +29,11 @@ function RenderLineChart({
         margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
       >
         <Tooltip />
-        <Area type="monotone" dataKey="white_leaf_disease" stroke="#54B5C4" fillOpacity={0.25} fill="#54B5C4" />
+        <Area type="monotone" dataKey="white_leaf_disease" stroke="#AA6FAA" fillOpacity={0.25} fill="#AA6FAA" />
         <Area type="monotone" dataKey="brown_spot_disease" stroke="#82ca9d" fillOpacity={0.25} fill="#82ca9d" />
         <Area type="monotone" dataKey="ring_spot_disease" stroke="#0184d8" fillOpacity={0.25} fill="#0184d8" />
-        <Area type="monotone" dataKey="none_of_all" stroke="#6F6F6F" fillOpacity={0.25} fill="#6F6F6F" />
+        <Area type="monotone" dataKey="other" stroke="#6A6FAF" fillOpacity={0.25} fill="#6A6FAF" />
+        <Area type="monotone" dataKey="not_analysis" stroke="#B4B5C0" fillOpacity={0.25} fill="#B4B5C0" />
         <CartesianGrid stroke="#ddd" strokeDasharray="5 5" />
         <XAxis dataKey="no">
           <Label value="No. Recently Test" offset={0} position="bottom" />

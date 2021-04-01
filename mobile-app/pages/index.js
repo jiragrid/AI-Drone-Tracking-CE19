@@ -9,6 +9,7 @@ import EcoIcon from '@material-ui/icons/Eco';
 import DotIcon from '@material-ui/icons/FiberManualRecord';
 import CircleIcon from '@material-ui/icons/RadioButtonUnchecked';
 import NoneIcon from '@material-ui/icons/NotInterested';
+import OtherIcon from '@material-ui/icons/DevicesOther';
 import CardInfo from '../component/Card';
 import OverallChart from '../component/OverallChart';
 import Axios from 'axios';
@@ -20,7 +21,8 @@ export default function Page() {
   const [whiteLeafs, setWhiteLeafs] = useState([]);
   const [ringSpots, setRingSpots] = useState([]);
   const [brownSpots, setBrownSpots] = useState([]);
-  const [noneOfAll, setNoneOfAll] = useState([]);
+  const [other, setOther] = useState([]);
+  const [notAnalysis, setNotAnalysis] = useState([]);
 
   const fetchPrediction = async () => {
     try {
@@ -33,12 +35,14 @@ export default function Page() {
         white_leaf_disease: item.class_no === '0' ? item.accuracy.toFixed(2) : 0,
         brown_spot_disease: item.class_no === '1' ? item.accuracy.toFixed(2) : 0,
         ring_spot_disease: item.class_no === '2' ? item.accuracy.toFixed(2) : 0,
-        none_of_all: item.class_no === '3' ? item.accuracy.toFixed(2) : 0,
+        other: item.class_no === '3' ? item.accuracy.toFixed(2) : 0,
+        not_analysis: item.class_no === '4' ? item.accuracy.toFixed(2) : 0,
       })));
       setWhiteLeafs(data?.data?.filter((item) => item.class_no === '0'));
       setBrownSpots(data?.data?.filter((item) => item.class_no === '1'));
       setRingSpots(data?.data?.filter((item) => item.class_no === '2'));
-      setNoneOfAll(data?.data?.filter((item) => item.class_no === '3'));
+      setOther(data?.data?.filter((item) => item.class_no === '3'));
+      setNotAnalysis(data?.data?.filter((item) => item.class_no === '4'));
       setIsLoading(false);
     }
     catch(error) {
@@ -65,7 +69,7 @@ export default function Page() {
   return (
     <AppContainer>
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-4">
           <CardInfo
             title="White Leaf Disease"
             total={whiteLeafs.length}
@@ -74,7 +78,7 @@ export default function Page() {
             icon={<EcoIcon />}
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-md-4">
           <CardInfo
             title="Narrow Brown Spot Leaf Disease"
             total={brownSpots.length}
@@ -83,7 +87,7 @@ export default function Page() {
             icon={<DotIcon />}
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-md-4">
           <CardInfo
             title="Ring Spot Leaf Disease"
             total={ringSpots.length}
@@ -92,12 +96,21 @@ export default function Page() {
             icon={<CircleIcon />}
           />
         </div>
-        <div className="col-md-3">
+        <div className="col-md-4">
           <CardInfo
-            title="None of All"
-            total={noneOfAll.length}
-            percentUp={calculatePercentage(noneOfAll)}
-            percentDown={getLastAccuracy(noneOfAll)}
+            title="Other"
+            total={other.length}
+            percentUp={calculatePercentage(other)}
+            percentDown={getLastAccuracy(other)}
+            icon={<OtherIcon />}
+          />
+        </div>
+        <div className="col-md-4">
+          <CardInfo
+            title="N/A"
+            total={notAnalysis.length}
+            percentUp={calculatePercentage(notAnalysis)}
+            percentDown={getLastAccuracy(notAnalysis)}
             icon={<NoneIcon />}
           />
         </div>

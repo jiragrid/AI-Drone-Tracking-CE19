@@ -60,6 +60,9 @@ def prediction(path):
         if accuracy >= threshold:
             info['class_no'] = str(class_no)
             info['class_name'] = str(class_labels['class_name'][class_no])
+        else:
+            info['class_no'] = str(4)
+            info['class_name'] = str(class_labels['class_name'][4])
 
         result.append(info)
 
