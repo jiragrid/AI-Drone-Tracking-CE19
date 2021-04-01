@@ -5,5 +5,7 @@
   "database_dir": {
     "logs": "./restful-api/database/logs.json",
     "images": "./restful-api/database/images"
-  }
+  },
+  "model_dir": "./SugarcaneDisease/Model/Save/CNN-V3",
+  "labels_dir": "./SugarcaneDisease/Class/labels.csv"
 }

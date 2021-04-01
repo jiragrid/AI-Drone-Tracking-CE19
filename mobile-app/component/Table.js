@@ -28,7 +28,7 @@ function CustomTable({
       setIsLoading(true);
       const { data } = await Axios.get(URL);
 
-      console.log(data);
+      // console.log(data);
       setPredictionInfo(data?.data?.map((item) => item))
       setIsLoading(false);
     }

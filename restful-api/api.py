@@ -10,6 +10,8 @@ class Predition(Resource):
         self.config = json.loads(self.open_json_file('./restful-api/config.json'))
         self.path_db = self.config['database_dir']['logs']
         self.image_path = self.config['database_dir']['images']
+        self.lables_path = self.config['labels_dir']
+        self.model_path = self.config['model_dir']
 
     def open_json_file(self, path):
         with open(path, 'r') as f:
@@ -33,7 +35,7 @@ class Predition(Resource):
 
         try:
             save_image(args['src'], self.image_path + '/temp')
-            result = prediction(self.image_path + '/temp')
+            result = prediction(self.image_path + '/temp', self.model_path, self.lables_path)
 
             data = json.loads(self.open_json_file(self.path_db))
             data = data['result']
@@ -58,7 +60,7 @@ class Predition(Resource):
 
 class GetFile(Resource):
     def __init__(self):
-        self.config = self.open_json_file('./restful-api/config.json')
+        self.config = json.loads(self.open_json_file('./restful-api/config.json'))
         self.user_path = self.config['user_dir']
 
     def open_json_file(self, path):

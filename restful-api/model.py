@@ -27,9 +27,9 @@ def save_image(src, path):
     return file_name
 
 
-def prediction(path):
-    model_path = './SugarcaneDisease/Model/Save/CNN-V1'
-    class_labels = pd.read_csv("./SugarcaneDisease/Class/labels.csv")
+def prediction(path, model_dir, class_dir):
+    model_path = model_dir
+    class_labels = pd.read_csv(class_dir)
     result = []
 
     model = tf.keras.models.load_model(model_path, compile=True)

@@ -1,3 +1,13 @@
 {
-    "result": []
+    "result": [
+        {
+            "file_name": "01.png",
+            "file_type": "image/png",
+            "accuracy": 100.0,
+            "url": "restful-api/database/images/save/1617264457.png",
+            "class_no": "3",
+            "class_name": "Other",
+            "timestamp": 1617264457
+        }
+    ]
 }
