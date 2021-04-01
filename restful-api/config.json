@@ -1,0 +1,9 @@
+{
+  "user_dir": "/Users/earthzaa/Desktop/AI-Drone-Tracking-CE19/",
+  "root_dir": "./restful-api",
+  "host_url": "restful-api",
+  "database_dir": {
+    "logs": "./restful-api/database/logs.json",
+    "images": "./restful-api/database/images"
+  }
+}

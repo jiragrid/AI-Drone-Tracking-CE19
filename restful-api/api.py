@@ -7,11 +7,12 @@ from flask import send_from_directory
 
 class Predition(Resource):
     def __init__(self):
-        self.path_db = './restful-api/database/db1.json'
-        self.image_path = './restful-api/database/images'
+        self.config = json.loads(self.open_json_file('./restful-api/config.json'))
+        self.path_db = self.config['database_dir']['logs']
+        self.image_path = self.config['database_dir']['images']
 
-    def open_json_file(self):
-        with open(self.path_db, 'r') as f:
+    def open_json_file(self, path):
+        with open(path, 'r') as f:
             return f.read()
 
     def write_json_file(self, data):
@@ -19,7 +20,7 @@ class Predition(Resource):
             json.dump({'result': data}, f, indent=4)
 
     def get(self):
-        data = json.loads(self.open_json_file())
+        data = json.loads(self.open_json_file(self.path_db))
 
         return {'data': data['result'], 'status_code': 200}
 
@@ -34,7 +35,7 @@ class Predition(Resource):
             save_image(args['src'], self.image_path + '/temp')
             result = prediction(self.image_path + '/temp')
 
-            data = json.loads(self.open_json_file())
+            data = json.loads(self.open_json_file(self.path_db))
             data = data['result']
 
             data.append({
@@ -56,6 +57,13 @@ class Predition(Resource):
             return {'data': str(e), 'status_code': 500}
 
 class GetFile(Resource):
+    def __init__(self):
+        self.config = self.open_json_file('./restful-api/config.json')
+        self.user_path = self.config['user_dir']
+
+    def open_json_file(self, path):
+        with open(path, 'r') as f:
+            return f.read()
+
     def get(self, path):
-        print(path)
-        return send_from_directory('/Users/earthzaa/Desktop/AI-Drone-Tracking-CE19/', path)
+        return send_from_directory(self.user_path, path)

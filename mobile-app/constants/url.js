@@ -1,4 +1,4 @@
-export const IP = '192.168.0.105';
+export const IP = '172.20.10.3';
 export const HOST = `http://${IP}:5000`;
 export const URL = `${HOST}/predict`;
 export const URL_FILE = `${HOST}/get-file`

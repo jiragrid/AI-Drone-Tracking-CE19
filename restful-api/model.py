@@ -53,8 +53,6 @@ def prediction(path):
         info = dict()
         info['accuracy'] = accuracy
         info['url'] = dir_name + str(file_name)
-        info['class_no'] = '3'
-        info['class_name'] =  str(class_labels['class_name'][3])
         info['timestamp'] = int(get_time)
         
         if accuracy >= threshold:
