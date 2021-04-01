@@ -38,6 +38,169 @@
                     "zoom": 0.2
                 }
             }
+        },
+        {
+            "log_name": "CNN",
+            "date": "2021-03-31 23:29:30.346152",
+            "timestamp": 1617208170,
+            "config": {
+                "root_dir": "./SugarcaneDisease/Class",
+                "save_model_dir": "./SugarcaneDisease/Model/Save/CNN-V1",
+                "save_predict_dir": "./SugarcaneDisease/Result",
+                "predict_file_name": "CNN",
+                "labels_dir": "./SugarcaneDisease/Class/labels.csv",
+                "dataset_dir": "./Dataset/train",
+                "testset_dir": "./Dataset/Test",
+                "image_config": {
+                    "width": 256,
+                    "height": 256,
+                    "batch_size": 8,
+                    "dimensions": 3
+                },
+                "hidden_layers": [
+                    3,
+                    3,
+                    16,
+                    256
+                ],
+                "max_pooling": 3,
+                "optimizer": "adam",
+                "test_ratio": 0.2,
+                "validation_ratio": 0.2,
+                "verbose": 1,
+                "seed": 6985,
+                "epochs": 100,
+                "total_class": 3,
+                "data_augment": {
+                    "shuffle": 1000,
+                    "flip": "horizontal",
+                    "rotation": 0.2,
+                    "zoom": 0.2
+                }
+            }
+        },
+        {
+            "log_name": "CNN",
+            "date": "2021-04-01 04:40:40.056006",
+            "timestamp": 1617226840,
+            "config": {
+                "root_dir": "./SugarcaneDisease/Class",
+                "save_model_dir": "./SugarcaneDisease/Model/Save/CNN-V2",
+                "test_model_dir": "./SugarcaneDisease/Model/Save/CNN-V2",
+                "save_predict_dir": "./SugarcaneDisease/Result",
+                "predict_file_name": "CNN",
+                "labels_dir": "./SugarcaneDisease/Class/labels.csv",
+                "dataset_dir": "./Dataset/train",
+                "testset_dir": "./Dataset/Test",
+                "image_config": {
+                    "width": 256,
+                    "height": 256,
+                    "batch_size": 32,
+                    "dimensions": 3
+                },
+                "hidden_layers": [
+                    64,
+                    64,
+                    32,
+                    128
+                ],
+                "max_pooling": 3,
+                "optimizer": "adam",
+                "test_ratio": 0.2,
+                "validation_ratio": 0.2,
+                "verbose": 1,
+                "seed": 5619,
+                "epochs": 10,
+                "total_class": 4,
+                "data_augment": {
+                    "shuffle": 50,
+                    "flip": "horizontal",
+                    "rotation": 0.2,
+                    "zoom": 0.2
+                }
+            }
+        },
+        {
+            "log_name": "CNN",
+            "date": "2021-04-01 05:03:24.003238",
+            "timestamp": 1617228204,
+            "config": {
+                "root_dir": "./SugarcaneDisease/Class",
+                "save_model_dir": "./SugarcaneDisease/Model/Save/CNN-V2",
+                "test_model_dir": "./SugarcaneDisease/Model/Save/CNN-V2",
+                "save_predict_dir": "./SugarcaneDisease/Result",
+                "predict_file_name": "CNN",
+                "labels_dir": "./SugarcaneDisease/Class/labels.csv",
+                "dataset_dir": "./Dataset/train",
+                "testset_dir": "./Dataset/Test",
+                "image_config": {
+                    "width": 256,
+                    "height": 256,
+                    "batch_size": 32,
+                    "dimensions": 3
+                },
+                "hidden_layers": [
+                    32,
+                    64,
+                    64,
+                    128
+                ],
+                "max_pooling": 3,
+                "optimizer": "adam",
+                "test_ratio": 0.2,
+                "validation_ratio": 0.2,
+                "verbose": 1,
+                "seed": 5619,
+                "epochs": 10,
+                "total_class": 4,
+                "data_augment": {
+                    "shuffle": 100,
+                    "flip": "horizontal",
+                    "rotation": 0.2,
+                    "zoom": 0.2
+                }
+            }
+        },
+        {
+            "log_name": "CNN",
+            "date": "2021-04-01 14:16:24.148121",
+            "timestamp": 1617261384,
+            "config": {
+                "root_dir": "./SugarcaneDisease/Class",
+                "save_model_dir": "./SugarcaneDisease/Model/Save/CNN-V3",
+                "test_model_dir": "./SugarcaneDisease/Model/Save/CNN-V3",
+                "save_predict_dir": "./SugarcaneDisease/Result",
+                "predict_file_name": "CNN",
+                "labels_dir": "./SugarcaneDisease/Class/labels.csv",
+                "dataset_dir": "./Dataset/train",
+                "testset_dir": "./Dataset/Test",
+                "image_config": {
+                    "width": 256,
+                    "height": 256,
+                    "batch_size": 32,
+                    "dimensions": 3
+                },
+                "hidden_layers": [
+                    128,
+                    32,
+                    64,
+                    128
+                ],
+                "max_pooling": 3,
+                "optimizer": "adam",
+                "test_ratio": 0.2,
+                "validation_ratio": 0.2,
+                "verbose": 1,
+                "seed": 5619,
+                "epochs": 100,
+                "total_class": 4,
+                "data_augment": {
+                    "shuffle": 1000,
+                    "flip": "horizontal",
+                    "rotation": 0.2,
+                    "zoom": 0.2
+                }
+            }
         }
     ]
 }

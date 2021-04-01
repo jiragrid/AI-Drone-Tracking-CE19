@@ -112,12 +112,14 @@ class SugarcaneDisease:
         )
         model = Sequential([
             data_augmentation,
+            layers.experimental.preprocessing.Rescaling(1./255, input_shape=(image_width, image_height, dimension)),
             layers.Conv2D(hidden_layers[0], max_pooling, padding='same', activation='relu'),
             layers.MaxPooling2D(),
             layers.Conv2D(hidden_layers[1], max_pooling, padding='same', activation='relu'),
             layers.MaxPooling2D(),
             layers.Conv2D(hidden_layers[2], max_pooling, padding='same', activation='relu'),
             layers.MaxPooling2D(),
+            layers.Dropout(0.2),
             layers.Flatten(),
             layers.Dense(hidden_layers[3], activation='relu'),
             layers.Dense(num_classes)
@@ -130,10 +132,10 @@ class SugarcaneDisease:
 
         print("Evaluate Model ...")
         history = model.fit(
-        train_dataset,
-        validation_data=validattion_dataset,
-        epochs=total_epochs,
-        verbose=verbose
+            train_dataset,
+            validation_data=validattion_dataset,
+            epochs=total_epochs,
+            verbose=verbose
         )
 
         print("Visualization ...")
@@ -161,18 +163,23 @@ class SugarcaneDisease:
 
         print("Save Model ...")
         keras.models.save_model(model, self.config['save_model_dir'])
+
+    def train_with_gpu(self):
+        with tf.device('/device:GPU:0'):
+            self.train()
     
     def test(self, y_true):
         print("Set config ...")
         image_config = self.config['image_config']
 
-        image_height = image_config['image_height']
-        image_width = image_config['image_width']
+        image_height = image_config['height']
+        image_width = image_config['width']
         dimensions = image_config['dimensions']
         batch_size = 32
-        model_dir = self.config['save_model_dir']
-        class_labels = self.config['labels_dir']
-        test_images_path = list(pathlib.Path(model_dir).glob("**/*"))
+        model_dir = self.config['test_model_dir']
+        class_labels = pd.read_csv(self.config['labels_dir'])
+        test_path = self.config['testset_dir']
+        test_images_path = list(pathlib.Path(test_path).glob("**/*"))
         result_list = []
         images_list = []
         y_predict = []
@@ -183,6 +190,7 @@ class SugarcaneDisease:
 
         print("Load test Dataset ...")
         csv_labels = ["file_path", "class_no", "class_name", "accuracy"]
+        print(class_labels)
 
         print("Load image ...")
 
@@ -211,7 +219,7 @@ class SugarcaneDisease:
                 class_labels["class_name"][class_no],
                 accuracy
             ]
-            result_list.append(info)
+            result_list.append(class_no)
             count += 1
             print("Success", count, "...")
 
@@ -222,6 +230,8 @@ class SugarcaneDisease:
         print("Result ...")
         print(classification_report(y_true, y_predict))
         print(tf.math.confusion_matrix(y_true, y_predict))
+
+        return result_list
 
         # df = pd.DataFrame(result_list, columns=csv_labels) 
         # df.to_csv("./SugarcaneDisease/Result/" + "result.csv", index=True, header=True)
