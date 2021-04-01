@@ -219,7 +219,7 @@ class SugarcaneDisease:
                 class_labels["class_name"][class_no],
                 accuracy
             ]
-            result_list.append(class_no)
+            result_list.append(info)
             count += 1
             print("Success", count, "...")
 
