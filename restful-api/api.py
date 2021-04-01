@@ -34,8 +34,16 @@ class Predition(Resource):
         args = parser.parse_args()
 
         try:
-            save_image(args['src'], self.image_path + '/temp')
-            result = prediction(self.image_path + '/temp', self.model_path, self.lables_path)
+            threshold = self.config['threshold']
+            images_root = self.image_path + '/temp'
+
+            save_image(args['src'], images_root)
+            result = prediction(
+                images_root, 
+                self.model_path, 
+                self.lables_path, 
+                threshold
+            )
 
             data = json.loads(self.open_json_file(self.path_db))
             data = data['result']

@@ -13,7 +13,6 @@ from shutil import copyfile
 
 image_height = 256
 image_width = 256
-threshold = 80
 
 def save_image(src, path):
     file_name = str(int(time.time())) + '.jpeg'
@@ -27,7 +26,7 @@ def save_image(src, path):
     return file_name
 
 
-def prediction(path, model_dir, class_dir):
+def prediction(path, model_dir, class_dir, threshold):
     model_path = model_dir
     class_labels = pd.read_csv(class_dir)
     result = []

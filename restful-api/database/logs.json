@@ -26,6 +26,15 @@
             "class_no": "4",
             "class_name": "No Answer",
             "timestamp": 1617274488
+        },
+        {
+            "file_name": "1615916383.png",
+            "file_type": "image/png",
+            "accuracy": 100.0,
+            "url": "restful-api/database/images/save/1617274736.jpeg",
+            "class_no": "3",
+            "class_name": "Other",
+            "timestamp": 1617274736
         }
     ]
 }
