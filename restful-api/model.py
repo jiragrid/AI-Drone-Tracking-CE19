@@ -16,13 +16,13 @@ image_width = 256
 threshold = 80
 
 def save_image(src, path):
-    file_name = str(int(time.time())) + '.png'
+    file_name = str(int(time.time())) + '.jpeg'
     file_path = path + "/" + file_name
 
     data = base64.b64decode(src)
     image = Image.open(BytesIO(data))
     image = image.resize((image_width, image_height))
-    image.save(file_path, 'png')
+    image.save(file_path, 'JPEG')
 
     return file_name
 
@@ -49,7 +49,7 @@ def prediction(path, model_dir, class_dir):
         accuracy = 100 * np.max(score)
 
         get_time = int(time.time())
-        file_name = str(get_time) + '.png'
+        file_name = str(get_time) + '.jpeg'
         info = dict()
         info['accuracy'] = accuracy
         info['url'] = dir_name + str(file_name)

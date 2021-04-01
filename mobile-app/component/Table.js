@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   Table,
   TableHead,
@@ -14,7 +15,7 @@ import Axios from 'axios';
 import { URL, URL_FILE } from '../constants/url';
 
 function CustomTable({
-
+  refetch = () => { },
 }) {
   const [predictionInfo, setPredictionInfo] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -125,6 +126,10 @@ function CustomTable({
       </div>
     </div>
   );
+};
+
+CustomTable.propTypes = {
+  refetch: PropTypes.func,
 };
 
 export default CustomTable;

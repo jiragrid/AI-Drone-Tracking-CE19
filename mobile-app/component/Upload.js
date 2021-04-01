@@ -7,6 +7,7 @@ import {
   Button,
   CircularProgress,
   Typography,
+  LinearProgress,
 } from '@material-ui/core';
 import Axios from 'axios';
 import { URL, URL_FILE } from '../constants/url';
@@ -17,9 +18,12 @@ function Upload({
   onClose = () => { },
 }) {
   const IMG_LENGTH = images.length || 0;
+
   const [progress, setProgress] = useState(0);
   const [prediction, setPrediction] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const NOT_COMPLETE = progress < 100
 
   const handleCloseModal = () => {
     setProgress(0);
@@ -30,17 +34,19 @@ function Upload({
 
   const uploadApi = async (image = {}, index = 0) => {
     try {
+      console.log('start upload', index);
+
       const { data } = await Axios.post(URL, {
         file_name: image.name,
         file_type: image.type,
         src: image.src
       });
 
-      console.log('success upload', data);
+      console.log(index, 'success uploaded', data);
 
       if (Array.isArray(data?.data)) data?.data?.map((item) => prediction.push(item))
 
-      setProgress((index + 1) / IMG_LENGTH * 100);
+      setProgress(((prediction.length + 1) / IMG_LENGTH) * 100);
       setPrediction([...prediction]);
     }
     catch (error) {
@@ -49,15 +55,17 @@ function Upload({
   };
 
   const handleUploadImages = () => {
-    images.map((image, index) => uploadApi(image, index));
+    images.map((image, index) => {
+      uploadApi(image, index);
+    })
   };
 
   useEffect(() => {
-    if (images.length > 0 && isOpen && prediction.length === 0) handleUploadImages();
+    if (images.length > 0 && isOpen && prediction.length === 0 && NOT_COMPLETE) handleUploadImages();
   });
 
   const RenderBody = () => {
-    if (progress >= 100) {
+    if (!NOT_COMPLETE) {
       const current = prediction[currentIndex];
 
       return (
@@ -88,6 +96,7 @@ function Upload({
             <CircularProgress variant="indeterminate" value={progress} />
           </div>
           <div>
+            {/* <LinearProgress variant="indeterminate" value={progress} /> */}
             <small>please wait ...</small>
           </div>
         </div>
@@ -108,14 +117,14 @@ function Upload({
       <DialogActions>
         <Button
           onClick={() => setCurrentIndex(currentIndex - 1)}
-          disabled={currentIndex === 0}
+          disabled={currentIndex === 0 || NOT_COMPLETE}
         >
           Back
         </Button>
         <Button
           color="primary"
           onClick={() => setCurrentIndex(currentIndex + 1)}
-          disabled={currentIndex >= IMG_LENGTH - 1}
+          disabled={currentIndex >= IMG_LENGTH - 1 || NOT_COMPLETE}
         >
           Next
         </Button>

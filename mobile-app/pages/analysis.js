@@ -24,6 +24,10 @@ function Analysis() {
 
   const toggleUploadCard = () => setIsOpenUploadCard(!isOpenUploadCard);
 
+  const handleCloseDialog = () => {
+    toggleUploadCard();
+  }
+
   const handleChangeFile = (event) => {
     const files = event.target.files;
     let arr = [];
@@ -58,12 +62,12 @@ function Analysis() {
         accept="image/*"
         onChange={handleChangeFile}
         ref={uploadRef}
-        // multiple
+        multiple
       />
       <UploadCard
         images={images}
         isOpen={isOpenUploadCard}
-        onClose={toggleUploadCard}
+        onClose={handleCloseDialog}
       />
       <Card>
         <CardContent>
@@ -73,11 +77,17 @@ function Analysis() {
           <Table />
         </CardContent>
       </Card>
-      <Fab color="primary" style={{ position: 'absolute', right: 30, bottom: 30 }}>
+      <Fab
+        color="primary"
+        style={{ 
+          position: 'absolute', 
+          right: 30, 
+          bottom: 30, 
+        }}
+        onClick={() => uploadRef.current.click()}
+      >
         <Tooltip title="Analysis">
-          <IconButton color="inherit" onClick={() => uploadRef.current.click()}>
-            <AddIcon style={{ fontSize: '1em' }} />
-          </IconButton>
+          <AddIcon style={{ fontSize: '2em' }} />
         </Tooltip>
       </Fab>
     </AppContainer>

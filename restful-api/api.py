@@ -40,15 +40,16 @@ class Predition(Resource):
             data = json.loads(self.open_json_file(self.path_db))
             data = data['result']
 
-            data.append({
-                'file_name': args['file_name'],
-                'file_type': args['file_type'],
-                'accuracy': result[0]['accuracy'],
-                'url': result[0]['url'],
-                'class_no': result[0]['class_no'],
-                'class_name': result[0]['class_name'],
-                'timestamp': result[0]['timestamp']
-            })
+            for predit in result:
+                data.append({
+                    'file_name': args['file_name'],
+                    'file_type': args['file_type'],
+                    'accuracy': predit['accuracy'],
+                    'url': predit['url'],
+                    'class_no': predit['class_no'],
+                    'class_name': predit['class_name'],
+                    'timestamp': predit['timestamp']
+                })
 
             self.write_json_file(data)
 
