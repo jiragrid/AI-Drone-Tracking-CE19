@@ -1,7 +1,7 @@
-import React, { 
-  useState, 
+import React, {
+  useState,
   useRef,
-  useEffect, 
+  useEffect,
 } from 'react';
 import {
   Card,
@@ -9,6 +9,7 @@ import {
   Typography,
   IconButton,
   Tooltip,
+  Fab,
 } from '@material-ui/core';
 import AppContainer from '../containers/AppContainer';
 import Table from '../component/Table';
@@ -66,17 +67,19 @@ function Analysis() {
       />
       <Card>
         <CardContent>
-          <Typography className="mb-3" variant="h5">Analysis Logs</Typography>
+          <div className="d-flex justify-content-between mb-2">
+            <Typography variant="h5" style={{ fontWeight: 'bolder' }}>Analysis Logs</Typography>
+          </div>
           <Table />
         </CardContent>
       </Card>
-      <div className="mb-0 text-center">
+      <Fab color="primary" style={{ position: 'absolute', right: 30, bottom: 30 }}>
         <Tooltip title="Analysis">
-          <IconButton className="mt-5" color="primary" onClick={() => uploadRef.current.click()}>
-            <AddIcon style={{ fontSize: '1.5em' }} />
+          <IconButton color="inherit" onClick={() => uploadRef.current.click()}>
+            <AddIcon style={{ fontSize: '1em' }} />
           </IconButton>
         </Tooltip>
-      </div>
+      </Fab>
     </AppContainer>
   );
 };

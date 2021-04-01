@@ -83,7 +83,7 @@ function Upload({
     }
     else {
       return (
-        <div className="text-center">
+        <div className="text-center mt-3">
           <div>
             <CircularProgress variant="indeterminate" value={progress} />
           </div>
