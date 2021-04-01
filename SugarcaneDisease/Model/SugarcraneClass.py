@@ -228,9 +228,12 @@ class SugarcaneDisease:
             # print("--------------------------------------------------------------------------------------------------")
 
         print("Result ...")
-        print(classification_report(y_true, y_predict))
-        print(tf.math.confusion_matrix(y_true, y_predict))
+        if (y_true):
+            print("Confusion Matrix ...")
+            print(classification_report(y_true, y_predict))
+            print(tf.math.confusion_matrix(y_true, y_predict))
 
+        print('Return ...')
         return result_list
 
         # df = pd.DataFrame(result_list, columns=csv_labels) 
