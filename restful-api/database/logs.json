@@ -8,6 +8,15 @@
             "class_no": "3",
             "class_name": "Other",
             "timestamp": 1617264457
+        },
+        {
+            "file_name": "1.jpg",
+            "file_type": "image/jpeg",
+            "accuracy": 59.64955687522888,
+            "url": "restful-api/database/images/save/1617264517.png",
+            "class_no": "4",
+            "class_name": "No Answer",
+            "timestamp": 1617264517
         }
     ]
 }

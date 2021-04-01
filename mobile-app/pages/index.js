@@ -107,7 +107,7 @@ export default function Page() {
         </div>
         <div className="col-md-4">
           <CardInfo
-            title="N/A"
+            title="No Answer"
             total={notAnalysis.length}
             percentUp={calculatePercentage(notAnalysis)}
             percentDown={getLastAccuracy(notAnalysis)}
