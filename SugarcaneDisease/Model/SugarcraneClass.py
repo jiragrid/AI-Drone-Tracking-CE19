@@ -168,7 +168,7 @@ class SugarcaneDisease:
         with tf.device('/device:GPU:0'):
             self.train()
     
-    def test(self, y_true):
+    def test(self, y_true, test_target):
         print("Set config ...")
         image_config = self.config['image_config']
 
@@ -179,6 +179,10 @@ class SugarcaneDisease:
         model_dir = self.config['test_model_dir']
         class_labels = pd.read_csv(self.config['labels_dir'])
         test_path = self.config['testset_dir']
+
+        if (test_target):
+            test_path = test_target
+
         test_images_path = list(pathlib.Path(test_path).glob("**/*"))
         result_list = []
         images_list = []
