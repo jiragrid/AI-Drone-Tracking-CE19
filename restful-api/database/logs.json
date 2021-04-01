@@ -1,67 +1,31 @@
 {
     "result": [
         {
-            "file_name": "1.jpg",
-            "file_type": "image/jpeg",
-            "accuracy": 60.62330603599548,
-            "url": "restful-api/database/images/save/1617267435.jpeg",
-            "class_no": "4",
-            "class_name": "No Answer",
-            "timestamp": 1617267435
-        },
-        {
-            "file_name": "1615916383.png",
-            "file_type": "image/png",
-            "accuracy": 100.0,
-            "url": "restful-api/database/images/save/1617267472.jpeg",
-            "class_no": "3",
-            "class_name": "Other",
-            "timestamp": 1617267472
-        },
-        {
-            "file_name": "1615916383.png",
-            "file_type": "image/png",
-            "accuracy": 100.0,
-            "url": "restful-api/database/images/save/1617267688.jpeg",
-            "class_no": "3",
-            "class_name": "Other",
-            "timestamp": 1617267688
-        },
-        {
-            "file_name": "1.jpg",
-            "file_type": "image/jpeg",
-            "accuracy": 60.62330603599548,
-            "url": "restful-api/database/images/save/1617267823.jpeg",
-            "class_no": "4",
-            "class_name": "No Answer",
-            "timestamp": 1617267823
-        },
-        {
             "file_name": "AIZ_6146.JPEG",
             "file_type": "image/jpeg",
             "accuracy": 100.0,
-            "url": "restful-api/database/images/save/1617267893.jpeg",
+            "url": "restful-api/database/images/save/1617274382.jpeg",
             "class_no": "3",
             "class_name": "Other",
-            "timestamp": 1617267893
-        },
-        {
-            "file_name": "01.png",
-            "file_type": "image/png",
-            "accuracy": 100.0,
-            "url": "restful-api/database/images/save/1617273630.jpeg",
-            "class_no": "3",
-            "class_name": "Other",
-            "timestamp": 1617273630
+            "timestamp": 1617274382
         },
         {
             "file_name": "162108254_436918577416735_5927679607221181108_n.jpeg",
             "file_type": "image/jpeg",
             "accuracy": 96.50559425354004,
-            "url": "restful-api/database/images/save/1617273757.jpeg",
+            "url": "restful-api/database/images/save/1617274439.jpeg",
             "class_no": "2",
             "class_name": "Ring Spot Disease",
-            "timestamp": 1617273757
+            "timestamp": 1617274439
+        },
+        {
+            "file_name": "1.jpg",
+            "file_type": "image/jpeg",
+            "accuracy": 60.62330603599548,
+            "url": "restful-api/database/images/save/1617274488.jpeg",
+            "class_no": "4",
+            "class_name": "No Answer",
+            "timestamp": 1617274488
         }
     ]
 }

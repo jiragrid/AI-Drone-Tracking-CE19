@@ -7,7 +7,6 @@ import {
   Card,
   CardContent,
   Typography,
-  IconButton,
   Tooltip,
   Fab,
 } from '@material-ui/core';

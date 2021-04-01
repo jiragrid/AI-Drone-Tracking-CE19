@@ -70,7 +70,7 @@ function CustomTable({
             <Typography>
               {
                 dialogInfo?.timestamp ?
-                  new Date(dialogInfo?.timestamp * 1000).toLocaleString()
+                  new Date(dialogInfo?.timestamp * 1000).toLocaleString('th')
                   :
                   '-'
               }
@@ -107,7 +107,7 @@ function CustomTable({
                 <TableCell className="text-center">
                   {
                     predict.timestamp ?
-                      new Date(predict.timestamp * 1000).toLocaleString()
+                      new Date(predict.timestamp * 1000).toLocaleString('th')
                       :
                       '-'
                   }

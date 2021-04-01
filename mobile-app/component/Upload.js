@@ -72,15 +72,15 @@ function Upload({
         <div className="row">
           <img className="col-md-6 mt-3" src={`${URL_FILE}/${current?.url || ''}`} />
           <div className="col-md-6 mt-3">
-            <Typography variant="h6">Class Name</Typography>
+            <Typography variant="h6">Class Name:</Typography>
             <Typography>{current?.class_name}</Typography>
-            <Typography className="mt-2" variant="h6">Accuracy</Typography>
+            <Typography className="mt-2" variant="h6">Accuracy:</Typography>
             <Typography>{current?.accuracy?.toFixed(2)}%</Typography>
-            <Typography className="mt-2" variant="h6">Created At</Typography>
+            <Typography className="mt-2" variant="h6">Created At:</Typography>
             <Typography>
               {
                 current?.timestamp ?
-                  new Date(current?.timestamp * 1000).toLocaleString()
+                  new Date(current?.timestamp * 1000).toLocaleString('th')
                   :
                   '-'
               }
