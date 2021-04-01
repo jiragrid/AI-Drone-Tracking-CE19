@@ -112,12 +112,14 @@ class SugarcaneDisease:
         )
         model = Sequential([
             data_augmentation,
+            layers.experimental.preprocessing.Rescaling(1./255, input_shape=(image_width, image_height, dimension)),
             layers.Conv2D(hidden_layers[0], max_pooling, padding='same', activation='relu'),
             layers.MaxPooling2D(),
             layers.Conv2D(hidden_layers[1], max_pooling, padding='same', activation='relu'),
             layers.MaxPooling2D(),
             layers.Conv2D(hidden_layers[2], max_pooling, padding='same', activation='relu'),
             layers.MaxPooling2D(),
+            layers.Dropout(0.2),
             layers.Flatten(),
             layers.Dense(hidden_layers[3], activation='relu'),
             layers.Dense(num_classes)
@@ -130,10 +132,10 @@ class SugarcaneDisease:
 
         print("Evaluate Model ...")
         history = model.fit(
-        train_dataset,
-        validation_data=validattion_dataset,
-        epochs=total_epochs,
-        verbose=verbose
+            train_dataset,
+            validation_data=validattion_dataset,
+            epochs=total_epochs,
+            verbose=verbose
         )
 
         print("Visualization ...")
@@ -161,6 +163,10 @@ class SugarcaneDisease:
 
         print("Save Model ...")
         keras.models.save_model(model, self.config['save_model_dir'])
+
+    def train_with_gpu(self):
+        with tf.device('/device:GPU:0'):
+            self.train()
     
     def test(self, y_true):
         print("Set config ...")
@@ -213,7 +219,7 @@ class SugarcaneDisease:
                 class_labels["class_name"][class_no],
                 accuracy
             ]
-            result_list.append(info)
+            result_list.append(class_no)
             count += 1
             print("Success", count, "...")
 
@@ -224,6 +230,8 @@ class SugarcaneDisease:
         print("Result ...")
         print(classification_report(y_true, y_predict))
         print(tf.math.confusion_matrix(y_true, y_predict))
+
+        return result_list
 
         # df = pd.DataFrame(result_list, columns=csv_labels) 
         # df.to_csv("./SugarcaneDisease/Result/" + "result.csv", index=True, header=True)
