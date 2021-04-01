@@ -33,7 +33,7 @@ function RenderLineChart({
         <Area type="monotone" dataKey="brown_spot_disease" stroke="#82ca9d" fillOpacity={0.25} fill="#82ca9d" />
         <Area type="monotone" dataKey="ring_spot_disease" stroke="#0184d8" fillOpacity={0.25} fill="#0184d8" />
         <Area type="monotone" dataKey="other" stroke="#6A6FAF" fillOpacity={0.25} fill="#6A6FAF" />
-        <Area type="monotone" dataKey="not_analysis" stroke="#B4B5C0" fillOpacity={0.25} fill="#B4B5C0" />
+        <Area type="monotone" dataKey="no_answer" stroke="#B4B5C0" fillOpacity={0.25} fill="#B4B5C0" />
         <CartesianGrid stroke="#ddd" strokeDasharray="5 5" />
         <XAxis dataKey="no">
           <Label value="No. Recently Test" offset={0} position="bottom" />
