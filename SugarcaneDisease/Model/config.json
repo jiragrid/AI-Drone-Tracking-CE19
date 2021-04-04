@@ -1,7 +1,7 @@
 {
   "root_dir": "./SugarcaneDisease/Class",
-  "save_model_dir": "./SugarcaneDisease/Model/Save/CNN-V3",
-  "test_model_dir": "./SugarcaneDisease/Model/Save/CNN-V3",
+  "save_model_dir": "./SugarcaneDisease/Model/Save/CNN-V4",
+  "test_model_dir": "./SugarcaneDisease/Model/Save/CNN-V4",
   "save_predict_dir": "./SugarcaneDisease/Result",
   "predict_file_name": "CNN",
   "labels_dir": "./SugarcaneDisease/Class/labels.csv",
@@ -15,7 +15,7 @@
   },
   "hidden_layers": [
     128,
-    32,
+    64,
     64,
     128
   ],
