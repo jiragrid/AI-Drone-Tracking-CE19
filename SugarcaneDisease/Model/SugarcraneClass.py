@@ -29,7 +29,7 @@ class SugarcaneDisease:
         with open(path, 'w') as f:
             json.dump({'logs': data}, f, indent=4)
 
-    def save_log(self, logs_dir):
+    def save_log(self, logs_dir, conf_mat):
         logs = json.loads(self.open_json_file(logs_dir))
         logs = logs['logs']
 
@@ -38,6 +38,7 @@ class SugarcaneDisease:
         info['date'] = str(datetime.datetime.now())
         info['timestamp'] = int(time.time())
         info['config'] = self.config
+        info['confusion_matrix'] = str(conf_mat)
         logs.append(info)
 
         self.write_json_file(logs_dir, logs)
@@ -228,10 +229,11 @@ class SugarcaneDisease:
             # print("--------------------------------------------------------------------------------------------------")
 
         print("Result ...")
+        cm = tf.math.confusion_matrix(y_true, y_predict)
         print(classification_report(y_true, y_predict))
-        print(tf.math.confusion_matrix(y_true, y_predict))
+        print(cm)
 
-        return result_list
+        return cm
 
         # df = pd.DataFrame(result_list, columns=csv_labels) 
         # df.to_csv("./SugarcaneDisease/Result/" + "result.csv", index=True, header=True)
